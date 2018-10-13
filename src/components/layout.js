@@ -3,8 +3,13 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
+import './bootstrap.min.css'
 import './layout.css'
+import './specialized.css'
+
+import Navbar from 'react-bootstrap/lib/navbar'
+import Nav from 'react-bootstrap/lib/nav'
+import Sidebar from './sidebar'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,6 +22,9 @@ const Layout = ({ children }) => (
         }
       }
     `}
+
+
+
     render={data => (
       <>
         <Helmet
@@ -27,17 +35,32 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Navbar  bg="dark" expand="md" style={{backgroundColor: "#134699"}}>
+          <Navbar.Brand href="/">
+
+            Michael Nekrasov</Navbar.Brand>
+
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav className="mr-auto">
+              <Nav.Link href="/">News</Nav.Link>
+              <Nav.Link href="#link">Skills</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+
+
         <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
+          className={'container'}
         >
-          {children}
+          <div className={'row'}>
+            <div id='content' className={'col-8'}>{children}</div>
+            <div className={'col-4 d-none d-md-block'}><Sidebar/></div>
+
+          </div>
         </div>
       </>
     )}
