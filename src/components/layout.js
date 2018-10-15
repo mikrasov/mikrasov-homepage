@@ -47,7 +47,9 @@ const Layout = ({ children }) => (
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="mr-auto">
               <Nav.Link href="/">News</Nav.Link>
-              <Nav.Link href="#link">Skills</Nav.Link>
+              <Nav.Link href="/skills">Skills</Nav.Link>
+              <Nav.Link href="/cv">CV</Nav.Link>
+
             </Nav>
           </Navbar.Collapse>
         </Navbar>

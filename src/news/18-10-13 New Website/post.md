@@ -1,6 +1,7 @@
 ---
 path: "/news/new-design"
 date: "2018-10-13"
+
 title: "New Website Design"
 ---
 As I finish my degree at UCSB, I wanted to take the time to revamp my website. 

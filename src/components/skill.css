@@ -1,0 +1,202 @@
+
+
+.skill-icon{
+	filter: grayscale(100%);
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 5rem 5rem;
+	height: 7.5rem;
+	width: 7.5rem;
+	margin-left: 1.25rem;
+}
+
+.skill-icon:hover{
+	filter: none;
+
+}
+
+.skill-category{
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: #000000 !important;
+}
+
+.skill-label{
+	min-height: 3rem;
+}
+
+
+
+
+
+.skill{
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 7.5rem 7.5rem;
+	text-align: center;
+	width: 10rem;
+
+
+}
+
+.skill-icon-class{
+	display: none;
+}
+.skill-icon-android{
+	background-image: url("../images/icons/dev-android.svg");
+}
+.skill-icon-apache{
+	background-image: url("../images/icons/dev-apache.svg");
+}
+.skill-icon-assembly{
+	background-image: url("../images/icons/dev-assembly.png");
+}
+.skill-icon-aws{
+	background-image: url("../images/icons/dev-aws.svg");
+}
+.skill-icon-bootstrap{
+	background-image: url("../images/icons/dev-bootstrap.svg");
+}
+.skill-icon-c{
+	background-image: url("../images/icons/dev-c.svg");
+}
+.skill-icon-cpp{
+	background-image: url("../images/icons/dev-cpp.svg");
+}
+.skill-icon-css3{
+	background-image: url("../images/icons/dev-css3.svg");
+}
+.skill-icon-d3js{
+	background-image: url("../images/icons/dev-d3js.svg");
+}
+.skill-icon-dataturbine{
+	background-image: url("../images/icons/dev-dataturbine.png");
+}
+.skill-icon-django{
+	background-image: url("../images/icons/dev-django.svg");
+}
+.skill-icon-eclipse{
+	background-image: url("../images/icons/dev-eclipse.svg");
+}
+.skill-icon-git{
+	background-image: url("../images/icons/dev-git.svg");
+}
+.skill-icon-html5{
+	background-image: url("../images/icons/dev-html5.svg");
+}
+.skill-icon-java{
+	background-image: url("../images/icons/dev-java.svg");
+}
+.skill-icon-javascript{
+	background-image: url("../images/icons/dev-javascript.svg");
+}
+.skill-icon-jetbrains{
+	background-image: url("../images/icons/dev-jetbrains.svg");
+}
+.skill-icon-jquery{
+	background-image: url("../images/icons/dev-jquery.svg");
+}
+.skill-icon-json{
+	background-image: url("../images/icons/dev-json.svg");
+}
+.skill-icon-latex{
+	background-image: url("../images/icons/dev-latex.svg");
+}
+.skill-icon-lightroom{
+	background-image: url("../images/icons/dev-lightroom.svg");
+}
+.skill-icon-linux{
+	background-image: url("../images/icons/dev-linux.svg");
+}
+
+
+.skill-icon-mac{
+	background-image: url("../images/icons/dev-mac.svg");
+}
+.skill-icon-matplotlib{
+	background-image: url("../images/icons/dev-matplotlib.svg");
+}
+.skill-icon-network{
+	background-image: url("../images/icons/dev-network.svg");
+}
+.skill-icon-nodejs{
+	background-image: url("../images/icons/dev-nodejs.svg");
+}
+.skill-icon-numpy{
+	background-image: url("../images/icons/dev-numpy.svg");
+}
+.skill-icon-office{
+	background-image: url("../images/icons/dev-office.svg");
+}
+.skill-icon-opencv{
+	background-image: url("../images/icons/dev-opencv.svg");
+}
+.skill-icon-outdoors{
+	background-image: url("../images/icons/dev-outdoors.svg");
+}
+
+
+
+
+.skill-icon-pandas{
+	background-image: url("../images/icons/dev-pandas.svg");
+}
+.skill-icon-photography{
+	background-image: url("../images/icons/dev-photography.svg");
+}
+.skill-icon-photoshop{
+	background-image: url("../images/icons/dev-photoshop.svg");
+}
+.skill-icon-php{
+	background-image: url("../images/icons/dev-php.svg");
+}
+.skill-icon-python{
+	background-image: url("../images/icons/dev-python.svg");
+}
+.skill-icon-quadcopter{
+	background-image: url("../images/icons/dev-quadcopter.svg");
+}
+
+
+
+.skill-icon-russian{
+	background-image: url("../images/icons/dev-russia.svg");
+}
+
+
+.skill-icon-sensors{
+	background-image: url("../images/icons/dev-wsn.png");
+}
+.skill-icon-scuba{
+	background-image: url("../images/icons/dev-scuba.svg");
+}
+.skill-icon-sql{
+	background-image: url("../images/icons/dev-sql.svg");
+}
+.skill-icon-wifi{
+	background-image: url("../images/icons/dev-wifi.svg");
+}
+.skill-icon-windows{
+	background-image: url("../images/icons/dev-windows.svg");
+}
+.skill-icon-xml{
+	background-image: url("../images/icons/dev-xml.svg");
+}
+
+
+
+.skill-level-low{
+	background-image: url("../images/icons/percent-low.png");
+}
+.skill-level-med{
+	background-image: url("../images/icons/percent-med.png");
+}
+.skill-level-high{
+	background-image: url("../images/icons/percent-high.png");
+}
+.skill-level-expert{
+	background-image: url("../images/icons/percent-expert.png");
+}
+
