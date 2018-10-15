@@ -7,8 +7,7 @@ import './bootstrap.min.css'
 import './layout.css'
 import './specialized.css'
 
-import Navbar from 'react-bootstrap/lib/navbar'
-import Nav from 'react-bootstrap/lib/nav'
+import {Nav, Navbar} from 'react-bootstrap'
 import Sidebar from './sidebar'
 
 const Layout = ({ children }) => (
