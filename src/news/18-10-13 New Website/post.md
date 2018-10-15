@@ -45,3 +45,21 @@ so I am using the beta version so that I can use Bootstrap v4. No problems as of
 
 ![React](react-bootstrap.png)
 
+
+I did run into a cryptic error when deploying to Netlify initialy that said:
+```
+Module not found: Error: Can't resolve 'react-bootstrap/lib/nav' in '/opt/buil  d/repo/src/components'
+```
+
+Turns out the problem was that I was doing imports of react as so:
+
+```javascript
+import Navbar from 'react-bootstrap/lib/navbar'
+import Nav from 'react-bootstrap/lib/nav'
+```
+
+
+Which worked on local machine, but to get it to deploy on Netlify I had to change it to 
+```javascript
+import {Nav, Navbar} from 'react-bootstrap'
+```

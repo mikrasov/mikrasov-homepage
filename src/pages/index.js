@@ -1,11 +1,6 @@
 import React from 'react'
-import { graphql } from "gatsby"
-
-
-import { Link } from 'gatsby'
-
+import { Link, graphql } from "gatsby"
 import Layout from '../components/layout'
-
 
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
@@ -30,7 +25,6 @@ export default function IndexPage({ data }) {
     </Layout>
   );
 }
-
 
 export const pageQuery = graphql`
   query IndexQuery {

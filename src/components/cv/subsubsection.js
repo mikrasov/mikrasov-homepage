@@ -5,8 +5,8 @@ class Subsubsection extends React.Component {
 
     return (
       <div className="">
-        <h3 className="">{this.props.name}</h3>
-        <p className="">{this.props.subtitle}</p>
+        <h3 className="" style={{margin:0}}>{this.props.name}</h3>
+        <p className="text-primary">{this.props.subtitle}</p>
         <div style={{paddingLeft: '1em'}}>
           {this.props.children}
         </div>

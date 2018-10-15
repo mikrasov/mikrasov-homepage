@@ -37,18 +37,13 @@ const Layout = ({ children }) => (
 
         </Helmet>
         <Navbar  bg="dark" expand="md" style={{backgroundColor: "#134699"}}>
-          <Navbar.Brand href="/">
-
-            Michael Nekrasov</Navbar.Brand>
-
-
+          <Navbar.Brand href="/">Michael Nekrasov</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="mr-auto">
               <Nav.Link href="/">News</Nav.Link>
               <Nav.Link href="/skills">Skills</Nav.Link>
               <Nav.Link href="/cv">CV</Nav.Link>
-
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -60,7 +55,6 @@ const Layout = ({ children }) => (
           <div className={'row'}>
             <div id='content' className={'col-8'}>{children}</div>
             <div className={'col-4 d-none d-md-block'}><Sidebar/></div>
-
           </div>
         </div>
       </>

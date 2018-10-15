@@ -13,25 +13,24 @@ const CVPage = () => <Layout>
 
 
       <Subsection name={"Education"}>
-
-        <div className="resume-item d-flex flex-column flex-md-row   pl-3 m-2">
-          <h5 className="mb-0">University of California, Santa Barbara, Ph.D</h5>
-          <div className="resume-date text-md-right">
-            <span className="text-primary">(Expected 2019)</span>
+        <div className="row mb-2">
+          <div className="col-9"> <strong>Ph.D Computer Science</strong> <br/>
+              University of California, Santa Barbara
           </div>
+          <div className="col-3 text-primary">2019 (expected)</div>
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row pl-3 m-2">
-          <h5 className="mb-0">University of California, San Diego, B.S., Computer Science & Mathematics (cum
-            laude)</h5>
-          <div className="resume-date text-md-right">
-            <span className="text-primary">2011</span>
+
+        <div className="row mb-2">
+          <div className="col-9"><strong>B.S. Computer Science </strong> (cum laude)
+            <span className="text-primary">2011</span> <br/>
+            Minor in Mathematics <br/>
+            University of California, San Diego, <br/>
           </div>
+          <div className="col-3 text-primary">2011</div>
         </div>
       </Subsection>
 
       <Subsection name="Academic Experience">
-
-
           <p className="section-description">
             Eight-year academic with work experience including leadership, research, outreach, policy development, and
             administrative roles. Interdisciplinary and cross-sectoral collaborations with various departments at UCSD,
@@ -182,58 +181,56 @@ const CVPage = () => <Layout>
   <Section name={"Publications"}>
 
       <div className="section-body">
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
-          PENDING REVIEW: Nekrasov, M, et al. “Anonymity and Reputation on Social Media in an Age of Global Internet
+        <div className="mb-2">
+          PENDING: Nekrasov, M, et al. “Anonymity and Reputation on Social Media in an Age of Global Internet
           Dependence.” Journal of Internet Services and Applications. 2018.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div className="mb-2">
           Nekrasov, M, et al. <a target="_blank" href={withPrefix("papers/Nekrasov_2017_foci.pdf")}>"SecurePost: Verified Group-Anonymity on
           Social Media."</a> 7th USENIX Workshop on Free and Open Communications on the Internet FOCI 17. USENIX
           Association, 2017.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div  className="mb-2">
           Nekrasov, M, Parks, L., and Belding, E. <a target="_blank" href={withPrefix("papers/Nekrasov_2017_10_LIMITS.pdf")}>"Limits to
           internet freedoms: Being heard in an increasingly authoritarian world.</a> Proceedings of the 2017 Workshop on
           Computing Within Limits. ACM, 2017.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div  className="mb-2">
           Zheleva, M., Nekrasov, M. (2013). <a target="_blank" href={withPrefix("papers/Nekrasov_2013_10_MobiSys.pdf")}>"MobiSys
           2013."</a> IEEE Pervasive Computing 12 (4), 0084-88.
         </div>
 
 
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div className="mb-2">
           Nekrasov, M., Chumkiew, S., Shin, P. <a target="_blank" href={withPrefix("papers/Nekrasov_2013_10_Android_Bandon_Bay.pdf")}>"Android
           at Bandon Bay: Low-Cost Environmental Monitoring and Event Detection Using Smartphones."</a> GSWC. 2013.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div className="mb-2">
           Fountain, T., Sameer, T., Shin, P. Nekrasov, M. <a target="_blank" href={withPrefix("papers/Nekrasov_2012_07_DataTurbine.pdf")}>"The Open
           Source DataTurbine Initiative: Empowering the Scientific Community with Streaming Data
           Middleware."</a> Bulletin of the Ecological Society of America. 2012.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div className="mb-2">
           Jaroensutasinee, M., Jaroensutasinee, K., Bainbridge, S., Fountain, T., Chumkiew, S., Noonsang, P. Kuhapon, U.
-          Vannarat, S. Poyai, S. Nekrasov, M. <a target="_blank"
-                                                 href={withPrefix("papers/Nekrasov_2012_07_Sensor_Networks_Reefs.pdf")}>"Sensor
+          Vannarat, S. Poyai, S. Nekrasov, M.
+          <a target="_blank" href={withPrefix("papers/Nekrasov_2012_07_Sensor_Networks_Reefs.pdf")}>"Sensor
           Networks Applications for Reefs at Racha Island, Thailand."</a> Published in the Proceedings of the 12th
           International Coral Reef Symposium. Cairns, Australia. 9-13 July 2012.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
+        <div className="mb-2">
           Jaroensutasinee, K., Jaroensutasinee, M., Bainbridge, S., Fountain, T., Holbrook, S., Nekrasov, M. <a
           target="_blank" href={withPrefix("papers/Nekrasov_2012_07_CREON.pdf")}>"CREON – Integrating Disparate Sources of Remote
           Coral Reef Sensor Data."</a> Proceedings of the 12th International Coral Reef Symposium. 2012.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
-          Jaroensutasinee, M., Jaroensutasinee, K., Fountain, T., Nekrasov, M. et al. <a target="_blank"
-                                                                                         href={withPrefix("papers/Nekrasov_2011_09_Coral_Sensor_Network.pdf")}>"Coral
-          Sensor Network at Racha Island, Thailand."</a> Published in the Proceedings of the Environmental Information
-          Management Conference. 2011.
+        <div className="mb-2">
+          Jaroensutasinee, M., Jaroensutasinee, K., Fountain, T., Nekrasov, M. et al.
+          <a target="_blank" href={withPrefix("papers/Nekrasov_2011_09_Coral_Sensor_Network.pdf")}>"Coral Sensor Network at Racha Island, Thailand."</a>
+          Published in the Proceedings of the Environmental Information Management Conference. 2011.
         </div>
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
-          Lu, S. Perry, M. Nekrasov, et al.. (2011). <a target="_blank" href={withPrefix("papers/Nekrasov_2011_05_Bees.pdf")}>"Automatic
-          analysis of Camera Image Data: an Example of Honey Bee (Apis cerana) Images from Shanping Wireless Sensor
-          Network."</a> Taiwan Journal of Forest Science. 6 (26); 305-311. 2011.
-
+        <div className="mb-2">
+          Lu, S. Perry, M. Nekrasov, et al.. (2011).
+          <a target="_blank" href={withPrefix("papers/Nekrasov_2011_05_Bees.pdf")}>"Automatic analysis of Camera Image Data: an Example of Honey Bee (Apis cerana) Images from Shanping Wireless Sensor Network."</a>
+          Taiwan Journal of Forest Science. 6 (26); 305-311. 2011.
         </div>
       </div>
 
