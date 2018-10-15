@@ -1,6 +1,8 @@
 # Project dependencies
 .idea
 .cache
+credentials.json
+token.json
 node_modules
 yarn-error.log
 
