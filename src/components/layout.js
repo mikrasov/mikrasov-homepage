@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
 
         </Helmet>
-        <Navbar  bg="dark" expand="md" style={{backgroundColor: "#134699"}}>
+        <Navbar  className="navbar-dark" expand="sm" fixed="top" style={{backgroundColor: "#134699"}}>
           <Navbar.Brand href="/">Michael Nekrasov</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
@@ -50,11 +50,11 @@ const Layout = ({ children }) => (
 
 
         <div
-          className={'container'}
+          className={'container mt-5'}
         >
           <div className={'row'}>
-            <div id='content' className={'col-8'}>{children}</div>
-            <div className={'col-4 d-none d-md-block'}><Sidebar/></div>
+            <div id='content' className={'col-md-8'}>{children}</div>
+            <div className={'col-md-4 '}><Sidebar/></div>
           </div>
         </div>
       </>

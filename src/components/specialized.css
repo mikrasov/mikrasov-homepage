@@ -24,11 +24,13 @@ a:hover, a:focus, a:active {
     background-color: #1856ba !important;
 }
 
-.text-primary {
+.text-emphasis {
     color: #1856ba !important;
 }
 
-
+.text-gray {
+    color: #676767 !important;
+}
 
 #sidebar {
     background-color: #f2f2f2 !important;

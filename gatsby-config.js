@@ -7,8 +7,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Mikrasov Design: Michael Nerkasov Homepage',
+        short_name: 'Mikrasov Design',
         start_url: '/',
         background_color: '#0277bd',
         theme_color: '#0277bd',
@@ -42,6 +42,14 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
         ]
       }
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: `data`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

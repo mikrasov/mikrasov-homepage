@@ -4,10 +4,10 @@ class Section extends React.Component {
   render() {
 
     return (
-      <div className="resume-section d-flex flex-column">
+      <div className="mb-4">
 
         <h1 className="">{this.props.name}</h1>
-        <div style={{paddingLeft: '1em'}}>
+        <div className="ml-3">
           {this.props.children}
         </div>
       </div>

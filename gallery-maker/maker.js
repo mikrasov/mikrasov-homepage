@@ -4,53 +4,39 @@ const {google} = require('googleapis');
 const opn = require('opn');
 const url = require('url');
 const http = require('http')
+const request = require('request');
+const download = require('image-downloader')
 
-
-const SCOPES = ['https://www.googleapis.com/auth/photoslibrary.readonly'];
+const SCOPES = ['https://www.googleapis.com/auth/photoslibrary.sharing', 'https://www.googleapis.com/auth/photoslibrary.readonly'];
 const CREDENTIALS_PATH = 'gallery-maker/credentials.json';
 const TOKEN_PATH = 'gallery-maker/token.json';
-
-
+const GALLERY_DATA_PATH = 'gallery-maker/gallery.json'
 
 var oAuth2Client;
+var albums = [];
 
-// Load client secrets from a local file.
+// Load client credentials from a local file.
 fs.readFile(CREDENTIALS_PATH, (err, content) => {
-  if (err) return console.log('Error loading client secret file:', err);
-  // Authorize a client with credentials, then call the Google Drive API.
-  authorize(JSON.parse(content));
-});
+  if (err) return console.log('Error loading client credentials from file:', err);
 
-/**
- * Create an OAuth2 client with the given credentials, and then execute the
- * given callback function.
- * @param {Object} credentials The authorization client credentials.
- * @param {function} callback The callback to call with the authorized client.
- */
-function authorize(credentials) {
+  //Parse credentials
+  var credentials = JSON.parse(content)
   const {client_secret, client_id, redirect_uri} = credentials.web;
   oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uri);
 
-  // Check if we have previously stored a token.
-  fs.readFile(TOKEN_PATH, (err, token) => {
-    if (err) return askForToken(oAuth2Client);
-    oAuth2Client.setCredentials(JSON.parse(token));
-    generateGallery()
-  });
-}
+
+
+  askForToken(oAuth2Client)
+});
 
 function setAccessToken(code) {
-
   oAuth2Client.getToken(code, (err, token) => {
     if (err) return console.error('Error retrieving access token', err);
     oAuth2Client.setCredentials(token);
     // Store the token to disk for later program executions
-    fs.writeFile(TOKEN_PATH, JSON.stringify(token), (err) => {
-      if (err) console.error(err);
-      console.log('Token stored to', TOKEN_PATH);
-    });
+    generateGallery()
   });
-  generateGallery()
+
 }
 
 function askForToken(oAuth2Client){
@@ -82,7 +68,110 @@ function askForToken(oAuth2Client){
 }
 
 function generateGallery() {
-  console.log(oAuth2Client)
+  reqAlbums()
 }
 
-///?code=4/eQDmoGQQasm2O4qtbDqzNikUN5wqLFyUQomWYJyIjtl66U6-71h1_im6vBVd4kc5Vysi2GmLW2aSwXm4fYPoiho&scope=https://www.googleapis.com/auth/photoslibrary.readonly
+
+
+function reqAlbums(nextPageToken){
+  var url_target  = "https://photoslibrary.googleapis.com/v1/sharedAlbums?pageSize=50";
+
+  if(nextPageToken !== undefined){
+    url_target+="&pageToken="+nextPageToken
+  }
+
+  console.log(url_target)
+  request(
+    {
+      url: url_target,
+      headers: { 'Authorization': 'Bearer ' + oAuth2Client.credentials.access_token }
+    },
+    function(error, response, body) {
+      data = JSON.parse(body)
+
+
+      albums = albums.concat(data.sharedAlbums)
+
+  console.log(body)
+      albums.map(album => {
+        //reqAlbum(album.id)
+      })
+
+      if(data.nextPageToken === undefined) {
+        downloadImages()
+        fs.writeFile(GALLERY_DATA_PATH, JSON.stringify(albums), (err) => {
+          console.log(err)
+        });
+        console.log("Saved Gallery")
+      }
+      else{
+        //reqAlbums(data.nextPageToken)
+
+      }
+    }
+  );
+}
+
+
+function reqAlbum(albumid){
+  url_target = "https://photoslibrary.googleapis.com/v1/albums/"+albumid;
+  console.log(url_target)
+  request(
+    {
+      url: url_target,
+      headers: { 'Authorization': 'Bearer ' + oAuth2Client.credentials.access_token }
+    },
+    function(error, response, body) {
+      data = JSON.parse(body)
+
+
+      console.log(body)
+
+
+
+    }
+  );
+}
+
+
+function downloadImages(){
+  const download = require('image-downloader')
+
+
+  emptyDir("./static/gallery")
+
+  albums.map(album => {
+
+
+// Download to a directory and save with the original filename
+  const options = {
+    url: album.coverPhotoBaseUrl,
+    dest: './static/gallery/'+album.id+".png"
+  }
+
+  download.image(options)
+    .then(({ filename, image }) => {
+      console.log('File saved to', filename)
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+
+  })
+
+  console.log("Done!")
+
+}
+
+
+function emptyDir(dirPath) {
+  try { var files = fs.readdirSync(dirPath); }
+  catch(e) { return; }
+  if (files.length > 0)
+    for (var i = 0; i < files.length; i++) {
+      var filePath = dirPath + '/' + files[i];
+      if (fs.statSync(filePath).isFile())
+        fs.unlinkSync(filePath);
+
+    }
+};

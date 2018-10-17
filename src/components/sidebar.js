@@ -13,7 +13,7 @@ const SideBar = (props) => (
       query iconImageQuery {
        profileImage: file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 250) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -27,7 +27,7 @@ const SideBar = (props) => (
 
 
         <div id={"sidebar"}>
-          <Img className={"rounded"} fluid={data.profileImage.childImageSharp.fluid}  />
+          <Img className={"rounded mx-auto d-block"} fluid={data.profileImage.childImageSharp.fluid}  style={{maxHeight:"250px",maxWidth:"250px"}} />
 
           <h3 style={{textAlign : 'center'}}>Michael Nekrasov</h3>
           <h4 style={{textAlign : 'center'}}>Ph.D Student in C.S., Web Designer, Photographer, Traveler.</h4>
@@ -40,11 +40,11 @@ const SideBar = (props) => (
             honored if you checked out some of my work.
           </p>
 
-
-          <a href="https://github.com/mikrasov" target="_blank"><img src={twitterLogo} style={{width:"25px"}}/></a>
-          <a href="https://twitter.com/mikrasov" target="_blank"><img src={linkedinLogo}  style={{width:"25px"}}/></a>
-          <a href="https://www.linkedin.com/in/mikrasov" target="_blank"><img src={gitLogo}  style={{width:"25px"}}/></a>
-
+          <div className="text-right">
+          <a href="https://github.com/mikrasov" target="_blank" className="mr-2"><img src={twitterLogo} style={{width:"25px"}}/></a>
+          <a href="https://twitter.com/mikrasov" target="_blank" className="mr-2"><img src={linkedinLogo}  style={{width:"25px"}}/></a>
+          <a href="https://www.linkedin.com/in/mikrasov" target="_blank" className="mr-2"><img src={gitLogo}  style={{width:"25px"}}/></a>
+          </div>
         </div>
 
 

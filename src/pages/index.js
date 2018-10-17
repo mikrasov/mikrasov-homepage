@@ -11,7 +11,7 @@ export default function IndexPage({ data }) {
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => {
           return (
-            <div className="blog-post-preview" key={post.id} >
+            <div className="blog-post-preview mb-1" key={post.id} >
 
               <p className="date">{post.frontmatter.date}</p>
               <h1>

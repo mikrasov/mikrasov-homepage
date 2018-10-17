@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Section from '../components/cv/section.js'
 import Subsection from '../components/cv/subsection.js'
 import Subsubsection from '../components/cv/subsubsection.js'
-
+import Experience from '../components/cv/experience.js'
 
 const CVPage = () => <Layout>
 
@@ -14,19 +14,19 @@ const CVPage = () => <Layout>
 
       <Subsection name={"Education"}>
         <div className="row mb-2">
-          <div className="col-9"> <strong>Ph.D Computer Science</strong> <br/>
+          <div className="col-md-3 col-lg-4 order-1 order-md-2 text-emphasis">2019<br/>(expected)</div>
+          <div className="col-md-9 col-lg-8 order-2 order-md-1"> <strong>Ph.D Computer Science</strong> <br/>
               University of California, Santa Barbara
           </div>
-          <div className="col-3 text-primary">2019 (expected)</div>
+
         </div>
 
         <div className="row mb-2">
-          <div className="col-9"><strong>B.S. Computer Science </strong> (cum laude)
-            <span className="text-primary">2011</span> <br/>
+          <div className="col-md-3 col-lg-4 order-1 order-md-2 align-items-center text-emphasis">2011</div>
+          <div className="col-md-9 col-lg-8 order-2 order-md-1"><strong>B.S. Computer Science </strong> (cum laude) <br/>
             Minor in Mathematics <br/>
             University of California, San Diego, <br/>
           </div>
-          <div className="col-3 text-primary">2011</div>
         </div>
       </Subsection>
 
@@ -39,148 +39,76 @@ const CVPage = () => <Layout>
           </p>
 
         <Subsubsection name={"UC Santa Barbara"} subtitle={"Santa Barbara, CA, USA"}>
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
 
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0">PhD Research on Wireless Aerial Disaster Networks Project</h5>
+          <Experience name={"PhD Research on Wireless Aerial Disaster Networks Project"} date={"Sep 2013 - Present"}>
+            Designed applied solutions for locating and communicating with affected individuals during
+            environmental disasters using unmanned aerial drones. – 20hrs per week
+          </Experience>
 
-              <p>Designed applied solutions for locating and communicating with affected individuals during
-                environmental disasters using unmanned aerial drones. – 20hrs per week</p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Sep 2013 - Present</span>
-            </div>
-          </div>
+          <Experience name={"Research Assistant on SecurePost Project, MOMENT Lab, Computer Science Department "} date={"Sep 2013 - Jun 2017"}>
+            Collaborated with interdisciplinary team of 10 PhD students, 5 faculty, and over 15 international
+            community partner organizations to design and implement technologies for managing real-world
+            obstructions to freedom of speech in developing regions – 20hrs per week.
+          </Experience>
 
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
+          <Experience name={"Computer Science Department Student Senate, Graduate Student Recruitment Committee,"} date={"Sep 2015 - Jun 2016"}>
+            Member of graduate student forum for department committees, policies and events. – 3-6hrs per week
+          </Experience>
 
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0">Research Assistant on SecurePost Project, MOMENT Lab, Computer Science
-                Department </h5>
-
-              <p>Collaborated with interdisciplinary team of 10 PhD students, 5 faculty, and over 15 international
-                community partner organizations to design and implement technologies for managing real-world
-                obstructions to freedom of speech in developing regions – 20hrs per week. </p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Sep 2013 - Jun 2017</span>
-            </div>
-          </div>
-
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0"> Computer Science Department Student Senate, Graduate Student Recruitment
-                Committee,</h5>
-
-              <p>Member of graduate student forum for department committees, policies and events. – 3-6hrs per week</p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Sep 2015 - Jun 2016</span>
-            </div>
-          </div>
         </Subsubsection>
 
 
         <Subsubsection name={"Walailak University"} subtitle={"Tha Sala, Nakhon Si Thammarat Province, Thailand"}>
 
+          <Experience name={"Fulbright Scholar, Center of Excellence in Ecoinformatics"} date={"Jan 2013 - Sep 2013"}>
+            Led international research partnership to develop real-time flood detection for protecting aquaculture
+            in the Gulf of Thailand– 40+hrs per week.
+          </Experience>
 
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
-
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0">Fulbright Scholar, Center of Excellence in Ecoinformatics </h5>
-
-              <p>Led international research partnership to develop real-time flood detection for protecting aquaculture
-                in the Gulf of Thailand– 40+hrs per week.</p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Jan 2013 - Sep 2013</span>
-            </div>
-          </div>
-
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
-
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0">NSF Funded Internship, Center of Excellence in Ecoinformatics </h5>
-
-              <p>Deployed coral reef observatory at Racha Yai (island near Phuket) – 40+hrs per week.</p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Sep 2010 - Dec 2010</span>
-            </div>
-          </div>
+          <Experience name={"NSF Funded Internship, Center of Excellence in Ecoinformatics"} date={"Sep 2010 - Dec 2010"}>
+            Deployed coral reef observatory at Racha Yai (island near Phuket) – 40+hrs per week.
+          </Experience>
         </Subsubsection>
 
 
         <Subsubsection name={"UC San Diego"} subtitle={"San Diego, CA, USA"}>
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
 
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0">Research Assistant, California Institute for Telecommunications and Information
-                Technology [CALIT2] </h5>
+          <Experience name={"Research Assistant, California Institute for Telecommunications and Information Technology [CALIT2]"} date={"Sep 2009 - Jun 2012"}>
+            Developed technologies for real-time data streaming and analysis as part of the Open Source Data
+            Turbine Initiative – 20hrs per week.
+          </Experience>
 
-              <p>Developed technologies for real-time data streaming and analysis as part of the Open Source Data
-                Turbine Initiative – 20hrs per week.</p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Sep 2009 - Jun 2012</span>
-            </div>
-          </div>
+          <Experience name={"Pacific Rim Undergraduate Experiences [PRIME] Scholar, National Museum of Marine Biology and Aquarium, Taiwan"} date={"Sep 2013 - Jun 2017"}>
+            Automated coral spawning detection using computer vision coupled with coral fluorescence and– 40hrs per
+            week.
+          </Experience>
 
-          <div className="resume-item d-flex flex-column flex-md-row mb-2">
-
-            <div className="resume-content mr-auto">
-              <h5 className="mb-0">Pacific Rim Undergraduate Experiences [PRIME] Scholar, National Museum of Marine
-                Biology and Aquarium, Taiwan</h5>
-              <p>Automated coral spawning detection using computer vision coupled with coral fluorescence and– 40hrs per
-                week.</p>
-            </div>
-            <div className="resume-date text-md-right">
-              <span className="text-primary">Sep 2013 - Jun 2017</span>
-            </div>
-          </div>
 
         </Subsubsection>
       </Subsection>
 
     <Subsection name={"Industry Experience"}>
-      <div className="section-body">
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
-          <div className="resume-content mr-auto">
-            <h5 className="mb-0">Idependent Contractor </h5>
-            <p>Administered a private consulting business for occasional jobs including web development, small business
-              computer network instillation and troubleshooting, and photography. Requires high level of flexibility,
-              understanding client needs, communicating expectations, meeting deadlines, and communicating technical
-              constraints and solutions in clear understandable language.</p>
-          </div>
-          <div className="resume-date text-md-right">
-            <span className="text-primary">Sep 2006 - Present</span>
-          </div>
-        </div>
 
+      <Experience name={"Idependent Contractor"} date={"Sep 2006 - Present"}>
+        Administered a private consulting business for occasional jobs including web development, small business
+        computer network instillation and troubleshooting, and photography. Requires high level of flexibility,
+        understanding client needs, communicating expectations, meeting deadlines, and communicating technical
+        constraints and solutions in clear understandable language.
+      </Experience>
 
-        <div className="resume-item d-flex flex-column flex-md-row mb-2">
-          <div className="resume-content mr-auto">
-            <h5 className="mb-0">Front-End Web Developer </h5>
-            <p>Lead front-end web developer for MobileTrac, a startup specializing in vehicle hostry reports. Worked in
-              a team with marketing, buisness, and back-end programmers to develop a comercial website selling instant
-              vehicle history reports. Required meeting tight deadlines, co-ordinating with members who had varying
-              perspectives and technical literacy. Duties included: programing as well graphical and interface
-              design.</p>
-          </div>
-          <div className="resume-date text-md-right">
-            <span className="text-primary">Feb 2009 - Nov 2012</span>
-          </div>
-        </div>
-
-      </div>
-
+      <Experience name={"Front-End Web Developer"} date={"Feb 2009 - Nov 2012"}>
+        Lead front-end web developer for MobileTrac, a startup specializing in vehicle hostry reports. Worked in
+        a team with marketing, buisness, and back-end programmers to develop a comercial website selling instant
+        vehicle history reports. Required meeting tight deadlines, co-ordinating with members who had varying
+        perspectives and technical literacy. Duties included: programing as well graphical and interface
+        design.
+      </Experience>
     </Subsection>
   </Section>
 
 
   <Section name={"Publications"}>
 
-      <div className="section-body">
         <div className="mb-2">
           PENDING: Nekrasov, M, et al. “Anonymity and Reputation on Social Media in an Age of Global Internet
           Dependence.” Journal of Internet Services and Applications. 2018.
@@ -232,7 +160,6 @@ const CVPage = () => <Layout>
           <a target="_blank" href={withPrefix("papers/Nekrasov_2011_05_Bees.pdf")}>"Automatic analysis of Camera Image Data: an Example of Honey Bee (Apis cerana) Images from Shanping Wireless Sensor Network."</a>
           Taiwan Journal of Forest Science. 6 (26); 305-311. 2011.
         </div>
-      </div>
 
   </Section>
 
