@@ -3,14 +3,14 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout'
 
 export default function Template({ data, }) {
+  console.log(data)
   const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
-
+  const { fields,frontmatter, html } = markdownRemark
 
   return (
     <Layout className="blog-post-container">
       <div className="blog-post">
-        <p className="date">{frontmatter.date}</p>
+        <p className="date">{fields.date}</p>
         <h1>{frontmatter.title}</h1>
 
         <div
@@ -22,16 +22,31 @@ export default function Template({ data, }) {
   )
 }
 
+
+
+
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
       html
-      frontmatter {
+      fields {
+        slug
         date(formatString: "MMMM DD, YYYY")
-        path
-        title
+      }     
+      frontmatter {
         
+        title
+        featuredImage {
+            childImageSharp{
+                sizes(maxWidth: 630) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+        }
       }
     }
   }
 `
+
+
+

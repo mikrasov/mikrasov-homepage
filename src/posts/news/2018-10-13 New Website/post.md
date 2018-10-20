@@ -1,12 +1,10 @@
 ---
-path: "/news/new-design"
-date: "2018-10-13"
-
 title: "New Website Design"
+featuredImage: "./featured-image.png" 
 ---
 As I finish my degree at UCSB, I wanted to take the time to revamp my website. 
 
-![Gatsby Logo](thumbnail.png)
+![Gatsby Logo](featured-image.png)
 
 With the redisign, I decided to take the time to learn some new tech. The first thing I wanted to try out was [React](https://reactjs.org/). React let you write page components in javascript
 which is then render as HTML. A cool feature of *React* is the use of a 'Virtual DOM' which smartly renders only the 
