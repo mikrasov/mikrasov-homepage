@@ -53,6 +53,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     'gatsby-plugin-catch-links',
 
     'gatsby-plugin-offline',

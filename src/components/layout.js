@@ -44,6 +44,7 @@ const Layout = ({ children }) => (
               <Nav.Link href="/">News</Nav.Link>
               <Nav.Link href="/skills">Skills</Nav.Link>
               <Nav.Link href="/cv">CV</Nav.Link>
+              <Nav.Link href="/gallery">Photography</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

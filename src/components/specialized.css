@@ -65,13 +65,17 @@ nav {
 .blog-preview{
     border: 1px solid #dfdfdf;
     padding: 0;
-    margin-bottom: 0.5em;
+    margin: 0.5em;
     width: 100%;
+    background-repeat: no-repeat;
+
+    background-position: bottom right;
 }
 
 .blog-album{
     border: 1px solid #c6dfbf;
 }
+
 
 .blog-album a{
     color: #18ba56;
@@ -92,15 +96,12 @@ nav {
 
 }
 
-.blog-preview img {
-    padding: 0;
-    margin: 0;
-    border: 1px solid #000000;
-}
 
 .blog-featured-image{
     padding: 0;
+    margin: 0;
     align-self: center!important;
+    border: 1px solid #000000;
 }
 
 .blog-content{

@@ -1,0 +1,24 @@
+.gallery-album{
+    margin: 0.5em;
+
+}
+
+.gallery-image {
+    border: 2px solid #000000;
+    margin-bottom: 0;
+}
+
+.gallery-name {
+    color: #000000 !important;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 4px;
+}
+
+
+.gallery-date {
+    color: #afafaf !important;
+    font-size: 75%;
+    margin: 0;
+    padding-left: 4px;
+}

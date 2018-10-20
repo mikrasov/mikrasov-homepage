@@ -15,6 +15,16 @@ const GALLERY_DATA_PATH = 'gallery-maker/gallery.json'
 var oAuth2Client;
 var albums = [];
 
+
+function slugify(text)
+{
+  var cls = text.toString()
+    .replace(/[^\w\s]/gi, '')
+
+  return "20YY-MM-DD "+cls
+}
+
+
 // Load client credentials from a local file.
 fs.readFile(CREDENTIALS_PATH, (err, content) => {
   if (err) return console.log('Error loading client credentials from file:', err);
@@ -88,14 +98,8 @@ function reqAlbums(nextPageToken){
     },
     function(error, response, body) {
       data = JSON.parse(body)
-
-
       albums = albums.concat(data.sharedAlbums)
-
-  console.log(body)
-      albums.map(album => {
-        //reqAlbum(album.id)
-      })
+      //console.log(data)
 
       if(data.nextPageToken === undefined) {
         downloadImages()
@@ -105,30 +109,9 @@ function reqAlbums(nextPageToken){
         console.log("Saved Gallery")
       }
       else{
-        //reqAlbums(data.nextPageToken)
+        reqAlbums(data.nextPageToken)
 
       }
-    }
-  );
-}
-
-
-function reqAlbum(albumid){
-  url_target = "https://photoslibrary.googleapis.com/v1/albums/"+albumid;
-  console.log(url_target)
-  request(
-    {
-      url: url_target,
-      headers: { 'Authorization': 'Bearer ' + oAuth2Client.credentials.access_token }
-    },
-    function(error, response, body) {
-      data = JSON.parse(body)
-
-
-      console.log(body)
-
-
-
     }
   );
 }
@@ -142,14 +125,31 @@ function downloadImages(){
 
   albums.map(album => {
 
+    if(album.title === undefined) return;
 
-// Download to a directory and save with the original filename
-  const options = {
-    url: album.coverPhotoBaseUrl,
-    dest: './static/gallery/'+album.id+".png"
-  }
+    target = './static/gallery/'+slugify(album.title)
+    if (!fs.existsSync(target)){
+      fs.mkdirSync(target);
+    }
 
-  download.image(options)
+
+    var fileContent = "---\n" +
+      "title: \""+album.title+"\"\n" +
+      "featuredImage: \"./featured-image.png\" \n" +
+      "album: \"\"\n" +
+      "---\n" +
+      "TEST";
+    fs.writeFile(target+"/post.md", fileContent, (err) => {
+      if (err) throw err;
+    });
+
+    // Download to a directory and save with the original filename
+    const options = {
+      url: album.coverPhotoBaseUrl,
+      dest: target+"/featured-image.png"
+    }
+
+    download.image(options)
     .then(({ filename, image }) => {
       console.log('File saved to', filename)
     })

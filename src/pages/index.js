@@ -7,8 +7,6 @@ import Layout from '../components/layout'
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
 
-
-  console.log(posts)
   return (
     <Layout>
     <div className="blog-posts">
@@ -25,7 +23,10 @@ export default function IndexPage({ data }) {
               </div>
               <div className="blog-content col-8">
               <p className="date">{post.fields.date}</p>
-              <h1><a href={post.frontmatter.album} target="_blank">{post.frontmatter.title}</a></h1>
+              <h1>
+                <a href={post.frontmatter.album} target="_blank">{post.frontmatter.title}</a>
+
+              </h1>
 
               <p>{post.excerpt} </p>
               </div>
@@ -38,9 +39,12 @@ export default function IndexPage({ data }) {
               <Img  fluid={post.frontmatter.featuredImage.childImageSharp.fluid}  />
               </Link>
             </div>
+
             <div className="blog-content col-8">
-              <p className="date">{post.fields.date}</p>
-              <h1><Link to={post.fields.slug}>{post.frontmatter.title}</Link></h1>
+              <div className="date">{post.fields.date}</div>
+              <h1>
+                <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+              </h1>
               <p>{post.excerpt} </p>
             </div>
           </div>
@@ -73,7 +77,20 @@ export const pageQuery = graphql`
               }
             }
           }
-
+        }
+      }
+    }
+    albumIcon: file(relativePath: { eq: "icons/album.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    postIcon: file(relativePath: { eq: "icons/news.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
