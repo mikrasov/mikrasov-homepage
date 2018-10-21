@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Album from '../components/album'
 export default function GalleryPage({ data }) {
   const { edges: albums } = data.allMarkdownRemark;
-  
+
   return (
     <Layout>
       <h1>Recent Albums</h1>

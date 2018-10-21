@@ -38,6 +38,13 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: { maxWidth: 400 }
           },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 500,
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+            }
+          },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
         ]

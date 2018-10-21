@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import "../components/blog.css"
 
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
