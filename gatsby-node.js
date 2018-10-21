@@ -15,8 +15,8 @@ function slugify(text)
   var cls = text.toString().toLowerCase()
     .replace("news/",'/')
     .replace("albums/",'/')
-    .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/\s+/g, '-')
+    .replace(/\-\-+/g, '-')
   return cls+""
 }
 
@@ -75,17 +75,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: `slug`,
-      value:slug,
+      value: slug,
     })
 
     createNodeField({
       node,
       name: `date`,
-      value:date,
+      value: date,
     })
-
-
   }
 }
-
-//(formatString: "MMMM DD, YYYY")
