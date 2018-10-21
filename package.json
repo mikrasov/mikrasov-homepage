@@ -25,6 +25,7 @@
     "react-bootstrap": "1.0.0-beta.1",
     "react-dom": "^16.x",
     "react-helmet": "^5.x",
+    "react-infinite-scroll-component": "^4.2.0",
     "react-simple-maps": "^0.12.1"
   },
   "keywords": [

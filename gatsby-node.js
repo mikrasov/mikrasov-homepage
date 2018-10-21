@@ -48,17 +48,49 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
+
+
         // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
+        const posts = result.data.allMarkdownRemark.edges;
+
+        _.each(posts, (post, index) => {
+          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+          const next = index === 0 ? null : posts[index - 1].node;
+
           createPage({
-            path: edge.node.fields.slug,
+            path: post.node.fields.slug,
             component: blogPost,
             context: {
-              slug: edge.node.fields.slug,
-              date: edge.node.fields.date
+              slug: post.node.fields.slug,
+              date: post.node.fields.date,
+              previous,
+              next,
             },
           })
         })
+
+        // Create blog post list pages
+        const postsPerPage = 10;
+        const numPages = Math.ceil(posts.length / postsPerPage);
+
+
+        console.log(numPages)
+        _.times(numPages, i => {
+          createPage({
+            path: i === 0 ? `/` : `/${i + 1}`,
+            component: path.resolve('./src/components/blog-list.js'),
+            context: {
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1
+            },
+          });
+        });
+
+
+
+
       })
     )
   })
