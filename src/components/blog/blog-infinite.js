@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import './album.css'
+import '../album.css'
 import Layout from './layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 

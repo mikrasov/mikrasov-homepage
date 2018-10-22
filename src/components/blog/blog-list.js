@@ -1,8 +1,10 @@
 import React from "react"
 import {Link,graphql } from "gatsby"
 import InfiniteScroll from 'react-infinite-scroll-component';
-import Layout from "../components/layout"
+import Layout from "../layout"
 import Img from 'gatsby-image'
+import BlogPreview from "./blogPreview"
+
 
 export default class BlogList extends React.Component {
 
@@ -27,39 +29,11 @@ export default class BlogList extends React.Component {
             .map(({ node: post }) => {
 
               return (post.frontmatter.album !== null)? (
-                <div className="row blog-preview blog-album" key={post.id}>
-                  <div className="blog-featured-image col-4 ">
-                    <a href={post.frontmatter.album} target="_blank">
-                      <Img  fluid={post.frontmatter.featuredImage.childImageSharp.fluid}  />
-                    </a>
-                  </div>
-                  <div className="blog-content col-8">
-                    <p className="date">{post.fields.date}</p>
-                    <h1>
-                      <a href={post.frontmatter.album} target="_blank">{post.frontmatter.title}</a>
 
-                    </h1>
-
-                    <p>{post.excerpt} </p>
-                  </div>
-                </div>
-
+                <BlogPreview className="blog-album" post={post} />
               ) : (
-                <div className="row blog-preview blog-post" key={post.id}>
-                  <div className="blog-featured-image col-4 ">
-                    <Link to={post.fields.slug}>
-                      <Img  fluid={post.frontmatter.featuredImage.childImageSharp.fluid}  />
-                    </Link>
-                  </div>
+                <BlogPreview className="blog-post" post={post} />
 
-                  <div className="blog-content col-8">
-                    <div className="date">{post.fields.date}</div>
-                    <h1>
-                      <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                    </h1>
-                    <p>{post.excerpt} </p>
-                  </div>
-                </div>
               )
             })}
         </div>
@@ -106,7 +80,7 @@ export const blogListQuery = graphql`
             album
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 250) {
+                fluid(maxWidth: 250, maxHeight: 250) {
                   ...GatsbyImageSharpFluid
                 }
               }

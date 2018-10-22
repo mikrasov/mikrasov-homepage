@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/components/blog-post.js')
+    const blogPost = path.resolve('./src/components/blog/blog-post.js')
     resolve(
       graphql(
         `
@@ -74,11 +74,10 @@ exports.createPages = ({ graphql, actions }) => {
         const numPages = Math.ceil(posts.length / postsPerPage);
 
 
-        console.log(numPages)
         _.times(numPages, i => {
           createPage({
             path: i === 0 ? `/` : `/${i + 1}`,
-            component: path.resolve('./src/components/blog-list.js'),
+            component: path.resolve('./src/components/blog/blog-list.js'),
             context: {
               limit: postsPerPage,
               skip: i * postsPerPage,
