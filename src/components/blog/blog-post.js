@@ -9,16 +9,14 @@ export default function Template({ data, }) {
   const { fields,frontmatter, html } = markdownRemark
 
   return (
-    <Layout className="blog-post-container">
-      <div className="blog-post">
-        <p className="date">{fields.date}</p>
-        <h1>{frontmatter.title}</h1>
+    <Layout className="blog-post">
+      <p className="blog-date">{fields.date}</p>
+      <h1>{frontmatter.title}</h1>
 
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
+      <div
+        className="blog-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Layout>
   )
 }

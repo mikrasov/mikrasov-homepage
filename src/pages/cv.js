@@ -1,5 +1,5 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
+import { graphql, StaticQuery, withPrefix } from 'gatsby'
 
 import Layout from '../components/layout'
 import Section from '../components/cv/section.js'
@@ -7,9 +7,24 @@ import Subsection from '../components/cv/subsection.js'
 import Subsubsection from '../components/cv/subsubsection.js'
 import Experience from '../components/cv/experience.js'
 
-const CVPage = () => <Layout>
+const CVPage = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+    {
+      profileImage: file(relativePath: { eq: "profile/profile-cv.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `}
 
-  <Section name={"Experience & Education"}>
+    render={data => (
+      <Layout sideImage={data.profileImage}  active={"cv"}>
+
+      <Section name={"Experience & Education"}>
 
 
       <Subsection name={"Education"}>
@@ -183,5 +198,8 @@ const CVPage = () => <Layout>
   </Section>
 
 </Layout>
+    )}
+  />
+)
 
 export default CVPage

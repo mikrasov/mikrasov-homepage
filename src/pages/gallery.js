@@ -1,27 +1,15 @@
 import React from 'react'
-import { Link, graphql } from "gatsby"
+import { Link, graphql, StaticQuery } from 'gatsby'
 
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Album from '../components/album'
-export default function GalleryPage({ data }) {
-  const { edges: albums } = data.allMarkdownRemark;
 
-  return (
-    <Layout>
-      <h1>Recent Albums</h1>
-      <div >
-        {albums
-          .map(({ node: album }) => {
-            return <Album album={album} />
-          })}
-      </div>
-    </Layout>
-  );
-}
 
-export const pageQuery = graphql`
-  query GalleryQuery {
+const GalleryPage = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+    {
     allMarkdownRemark(sort: { order: DESC, fields: [fields___date] }, filter:{frontmatter:{album:{ne:null}}} ) {
       edges {
         node {
@@ -44,7 +32,31 @@ export const pageQuery = graphql`
         }
       }
     }
-    
-  }
-`;
+
+      profileImage: file(relativePath: { eq: "profile/profile-photo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `}
+
+    render={data => (
+
+      <Layout sideImage={data.profileImage}  active={"gallery"}>
+      <h1>Recent Albums</h1>
+      <div >
+        {data.allMarkdownRemark.edges
+          .map(({ node: album }) => {
+            return <Album album={album} />
+          })}
+      </div>
+    </Layout>
+      )}
+  />
+)
+
+export default GalleryPage
 

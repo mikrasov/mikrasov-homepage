@@ -1,14 +1,10 @@
 import React from "react"
-import {Link,graphql } from "gatsby"
-import InfiniteScroll from 'react-infinite-scroll-component';
+import {Link, graphql } from "gatsby"
 import Layout from "../layout"
-import Img from 'gatsby-image'
 import BlogPreview from "./blogPreview"
 
 
 export default class BlogList extends React.Component {
-
-
 
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -19,21 +15,23 @@ export default class BlogList extends React.Component {
     const nextPage = (currentPage + 1).toString()
 
 
+    const sidebar = (<p className="mb-9">
+      Welcome! Thank's for taking interest in me. I am currently finishing a PhD in Computer Science at UC Santa
+      Barbara. My research focuses on wireless aerial networks for environmental and disaster applications. In addition
+      to my academic and professional work, I am a photographer, hiker, and adventurer. While you are here I would be
+      honored if you checked out some of my work.
+    </p>)
 
     return (
-      <Layout>
+      <Layout sideContent={sidebar} sideImage={this.props.data.profileImage} active={"news"}>
 
+        <h1> Recent News </h1>
         <div className="blog-posts">
           {posts
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }) => {
-
-              return (post.frontmatter.album !== null)? (
-
-                <BlogPreview className="blog-album" post={post} />
-              ) : (
-                <BlogPreview className="blog-post" post={post} />
-
+              return(
+                <BlogPreview post={post} />
               )
             })}
         </div>
@@ -69,18 +67,18 @@ export const blogListQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 240)
+          excerpt(pruneLength: 215)
           id
           fields {
             slug
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
           }
           frontmatter {
             title
             album
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 250, maxHeight: 250) {
+                fluid(maxWidth: 200, maxHeight: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -100,6 +98,13 @@ export const blogListQuery = graphql`
       childImageSharp {
         fixed(width: 20) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 225) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

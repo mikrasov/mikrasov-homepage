@@ -1,43 +1,60 @@
 
 .blog-preview{
-    font-size: 85%;
+    font-size: 90%;
     border: 1px solid #dfdfdf;
     padding: 0;
-    margin: 0.5em;
+    margin: 0.5rem;
     width: 100%;
+    color: #000000;
     background-repeat: no-repeat;
 
     background-position: bottom right;
 }
 
-.blog-album{
-    border: 1px solid #c6dfbf;
+
+
+.blog-title{
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    margin-top: 0.5rem;
 }
 
-.blog-album a{
+.blog-date{
+    color: #c8cbcf;
+    font-size: 75%;
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+
+.blog-preview.blog-album .blog-title{
     color: #18ba56;
 }
 
-.blog-album a:hover,.blog-album  a:focus,.blog-album  a:active {
-    color: #89ffb6;
+.blog-preview.blog-post .blog-title{
+    color: #1856ba;
 }
 
-.blog-preview h1{
-    margin-bottom: 5px;
-}
-.blog-post .date, .blog-preview .date{
-    color: #c8cbcf;
-    font-size: 80%;
-    text-align: right;
-    margin-bottom: 0;
 
+.blog-preview.blog-post{
+    background-color: #0000FF07;
 }
+
+.blog-preview.blog-album{
+    background-color: #00FF0007;
+    border: 1px solid #c6dfbf;
+}
+
+
 
 .blog-featured-image{
     padding: 0;
     margin: 0;
+    background-color: #FFFFFF;
+    border-right: 1px solid #dfdfdf;
     align-self: center!important;
-    border: 1px solid #000000;
+
 }
 
 .blog-content{

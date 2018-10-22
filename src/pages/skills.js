@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Section from '../components/cv/section.js'
 import Subsection from '../components/cv/subsection.js'
 import '../components/specialized.css'
-import { Link } from 'gatsby'
+import { graphql, Link, StaticQuery } from 'gatsby'
 
 
 function slugify(text)
@@ -115,47 +115,62 @@ var classes = {
 
 
 
-const SkillsPage = () => (
-
-  <Layout>
-
-    <Section name = "Skills">
-      {
-        Object.keys(skills).map((key, index) => (
-          <Subsection name={key}>
-            <ul className="list-inline list-icons">
-              {skills[key].map((s) => (
-                <li key={s[0]} className="list-inline-item">
-                  <div className={slugify(s)}/>
-                  <div className="skill-label">{s[0]}</div>
-                </li>
-              ))
-              }
-            </ul>
-          </Subsection>
-        ))
+const SkillsPage = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+    {
+      profileImage: file(relativePath: { eq: "profile/profile-skill.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-    </Section>
+    }
+  `}
 
-    <Section name = "Formal Training">
-      {
-        Object.keys(classes).map((key, index) => (
-          <Subsection name={key}>
-            <ul className="list-inline">
-              {classes[key].map((c) => (
-                <li key={c} className="list-inline-item ">
-                  <div className="skill-label">{c}</div>
-                </li>
-              ))
-              }
-            </ul>
-          </Subsection>
-        ))
-      }
-    </Section>
+    render={data => (
+      <Layout sideImage={data.profileImage}  active={"skills"}>
 
-  </Layout>
+        <Section name = "Skills">
+          {
+            Object.keys(skills).map((key, index) => (
+              <Subsection name={key}>
+                <ul className="list-inline list-icons">
+                  {skills[key].map((s) => (
+                    <li key={s[0]} className="list-inline-item">
+                      <div className={slugify(s)}/>
+                      <div className="skill-label">{s[0]}</div>
+                    </li>
+                  ))
+                  }
+                </ul>
+              </Subsection>
+            ))
+          }
+        </Section>
 
+        <Section name = "Formal Training">
+          {
+            Object.keys(classes).map((key, index) => (
+              <Subsection name={key}>
+                <ul className="list-inline">
+                  {classes[key].map((c) => (
+                    <li key={c} className="list-inline-item ">
+                      <div className="skill-label">{c}</div>
+                    </li>
+                  ))
+                  }
+                </ul>
+              </Subsection>
+            ))
+          }
+        </Section>
+
+      </Layout>
+    )}
+  />
 )
 
 export default SkillsPage
+
