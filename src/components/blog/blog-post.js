@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from '../layout'
 import "./blog.css"
 import SocialCard from "../socialCard"
-import Helmet from 'react-helmet'
 
 export default function Template({ data, }) {
 
@@ -27,9 +26,6 @@ export default function Template({ data, }) {
 
   )
 }
-
-
-
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -60,6 +56,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-
-

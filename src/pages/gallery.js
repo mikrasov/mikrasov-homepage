@@ -1,21 +1,28 @@
 import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
-
-import Img from 'gatsby-image'
+import { graphql, StaticQuery } from 'gatsby'
 import Layout from '../components/layout'
-import Album from '../components/album'
+import Gallery from '../components/gallery/gallery'
+import GallerySidebar from '../components/gallery/gallery-sidebar'
 
 
 const GalleryPage = ({ children }) => (
   <StaticQuery
     query={graphql`
     {
-    allMarkdownRemark(sort: { order: DESC, fields: [fields___date] }, filter:{frontmatter:{album:{ne:null}}} ) {
+      profileImage: file(relativePath: { eq: "profile/profile-photo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      allMarkdownRemark(sort: { order: DESC, fields: [fields___date] }, filter:{frontmatter:{album:{ne:null}}} ) {
       edges {
         node {
           id
           fields {
             slug
+            year
             date(formatString: "MMMM DD, YYYY")
           }
           frontmatter {
@@ -32,27 +39,14 @@ const GalleryPage = ({ children }) => (
         }
       }
     }
-
-      profileImage: file(relativePath: { eq: "profile/profile-photo.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
     }
   `}
 
     render={data => (
 
-      <Layout sideImage={data.profileImage}  active={"gallery"}>
+      <Layout sideImage={data.profileImage} sideContent=<GallerySidebar data={data.allMarkdownRemark}/> active={"gallery"}>
       <h1>Recent Albums</h1>
-      <div >
-        {data.allMarkdownRemark.edges
-          .map(({ node: album }) => {
-            return <Album album={album} />
-          })}
-      </div>
+      <Gallery data={data.allMarkdownRemark}/>
     </Layout>
       )}
   />

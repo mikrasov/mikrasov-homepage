@@ -13,8 +13,6 @@ const { createFilePath } = require('gatsby-source-filesystem')
 function slugify(text)
 {
   var cls = text.toString().toLowerCase()
-//    .replace("news/",'/')
-//    .replace("albums/",'/')
     .replace("post/",'')
     .replace(/\s+/g, '-')
     .replace(/\-\-+/g, '-')
