@@ -2,6 +2,7 @@ import React from "react"
 import {Link, graphql } from "gatsby"
 import Layout from "../layout"
 import BlogPreview from "./blogPreview"
+import "./blog.css"
 
 
 export default class BlogList extends React.Component {
