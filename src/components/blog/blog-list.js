@@ -71,7 +71,7 @@ export const blogListQuery = graphql`
           id
           fields {
             slug
-            date(formatString: "MMM DD, YYYY")
+             date(formatString: "MMM DD, YYYY")
           }
           frontmatter {
             title

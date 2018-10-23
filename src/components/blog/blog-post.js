@@ -4,12 +4,13 @@ import Layout from '../layout'
 import "./blog.css"
 
 export default function Template({ data, }) {
-  console.log(data)
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { fields,frontmatter, html } = markdownRemark
 
+  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { fields, frontmatter, html } = markdownRemark
+
+  const sidebar = ""
   return (
-    <Layout className="blog-post">
+    <Layout className="blog-post" sideContent={sidebar} sideImage={data.profileImage} active={"news"}>
       <p className="blog-date">{fields.date}</p>
       <h1>{frontmatter.title}</h1>
 
@@ -33,7 +34,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
       }     
       frontmatter {
-        
         title
         featuredImage {
             childImageSharp{
@@ -41,6 +41,13 @@ export const pageQuery = graphql`
                     ...GatsbyImageSharpSizes
                 }
             }
+        }
+      }
+    }
+    profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 225) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

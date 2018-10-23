@@ -34,7 +34,7 @@ class BlogPreview extends React.Component {
     }
     else{
       cls = "blog-post";
-      link = "./"+post.fields.slug;
+      link = "."+post.fields.slug;
     }
 
 
@@ -43,9 +43,7 @@ class BlogPreview extends React.Component {
       <div className={cls+" row blog-preview"} key={post.id}>
 
         <div className="blog-featured-image col-3 col-md-3 ">
-
             <Img  fluid={post.frontmatter.featuredImage.childImageSharp.fluid}  />
-
         </div>
         <div className="col-9 col-md-9">
           <div className="d-flex">

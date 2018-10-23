@@ -15,11 +15,8 @@ import linkedinLogo from '../images/icons/in.png'
 import gitLogo from '../images/icons/git.png'
 
 
-
-
 class Layout extends React.Component {
   render() {
-  console.log(this.props)
 
     return (
 
@@ -28,8 +25,8 @@ class Layout extends React.Component {
         <Helmet
           title={"Mikrasov Design"}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'The homepage of Michael Nekrasov. I am currently finishing a PhD in Computer Science at UC Santa Barbara. My research focuses on wireless aerial networks for environmental and disaster applications. In addition to my academic and professional work, I am a photographer, hiker, and adventurer. ' },
+            { name: 'keywords', content: 'Michael Nekrasov, computer science, photography, wireless networks, sensor networks, aerial networks, UAV, UAS, drone, programing, web design, environment, disaster, travel, hiking' },
           ]}
         >
           <html lang="en" />
