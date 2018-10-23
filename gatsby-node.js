@@ -13,8 +13,9 @@ const { createFilePath } = require('gatsby-source-filesystem')
 function slugify(text)
 {
   var cls = text.toString().toLowerCase()
-    .replace("news/",'/')
-    .replace("albums/",'/')
+//    .replace("news/",'/')
+//    .replace("albums/",'/')
+    .replace("post/",'')
     .replace(/\s+/g, '-')
     .replace(/\-\-+/g, '-')
   return cls+""
@@ -101,7 +102,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const path = createFilePath({ node, getNode })
     const slug = slugify(path)
-    const date = slug.substring(2,12)
+    date = slug.match(/(\d{4})-(\d{2})-(\d{2})/ )
 
     createNodeField({
       node,
@@ -109,10 +110,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: slug,
     })
 
-    createNodeField({
-      node,
+    createNodeField({ node,
       name: `date`,
-      value: date,
+      value: date[0],
+    })
+
+    createNodeField({ node,
+      name: `year`,
+      value: date[1],
     })
   }
 }

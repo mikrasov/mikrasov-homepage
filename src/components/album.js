@@ -7,7 +7,7 @@ class Album extends React.Component {
 
     var album = this.props.album;
     return (
-      <div className="d-inline-flex gallery-album" >
+      <div className="gallery-album" >
         <a href={album.frontmatter.album} target="_blank">
           <Img className="gallery-image" fixed={album.frontmatter.featuredImage.childImageSharp.fixed}  />
           <p className="gallery-name">{album.frontmatter.title}</p>

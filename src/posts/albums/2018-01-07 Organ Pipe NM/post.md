@@ -1,5 +1,5 @@
 ---
-title: "Organ Pipe National Monument"
+title: "Organ Pipe"
 featuredImage: "./featured-image.png"
 album: "https://photos.app.goo.gl/Oeul1AsYwdnsZs5G2"
 ---

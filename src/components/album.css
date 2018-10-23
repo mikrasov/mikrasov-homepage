@@ -1,7 +1,7 @@
 .gallery-album{
-    margin: 0.5em;
-    max-width: 200px;
-
+    margin: 15px ;
+    width: 150px;
+    display: inline-flex!important;
 }
 
 .gallery-image {
@@ -12,6 +12,7 @@
 .gallery-name {
     color: #000000 !important;
     font-weight: bold;
+    font-size: 85%;
     margin: 0;
     padding-left: 4px;
 }
@@ -19,7 +20,7 @@
 
 .gallery-date {
     color: #afafaf !important;
-    font-size: 75%;
+    font-size: 70%;
     margin: 0;
     padding-left: 4px;
 }
