@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from '../layout'
 import "./blog.css"
+import SocialCard from "../socialCard"
+import Helmet from 'react-helmet'
 
 export default function Template({ data, }) {
 
@@ -10,7 +12,10 @@ export default function Template({ data, }) {
 
   const sidebar = ""
   return (
+
     <Layout className="blog-post" sideContent={sidebar} sideImage={data.profileImage} active={"news"}>
+      <SocialCard title={frontmatter.title} url={fields.slug} description={markdownRemark.excerpt} featuredImage={frontmatter.featuredImage.childImageSharp.sizes.src} />
+
       <p className="blog-date">{fields.date}</p>
       <h1>{frontmatter.title}</h1>
 
@@ -19,6 +24,7 @@ export default function Template({ data, }) {
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Layout>
+
   )
 }
 
@@ -29,6 +35,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
+      excerpt(pruneLength: 215)
       fields {
         slug
         date(formatString: "MMMM DD, YYYY")

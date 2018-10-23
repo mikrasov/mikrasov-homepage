@@ -79,7 +79,7 @@ export const blogListQuery = graphql`
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 200, maxHeight: 200) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
@@ -104,7 +104,7 @@ export const blogListQuery = graphql`
     profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 225) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

@@ -36,7 +36,7 @@ const GalleryPage = ({ children }) => (
       profileImage: file(relativePath: { eq: "profile/profile-photo.png" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
