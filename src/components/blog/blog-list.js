@@ -17,7 +17,17 @@ export default class BlogList extends React.Component {
 
 
     const sidebar = (<p className="mb-9">
-
+      <h3>Navigation</h3>
+      <ul>
+        {
+          !isFirst &&
+          <li><Link to={prevPage} rel="prev">← Newer</Link></li>
+        }
+        {
+          !isLast &&
+          <li><Link to={nextPage} rel="next">Older →</Link></li>
+        }
+      </ul>
     </p>)
 
     return (
