@@ -16,10 +16,7 @@ export default class BlogList extends React.Component {
 
 
     const sidebar = (<p className="mb-9">
-      Welcome! Thank's for taking interest in me. I am currently finishing a PhD in Computer Science at UC Santa
-      Barbara. My research focuses on wireless aerial networks for environmental and disaster applications. In addition
-      to my academic and professional work, I am a photographer, hiker, and adventurer. While you are here I would be
-      honored if you checked out some of my work.
+
     </p>)
 
     return (
@@ -84,20 +81,6 @@ export const blogListQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-    albumIcon: file(relativePath: { eq: "icons/album.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    postIcon: file(relativePath: { eq: "icons/news.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
         }
       }
     }

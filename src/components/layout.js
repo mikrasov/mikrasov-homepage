@@ -40,6 +40,7 @@ class Layout extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="mr-auto" >
+              <Nav.Link href="/about" className={(this.props.active==="about")?"active":""}>About</Nav.Link>
               <Nav.Link href="/" className={(this.props.active==="news")?"active":""}>News</Nav.Link>
               <Nav.Link href="/skills" className={(this.props.active==="skills")?"active":""}>Skills</Nav.Link>
               <Nav.Link href="/cv" className={(this.props.active==="cv")?"active":""}>CV</Nav.Link>
@@ -65,7 +66,8 @@ class Layout extends React.Component {
                 <a className="sidebarIconB" href="https://twitter.com/mikrasov" target="_blank"><img src={linkedinLogo}  /></a>
                 <a className="sidebarIconC" href="https://www.linkedin.com/in/mikrasov" target="_blank"><img src={gitLogo} /></a>
               </div>
-              <h1 >Michael Nekrasov</h1>
+
+              <h1  >Michael Nekrasov</h1>
               <h2 style={{textAlign : 'center'}}>Ph.D Candidate in C.S., Web Designer, Photographer, Traveler.</h2>
 
               <div className="sidebar-content">
