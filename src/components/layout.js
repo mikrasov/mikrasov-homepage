@@ -5,6 +5,7 @@ import { Link, StaticQuery } from 'gatsby'
 
 import './bootstrap.min.css'
 import './layout.css'
+import './sidebar.css'
 import './specialized.css'
 
 import {Nav, Navbar} from 'react-bootstrap'
@@ -17,16 +18,18 @@ import gitLogo from '../images/icons/git.png'
 
 class Layout extends React.Component {
   render() {
-
     return (
-
-
       <>
         <Helmet
           title={"Mikrasov Design"}
           meta={[
-            { name: 'description', content: 'The homepage of Michael Nekrasov. I am currently finishing a PhD in Computer Science at UC Santa Barbara. My research focuses on wireless aerial networks for environmental and disaster applications. In addition to my academic and professional work, I am a photographer, hiker, and adventurer. ' },
-            { name: 'keywords', content: 'Michael Nekrasov, computer science, photography, wireless networks, sensor networks, aerial networks, UAV, UAS, drone, programing, web design, environment, disaster, travel, hiking' },
+            { name: 'description', content: 'The homepage of Michael Nekrasov. I am currently finishing a PhD in ' +
+                'Computer Science at UC Santa Barbara. My research focuses on wireless aerial networks for environmental ' +
+                'and disaster applications. In addition to my academic and professional work, I am a photographer, hiker, ' +
+                'and adventurer. ' },
+            { name: 'keywords', content: 'Michael Nekrasov, computer science, photography, wireless networks, ' +
+                'sensor networks, aerial networks, UAV, UAS, drone, programing, web design, environment, disaster, ' +
+                'travel, hiking' },
           ]}
         >
           <html lang="en" />
@@ -50,22 +53,23 @@ class Layout extends React.Component {
           <div className={'row no-gutters'}>
             <div id='content' className={'col-md-9'}>{this.props.children}</div>
             <div className='col-md-3 ' id={"sidebar"}>
-              {
-                (this.props.sideImage !== undefined) &&
-                <Img className={"rounded mx-auto d-block mb-2"} fluid={this.props.sideImage.childImageSharp.fluid}  style={{maxHeight:"225px",maxWidth:"225px"}} />
-              }
+              <div className="sidebarProfileBlock">
+                {
+                  (this.props.sideImage !== undefined) &&
+                  <Img className="sidebarProfile" fluid={this.props.sideImage.childImageSharp.fluid}  />
+                }
 
-              <h3 style={{textAlign : 'center'}}>Michael Nekrasov</h3>
-              <h4 style={{textAlign : 'center'}}>Ph.D Student in C.S., Web Designer, Photographer, Traveler.</h4>
+              </div>
+              <div className="sideLinkBox">
+                <a className="sidebarIconA" href="https://github.com/mikrasov" target="_blank" ><img src={twitterLogo} /></a><br/>
+                <a className="sidebarIconB" href="https://twitter.com/mikrasov" target="_blank"><img src={linkedinLogo}  /></a>
+                <a className="sidebarIconC" href="https://www.linkedin.com/in/mikrasov" target="_blank"><img src={gitLogo} /></a>
+              </div>
+              <h1 >Michael Nekrasov</h1>
+              <h2 style={{textAlign : 'center'}}>Ph.D Candidate in C.S., Web Designer, Photographer, Traveler.</h2>
 
-              {this.props.sideContent}
-
-
-
-              <div className="text-right">
-                <a href="https://github.com/mikrasov" target="_blank" className="mr-2"><img src={twitterLogo} style={{width:"25px"}}/></a>
-                <a href="https://twitter.com/mikrasov" target="_blank" className="mr-2"><img src={linkedinLogo}  style={{width:"25px"}}/></a>
-                <a href="https://www.linkedin.com/in/mikrasov" target="_blank" className="mr-2"><img src={gitLogo}  style={{width:"25px"}}/></a>
+              <div className="sidebar-content">
+                {this.props.sideContent}
               </div>
             </div>
 
