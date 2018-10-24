@@ -50,7 +50,7 @@ class Layout extends React.Component {
         </Navbar>
 
 
-        <div className={'container mt-5'}>
+        <div className={'container'}>
           <div className={'row no-gutters'}>
             <div id='content' className={'col-md-9'}>{this.props.children}</div>
             <div className='col-md-3 ' id={"sidebar"}>
@@ -76,6 +76,15 @@ class Layout extends React.Component {
             </div>
 
           </div>
+        </div>
+
+        <div id="footer" className="row">
+          <div className="col-md-4">
+            Copyright © 2018 - Michael Nekrasov
+          </div>
+            <div className="col-md-8" style={{color:"#DDDDDD"}}>
+              If you wish to use any content including photos featured on this website please contact me.
+            </div>
         </div>
 
       </>

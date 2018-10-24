@@ -34,7 +34,7 @@ class BlogPreview extends React.Component {
     }
     else{
       cls = "blog-post";
-      link = "."+post.fields.slug;
+      link = post.fields.slug;
     }
 
 

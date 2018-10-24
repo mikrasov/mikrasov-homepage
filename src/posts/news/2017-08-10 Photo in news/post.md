@@ -4,8 +4,8 @@ featuredImage: "./featured-image.jpg"
 ---
 So while we watch the fire from our bedroom window, something cool happened.
 
-I tweeted out photos of the fire and as a result my photos of the fire got retweeted by Cal Fire, shared by Reuters and then picked up by many major news agencies.
-(Not that any of them asked for permission mind you)
+I tweeted out photos of the fire and as a result my photos of the fire got re-tweeted by Cal Fire, shared by Reuters and then picked up by many major news agencies.
+
 
 ![Whittier Fire](./featured-image.jpg)
 
@@ -17,3 +17,11 @@ I tweeted out photos of the fire and as a result my photos of the fire got retwe
 * [Huffington Post](https://www.huffingtonpost.com/entry/california-wildifres-july-2017_us_5962497ae4b0615b9e9227a4)
 * [NY Daily News](http://www.nydailynews.com/newswires/news/national/wildfire-california-canyons-spreads-overnight-article-1.3313878)
 * [Chiemgau 24](https://www.chiemgau24.de/welt/news/waldbraende-verwuesten-teile-kaliforniens-zr-8475081.html)
+
+Given the wide spread use, you would think someone would have asked for my consent.
+Unfortunately what ended up happening is that CalFire re-tweeted my image and someone at Reuters thought
+it came from CalFire itself so they never contacted me. In fact they initially didn't even credit me.
+I had to reach out to them to correct this. Everyone else just used the Reuters image through presumably some kind
+of image sharing agreement.
+
+At least my work got views I guess.
