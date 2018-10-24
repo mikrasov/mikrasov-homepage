@@ -3,7 +3,8 @@ import Layout from '../components/layout'
 import Section from '../components/cv/section.js'
 import Subsection from '../components/cv/subsection.js'
 import '../components/specialized.css'
-import { graphql, Link, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
+import "../components/cv/skill.css"
 
 
 function slugify(text)
@@ -92,8 +93,9 @@ var classes = {
     "Computer Architecture",
     "Operating Systems",
     "Computer Security",
-    "Networks",
-    "Data Structures",
+    "Computer Communication and Networks",
+    "Basic Data Structures & Object Oriented Design",
+    "Advanced Data Structures",
     "Software Engineering",
     "Cognitive Science",
     "Computability & Intractability",
@@ -104,12 +106,26 @@ var classes = {
     "Statistics",
     "Combinatorics",
     "Number Theory",
-    "Physics (Electromagnetics, Optics, Mechanical, Thermodynamics)",
+    "Physics (Electromagnetic, Optics, Mechanical, Thermodynamics)",
     "Analog Design",
     "Circuits and Systems",
   ],
   "Graduate":[
-    "Computational Geometry"
+    "Computational Geometry",
+    "Distributed Computing and Computer Networks",
+    "Mobile Computing",
+    "Cloud Computing",
+    "Mobile Networks",
+    "Mobile Imaging",
+    "Data Intensive Computing",
+    "Java Distributed Computing",
+    "Sociology & Biology Networks",
+    "Education: Blended Learning Course Design"
+  ],
+  "Taught (As TA)":[
+    "Foundations of Computer Science",
+    "Data Structures and Algorithms ",
+    "Into to Computer Science",
   ]
 }
 
