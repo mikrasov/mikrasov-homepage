@@ -113,6 +113,14 @@ var classes = {
   ]
 }
 
+const sidebar = <div>
+  <h3>Jump to:</h3>
+  <ul>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#classes">Formal Training</a></li>
+
+  </ul>
+</div>
 
 
 const SkillsPage = ({ children }) => (
@@ -130,9 +138,10 @@ const SkillsPage = ({ children }) => (
   `}
 
     render={data => (
-      <Layout sideImage={data.profileImage}  active={"skills"}>
+      <Layout sideImage={data.profileImage} sideContent={sidebar} active={"skills"}>
 
-        <Section name = "Skills">
+        <Section name="Skills" id="skills">
+          <a id="skills" />
           {
             Object.keys(skills).map((key, index) => (
               <Subsection name={key}>
@@ -150,7 +159,8 @@ const SkillsPage = ({ children }) => (
           }
         </Section>
 
-        <Section name = "Formal Training">
+        <Section name="Formal Training">
+          <a id="classes" />
           {
             Object.keys(classes).map((key, index) => (
               <Subsection name={key}>

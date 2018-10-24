@@ -7,6 +7,25 @@ import Subsection from '../components/cv/subsection.js'
 import Subsubsection from '../components/cv/subsubsection.js'
 import Experience from '../components/cv/experience.js'
 
+const sidebar = <div>
+  <h3>Jump to:</h3>
+  <ul>
+    <li>
+      <a href="#experience">Experience & Education</a>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#academic">Academic Experience</a></li>
+        <li><a href="#industry">Industry Experience</a></li>
+      </ul>
+    </li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#awards">Awards & Scholarships</a></li>
+  </ul>
+</div>
+
+
+
+
 const CVPage = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -22,12 +41,13 @@ const CVPage = ({ children }) => (
   `}
 
     render={data => (
-      <Layout sideImage={data.profileImage}  active={"cv"}>
+      <Layout sideImage={data.profileImage} sideContent={sidebar} active={"cv"}>
 
       <Section name={"Experience & Education"}>
-
+        <a id="experience" />
 
       <Subsection name={"Education"}>
+        <a id="education" />
         <div className="row mb-2">
           <div className="col-md-3 col-lg-4 order-1 order-md-2 text-emphasis">2019<br/>(expected)</div>
           <div className="col-md-9 col-lg-8 order-2 order-md-1"> <strong>Ph.D Computer Science</strong> <br/>
@@ -46,6 +66,8 @@ const CVPage = ({ children }) => (
       </Subsection>
 
       <Subsection name="Academic Experience">
+        <a id="academic" />
+
           <p className="section-description">
             Eight-year academic with work experience including leadership, research, outreach, policy development, and
             administrative roles. Interdisciplinary and cross-sectoral collaborations with various departments at UCSD,
@@ -103,6 +125,7 @@ const CVPage = ({ children }) => (
       </Subsection>
 
     <Subsection name={"Industry Experience"}>
+      <a id="industry" />
 
       <Experience name={"Idependent Contractor"} date={"Sep 2006 - Present"}>
         Administered a private consulting business for occasional jobs including web development, small business
@@ -123,7 +146,7 @@ const CVPage = ({ children }) => (
 
 
   <Section name={"Publications"}>
-
+    <a id="publications" />
         <div className="mb-2">
           PENDING: Nekrasov, M, et al. “Anonymity and Reputation on Social Media in an Age of Global Internet
           Dependence.” Journal of Internet Services and Applications. 2018.
@@ -179,21 +202,22 @@ const CVPage = ({ children }) => (
   </Section>
 
   <Section name={"Awards & Scholarships"}>
-      <ul className="fa-ul mb-0">
-        <li>MobiSys 2013 Best Poster 2013</li>
-        <li>NSF Graduate Fellowship Recipient 2012</li>
-        <li>Fulbright Scholar 2012</li>
-        <li>UCSB Fellowship Recipient 2012</li>
-        <li>Graduated Cum Laude 2011</li>
-        <li>UCSD Robins Scholarship 2010</li>
-        <li>BAE Systems Scholarship 2009</li>
-        <li>UCSD Programs Abroad Returnee of the Year 2010</li>
-        <li>Inducted Tau Beta Pi (TBP) 2009</li>
-        <li>Inducted Eta Kappa Nu (HKN) 2009</li>
-        <li>UCSD Provost Honors 2006- 2009</li>
-        <li>Boeing Scholarship 2008</li>
-        <li>UCSD International Center Scholarship 2007</li>
-      </ul>
+    <a id="awards" />
+    <ul className="fa-ul mb-0">
+      <li>MobiSys 2013 Best Poster 2013</li>
+      <li>NSF Graduate Fellowship Recipient 2012</li>
+      <li>Fulbright Scholar 2012</li>
+      <li>UCSB Fellowship Recipient 2012</li>
+      <li>Graduated Cum Laude 2011</li>
+      <li>UCSD Robins Scholarship 2010</li>
+      <li>BAE Systems Scholarship 2009</li>
+      <li>UCSD Programs Abroad Returnee of the Year 2010</li>
+      <li>Inducted Tau Beta Pi (TBP) 2009</li>
+      <li>Inducted Eta Kappa Nu (HKN) 2009</li>
+      <li>UCSD Provost Honors 2006- 2009</li>
+      <li>Boeing Scholarship 2008</li>
+      <li>UCSD International Center Scholarship 2007</li>
+    </ul>
 
   </Section>
 

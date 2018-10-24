@@ -10,7 +10,7 @@ class GallerySidebar extends React.Component {
 
     var years=[]
     return (
-      <div className="mb-4">
+      <div >
 
         <h3>Jump to Year:</h3>
         <ul>
