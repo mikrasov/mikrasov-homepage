@@ -1,93 +1,141 @@
+import React from 'react'
 import { graphql, StaticQuery, withPrefix } from 'gatsby'
-import React, { Component } from "react"
-
-import "../components/map.css"
-import {
-  ComposableMap,
-  ZoomableGroup,
-  Geographies,
-  Geography,
-} from "react-simple-maps"
-
-
+import WorldMap from "../components/map/world-map"
+import UsaMap from "../components/map/usa-map"
 import Layout from '../components/layout'
 
-const livedCountries = {
-  "GBR": "United Kingdom",
-  "RUS": "Russia",
-  "TWN": "Taiwan",
-  "THA": "Thailand",
-  "USA": "USA",
-
+const lived = {
+  states: [
+    "California",
+    "Colorado",
+  ],
+  countries: [
+    "Russia",
+    "Thailand",
+    "United States",
+    "Taiwan",
+  ]
 }
 
-const visitedCountries = {
-  //https://www.worldatlas.com/aatlas/ctycodes.htm
-  "AUS": "Australia",
-  "AUT": "Austria",
-  "BEL": "Belgium",
-  "KHM": "Cambodia",
-  "CAN": "Canada",
-  "HRV": "Croatia",
-  "CHN": "China",
-  "CZE": "Czech Republic",
-  "GBR": "United Kingdom",
-  "FIN": "Finland",
-  "FRA": "France",
-  "DEU": "Germany",
-  "GRC": "Greece",
-  "HKG": "Hong Kong",
-  "HUN": "Hungary",
-  "IRL": "Ireland",
-  "ITA": "Italy",
-  "JPN": "Japan",
-  "LUX": "Luxembourg",
-  "MAC": "Macau",
-  "MYS": "Malaysia",
-  "MEX": "Mexico",
-  "MCO": "Monaco",
-  "MNE": "Montenegro",
-  "NLD": "Netherlands",
-  "NZL": "New Zealand",
-  "NOR": "Norway",
-  "PER": "Peru",
-  "SRB": "Serbia",
-  "SGP": "Singapore",
-  "ESP": "Spain",
-  "SWE": "Sweden",
-  "CHE": "Switzerland",
-  "TUR": "Turkey",
-  "UKR": "Ukraine",
-  "VAT": "Vatican City",
-  "VNM": "Vietnam",
-  "ZMB": "Zambia"
+const visited = {
+  states: [
+    "Arizona",
+    "Connecticut",
+    "Delaware",
+    "District of Columbia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Kansas",
+    "Kentucky",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Minnesota",
+    "Missouri",
+    "Montana",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "Ohio",
+    "Oregon",
+    "Pennsylvania",
+    "Rode Island",
+    "South Dakota",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "Wisconsin",
+    "Wyoming",
+  ],
+  countries: [
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Canada",
+    "Switzerland",
+    "China",
+    "Czech Rep.",
+    "Germany",
+    "Spain",
+    "Finland",
+    "France",
+    "United Kingdom",
+    "Greece",
+    "Hong Kong",
+    "Croatia",
+    "Hungary",
+    "Ireland",
+    "Italy",
+    "Japan",
+    "Cambodia",
+    "Luxembourg",
+    "Monaco",
+    "Mexico",
+    "Montenegro",
+    "Malaysia",
+    "Netherlands",
+    "Norway",
+    "New Zealand",
+    "Peru",
+    "Singapore",
+    "Serbia",
+    "Sweden",
+    "Turkey",
+    "Ukraine",
+    "Vatican",
+    "Vietnam",
+    "Zambia",
+  ]
 }
 
 
+const styleWorld = function(geography){
+  var sel = geography.properties.name;
+  var cls = "mapDefault";
 
-
-const geo = function(projection,geography,i){
-
-  var cls;
-  if( geography.id in livedCountries){
+  if(lived.countries.includes(sel) ){
     cls = "mapLived";
   }
-  else if( geography.id in visitedCountries){
+
+  if( visited.countries.includes(sel) ){
     cls = "mapVisited";
   }
-  else {
-    cls = "mapDefault";
-  }
 
-  return <Geography
-    key={i}
-    geography={geography}
-    projection={projection}
-    className={cls}
-  />
+  return cls
 
 }
 
+const styleUsa = function(geography){
+  var sel = geography.properties.NAME_1;
+  var cls = "mapDefault";
+
+  if( lived.states.includes(sel) ){
+    cls = "mapLived";
+  }
+
+  if( visited.states.includes(sel) ){
+    cls = "mapVisited";
+  }
+
+  return cls
+}
+
+
+const sidebar = <div>
+  <h3>Jump to:</h3>
+  <ul>
+    <li>
+      <a href="#worldMap">World Travels</a>
+    </li>
+    <li><a href="#usaMap">USA Travels</a></li>
+  </ul>
+</div>
 
 const MapPage = ({ children }) => (
   <StaticQuery
@@ -105,25 +153,17 @@ const MapPage = ({ children }) => (
 
 
   render={data => (
-    <Layout sideImage={data.profileImage} active={"travel"}>
-      <div className="mapContainer">
-        <ComposableMap
-          projectionConfig={{ scale: 205,  rotation: [-11,0,0], }}
-          width={980}
-          height={551}
-          className="mapBox"
-        >
-          <ZoomableGroup center={[0,20]} disablePanning>
-            <Geographies geography={withPrefix("world-50m.json")}>
-              {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
+    <Layout sideImage={data.profileImage} sideContent={sidebar} active={"travel"}>
+      <h1>My Travels Around the World</h1>
+      <a id="worldMap"/>
+      <WorldMap styleGeo={styleWorld} />
+      <h3 style={{textAlign:"right"}}>I have lived in <span className="mapLivedColor"> {lived.countries.length}</span> countries and explored a total of <span className="mapVisitedColor"> {lived.countries.length + visited.countries.length}</span>.</h3>
 
-                geo(projection,geography, i)
+      <h1 className="mt-5 mb-0">My Travels in the USA</h1>
+      <a id="usaMap"/>
+      <UsaMap  styleGeo={styleUsa} />
+      <h3 style={{textAlign:"right"}}>I have lived in <span className="mapLivedColor"> {lived.states.length}</span> states and explored a total of <span className="mapVisitedColor"> {lived.states.length + visited.states.length}</span>.</h3>
 
-              ))}
-            </Geographies>
-          </ZoomableGroup>
-        </ComposableMap>
-      </div>
     </Layout>
   )}
 />

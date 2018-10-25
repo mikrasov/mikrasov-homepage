@@ -10,6 +10,14 @@
 }
 
 
+.mapVisitedColor{
+    color: #21f13d;
+}
+.mapLivedColor{
+    color:#f10400;
+}
+
+
 .mapLived{
     fill: #f10400;
     stroke: #607D8B;
