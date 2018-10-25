@@ -50,7 +50,7 @@ export const pageQuery = graphql`
     profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 225) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

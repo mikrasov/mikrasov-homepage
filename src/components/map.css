@@ -1,0 +1,54 @@
+.mapContainer {
+    width: 100%;
+    maxWidth: 980;
+    margin: 0 auto;
+}
+
+.mapBox {
+    width: 100%;
+    height: auto;
+}
+
+
+.mapLived{
+    fill: #f10400;
+    stroke: #607D8B;
+    strokeWidth: 0.75;
+    outline: none;
+}
+
+.mapLived:hover{
+    fill: #a90500;
+    stroke: #607D8B;
+    strokeWidth: 0.75;
+    outline: none;
+}
+
+.mapVisited{
+    fill: #21f13d;
+    stroke: #607D8B;
+    strokeWidth: 0.75;
+    outline: none;
+}
+
+.mapVisited:hover{
+    fill: #29a92c;
+    stroke: #607D8B;
+    strokeWidth: 0.75;
+    outline: none;
+}
+
+.mapDefault{
+    fill: #ECEFF1;
+    stroke: #607D8B;
+    strokeWidth: 0.75;
+    outline: none;
+}
+
+.mapDefault:hover{
+    fill: #607D8B;
+    stroke: #607D8B;
+    strokeWidth: 0.75;
+    outline: none;
+}
+
