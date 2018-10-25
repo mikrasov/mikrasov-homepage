@@ -11,52 +11,41 @@
 
 
 .mapVisitedColor{
-    color: #21f13d;
+    color: #4da9d4;
 }
 .mapLivedColor{
-    color:#f10400;
+    color:#d44456;
 }
 
 
 .mapLived{
-    fill: #f10400;
+    fill: #d44456;
     stroke: #607D8B;
-    strokeWidth: 0.75;
-    outline: none;
 }
 
 .mapLived:hover{
-    fill: #a90500;
+    fill: #f10400;
     stroke: #607D8B;
-    strokeWidth: 0.75;
-    outline: none;
 }
 
 .mapVisited{
-    fill: #21f13d;
+    fill: #4da9d4;
     stroke: #607D8B;
-    strokeWidth: 0.75;
-    outline: none;
+
 }
 
 .mapVisited:hover{
-    fill: #29a92c;
-    stroke: #607D8B;
-    strokeWidth: 0.75;
-    outline: none;
+    fill: #1856ba;
+
 }
 
 .mapDefault{
-    fill: #ECEFF1;
+    fill: #f1f1f1;
     stroke: #607D8B;
-    strokeWidth: 0.75;
-    outline: none;
 }
 
 .mapDefault:hover{
-    fill: #607D8B;
+    fill: #f1f1f1;
     stroke: #607D8B;
-    strokeWidth: 0.75;
-    outline: none;
 }
 
