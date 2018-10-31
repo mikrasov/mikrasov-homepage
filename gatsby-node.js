@@ -33,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
               edges {
                 node {
                   fields {
+                    draft
                     slug
                     date
                   }
@@ -56,16 +57,18 @@ exports.createPages = ({ graphql, actions }) => {
           const previous = index === posts.length - 1 ? null : posts[index + 1].node;
           const next = index === 0 ? null : posts[index - 1].node;
 
-          createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: post.node.fields.slug,
-              date: post.node.fields.date,
-              previous,
-              next,
-            },
-          })
+          if (!post.node.fields.draft) {
+            createPage({
+              path: post.node.fields.slug,
+              component: blogPost,
+              context: {
+                slug: post.node.fields.slug,
+                date: post.node.fields.date,
+                previous,
+                next,
+              },
+            })
+          }
         })
 
         // Create blog post list pages
@@ -87,7 +90,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
 
-
+115
 
       })
     )
@@ -101,6 +104,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const path = createFilePath({ node, getNode })
     const slug = slugify(path)
     date = slug.match(/(\d{4})-(\d{2})-(\d{2})/ )
+
+    createNodeField({
+      node,
+      name: `draft`,
+      value: path.includes("/_"),
+    })
 
     createNodeField({
       node,
