@@ -36,7 +36,7 @@ export default class BlogList extends React.Component {
         <h1> Recent News </h1>
         <div className="blog-posts">
           {posts
-            .filter(post => post.node.frontmatter.title.length > 0)
+            .filter(post => (post.node.frontmatter.title.length > 0) && !post.node.fields.draft)
             .map(({ node: post }) => {
               return(
                 <BlogPreview post={post} />
@@ -78,8 +78,9 @@ export const blogListQuery = graphql`
           excerpt(pruneLength: 215)
           id
           fields {
+            draft
             slug
-             date(formatString: "MMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
           }
           frontmatter {
             title

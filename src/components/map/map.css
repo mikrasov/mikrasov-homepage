@@ -1,0 +1,51 @@
+.mapContainer {
+    width: 100%;
+    maxWidth: 980;
+    margin: 0 auto;
+}
+
+.mapBox {
+    width: 100%;
+    height: auto;
+}
+
+
+.mapVisitedColor{
+    color: #4da9d4;
+}
+.mapLivedColor{
+    color:#d44456;
+}
+
+
+.mapLived{
+    fill: #d44456;
+    stroke: #607D8B;
+}
+
+.mapLived:hover{
+    fill: #f10400;
+    stroke: #607D8B;
+}
+
+.mapVisited{
+    fill: #4da9d4;
+    stroke: #607D8B;
+
+}
+
+.mapVisited:hover{
+    fill: #1856ba;
+
+}
+
+.mapDefault{
+    fill: #f1f1f1;
+    stroke: #607D8B;
+}
+
+.mapDefault:hover{
+    fill: #f1f1f1;
+    stroke: #607D8B;
+}
+

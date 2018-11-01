@@ -44,6 +44,7 @@ class Layout extends React.Component {
               <Nav.Link href="/" className={(this.props.active==="news")?"active":""}>News</Nav.Link>
               <Nav.Link href="/skills" className={(this.props.active==="skills")?"active":""}>Skills</Nav.Link>
               <Nav.Link href="/cv" className={(this.props.active==="cv")?"active":""}>CV</Nav.Link>
+              <Nav.Link href="/travel" className={(this.props.active==="travel")?"active":""}>Travel</Nav.Link>
               <Nav.Link href="/gallery" className={(this.props.active==="gallery")?"active":""}>Photography</Nav.Link>
             </Nav>
           </Navbar.Collapse>

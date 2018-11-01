@@ -1,5 +1,5 @@
 ---
-#title: "Gatsby Automatic Slugs"
+title: "Gatsby Automatic Slugs"
 featuredImage: "./featured-image.jpg"
 ---
 

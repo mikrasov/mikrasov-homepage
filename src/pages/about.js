@@ -46,8 +46,8 @@ const AboutPage = ({ children }) => (
       }
       zambiaImage: file(relativePath: { eq: "zambia.jpg" }) {
         childImageSharp {
-          fixed(width: 600) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
@@ -72,7 +72,7 @@ const AboutPage = ({ children }) => (
           network traces.
         </p>
 
-        <Img className="boundedPic" fixed={data.zambiaImage.childImageSharp.fixed} style={{textAlign:"center"}} />
+        <Img className="boundedPic" fluid={data.zambiaImage.childImageSharp.fluid} style={{textAlign:"center"}} />
 
         <p>
           My work focuses on cutting edge research in Computer Science that is applied to social issues facing us today.
