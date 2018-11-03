@@ -11,11 +11,9 @@ export default function Template({ data, }) {
   const { fields, frontmatter, html } = markdownRemark
 
   const sidebar = ""
-
   var albumReminder = "";
   var albumReminderIcon = "";
 
-  console.log(AlbumIcon)
   if(frontmatter.album != null){
     albumReminderIcon = (
       <a href={frontmatter.album} target="_blank" className="album-reminder-icon">
@@ -32,15 +30,11 @@ export default function Template({ data, }) {
   }
 
   return (
-
     <Layout sideContent={sidebar} sideImage={data.profileImage} active={"news"}>
       <SocialCard title={frontmatter.title} url={fields.slug} description={markdownRemark.excerpt} featuredImage={frontmatter.featuredImage.childImageSharp.sizes.src} />
 
-
       <p className="blog-date">{fields.date}</p>
       <h1>{frontmatter.title}{albumReminderIcon}</h1>
-
-
 
       <div
         className="blog-content"
