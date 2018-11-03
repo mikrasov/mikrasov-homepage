@@ -60,7 +60,7 @@ const AboutPage = ({ children }) => (
       <Layout sideImage={data.profileImage} sideContent={sidebar} active={"about"}>
         <h1>About</h1>
 
-        <Img className="boundedPic" fixed={data.droneImage.childImageSharp.fixed}  style={{float:"left"}}/>
+        <Img className="boundedPic float-left" fixed={data.droneImage.childImageSharp.fixed} />
 
         <p>
           I am currently finishing a PhD in Computer Science at UC Santa Barbara.
@@ -79,7 +79,7 @@ const AboutPage = ({ children }) => (
           Topics of interest include disaster response and recovery, understanding climate change and habitat disruption,
           freedom of speech, and ethical use of technology.
         </p>
-        <Img className="boundedPic" fixed={data.sunflowerImage.childImageSharp.fixed}  style={{float:"right"}}/>
+        <Img className="boundedPic float-right" fixed={data.sunflowerImage.childImageSharp.fixed} />
 
         <p>
           My skills include application and systems engineering, strong understanding of wireless networks, as well as

@@ -29,10 +29,11 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allMarkdownRemark(limit: 1000) {
+            allMarkdownRemark(limit: 1000 ) {
               edges {
                 node {
                   fields {
+                    type
                     draft
                     slug
                     date
@@ -53,11 +54,17 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
 
+        var numDrafts = 0;
         _.each(posts, (post, index) => {
           const previous = index === posts.length - 1 ? null : posts[index + 1].node;
           const next = index === 0 ? null : posts[index - 1].node;
 
-          if (!post.node.fields.draft) {
+          if (post.node.fields.draft) {
+            numDrafts++;
+            return;
+          }
+
+          if (post.node.fields.type !== "album") {
             createPage({
               path: post.node.fields.slug,
               component: blogPost,
@@ -69,11 +76,12 @@ exports.createPages = ({ graphql, actions }) => {
               },
             })
           }
+
         })
 
         // Create blog post list pages
         const postsPerPage = 5;
-        const numPages = Math.ceil(posts.length / postsPerPage);
+        const numPages = Math.ceil( (posts.length - numDrafts)/ postsPerPage);
 
 
         _.times(numPages, i => {
@@ -89,9 +97,6 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
 
-
-115
-
       })
     )
   })
@@ -102,15 +107,33 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const path = createFilePath({ node, getNode })
-    const slug = slugify(path)
+    var slug = slugify(path)
     date = slug.match(/(\d{4})-(\d{2})-(\d{2})/ )
+
+    if(path.includes("/posts")){
+      type = "post";
+    }
+    else if(path.includes("/tutorials")){
+      type = "tutorial";
+    }
+    else if(path.includes("/albums")){
+      type = "album";
+    }
+    else {
+      type = "unknown";
+    }
+
 
     createNodeField({
       node,
-      name: `draft`,
-      value: path.includes("/_"),
+      name: `type`,
+      value: type,
     })
-
+    createNodeField({
+      node,
+      name: `draft`,
+      value: path.includes("_"),
+    })
     createNodeField({
       node,
       name: `slug`,

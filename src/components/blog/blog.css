@@ -36,6 +36,10 @@
     color: #1856ba;
 }
 
+.blog-preview.blog-tutorial .blog-title{
+    color: #ba1856;
+}
+
 
 .blog-preview.blog-post{
     background-color: #0000FF07;
@@ -46,6 +50,40 @@
     border: 1px solid #c6dfbf;
 }
 
+
+.blog-preview.blog-tutorial{
+    background-color: #FF000007;
+    border: 1px solid #dfbcb7;
+}
+
+
+
+.marker-post{
+    color: #1856ba;
+    font-size: 75%;
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.marker-album{
+    color: #18ba56;
+    font-size: 75%;
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.marker-tutorial{
+    color: #ba1856;
+    font-size: 75%;
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
 
 
 .blog-featured-image{
@@ -62,4 +100,84 @@
 }
 .blog-preview h1{
     font-size: large;
+}
+
+.blog-content img{
+    border: 2px solid #000000;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+
+.no-border img{
+
+    border: none;
+}
+
+.blog-content .gatsby-resp-image-wrapper {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.album-reminder{
+    max-width: 25rem;
+    margin: 0.5rem auto 0.5rem auto;
+    color: #18ba56;
+    background-color: #00FF0007;
+    border: 1px solid #c6dfbf;
+    padding: 0.5rem;
+    text-align: center;
+
+}
+
+.album-reminder svg{
+    max-height: 1rem;
+    max-width: 1rem;
+    margin: 0 0.5rem 0 0.5rem;
+
+}
+
+
+.album-reminder:hover{
+    color: rgb(34, 255, 117);
+    fill: rgb(34, 255, 117);
+}
+
+.album-reminder-icon svg{
+    max-height: 1.3rem;
+    max-width: 1.3rem;
+    margin: 0 0.5rem 0 0.5rem;
+    fill: #18ba56;
+
+}
+
+
+.album-reminder-icon svg:hover{
+    color: rgb(34, 255, 117);
+    fill: rgb(34, 255, 117);
+}
+
+.img-left{
+    float: left;
+    min-width: 30%;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.img-right{
+    float: right;
+    min-width: 30%;
+    margin: 0 0.5rem 0 0.5rem;
+}
+.img-center{
+    min-width: 30%;
+    margin: 1rem auto 1rem auto;
+}
+
+
+.img-no-border img{
+    border: none;
+
+}
+
+.date-range{
+    text-align: right;
+    font-weight: bold;
 }

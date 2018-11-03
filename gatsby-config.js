@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-sitemap`,
+
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -36,7 +36,7 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: [],
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
@@ -52,10 +52,15 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: "markdown-pages",
-        path: `${__dirname}/src/posts/`,
+        path: `${__dirname}/src/news/`,
       },
     },
     {
@@ -71,7 +76,11 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: { maxWidth: 400 }
+            options: {
+              maxWidth: 400,
+              linkImagesToOriginal: false,
+              withWebp: true
+            }
           },
           {
             resolve: "gatsby-remark-embed-video",
@@ -96,6 +105,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-react-svg',
   ],
 }
