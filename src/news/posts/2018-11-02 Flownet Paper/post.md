@@ -3,8 +3,7 @@ title: "Paper on Verified Group Anonymity Published"
 featuredImage: "./featured-image.jpg" 
 ---
 
-After a long delay, our paper 
-**A user-driven free speech application for anonymous and verified online, public group discourse** has finally been published in the *Journal of Internet Services and Applications*.
+After a long delay, our paper: **A user-driven free speech application for anonymous and verified online, public group discourse** has finally been published in the *Journal of Internet Services and Applications*.
 
 
 Online social networks are major hubs of communications that are used to share information by societies worldwide. However, the ability to freely communicate on these platforms is increasingly restricted in countries across the globe and existing technological solutions do not fully address the needs of affected communities. 

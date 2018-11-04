@@ -16,12 +16,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-netlify`,
+
 
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Mikrasov Design: Michael Nerkasov\'s Homepage',
+        name: 'Mikrasov Design: Michael Nekrasov\'s Homepage',
         short_name: 'Mikrasov Design',
         start_url: '/',
         background_color: '#0277bd',
@@ -106,5 +106,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-svg',
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`, //KEEP LAST!
   ],
 }
