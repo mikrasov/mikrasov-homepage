@@ -57,6 +57,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-430466-1",
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        cookieDomain: "mikrasov.com",
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: "markdown-pages",
