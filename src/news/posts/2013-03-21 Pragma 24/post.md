@@ -1,12 +1,12 @@
 ---
 title: "Present at PRAGMA 24"
-featuredImage: "./featured-image.jpg"
+featuredImage: "./featured-image.png"
 ---
 
 I attended the [PRAGMA 24 Workshop](http://www.pragma-grid.net/meetings/pragma-24-presentations/) in Bangkok where I presented my work on **[Technologies for Environmental and Disaster Monitoring](/papers/Nekrasov_2013-03_PRAGMA24.pdf)**
 
 <div class="img-left">
- <a href="/papers/Nekrasov_2013-03_PRAGMA24.pdf"><img src="featured-image.jpg" alt="Technologies for Environmental and Disaster Monitoring"/></a>
+ <a href="/papers/Nekrasov_2013-03_PRAGMA24.pdf"><img src="featured-image.png" alt="Technologies for Environmental and Disaster Monitoring"/></a>
 </div>
 
 
