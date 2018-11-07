@@ -2,6 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 
 import { Link as GatsbyLink } from "gatsby"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Link = ({ children, to, ...other }) => {
 
@@ -16,9 +17,9 @@ const Link = ({ children, to, ...other }) => {
     )
   }
   return (
-    <a href={to} {...other} target="_blank">
+    <OutboundLink href={to} {...other} target="_blank">
       {children}
-    </a>
+    </OutboundLink>
   )
 }
 

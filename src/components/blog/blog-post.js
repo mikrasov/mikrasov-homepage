@@ -1,5 +1,6 @@
 import React from "react"
 import {Link, graphql } from "gatsby"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../layout'
 import "./blog.css"
 import SocialCard from "../socialCard"
@@ -16,16 +17,16 @@ export default function Template({ data, }) {
 
   if(frontmatter.album != null){
     albumReminderIcon = (
-      <a href={frontmatter.album} target="_blank" className="album-reminder-icon">
+      <OutboundLink href={frontmatter.album} target="_blank" className="album-reminder-icon">
         <AlbumIcon />
-      </a>
+      </OutboundLink>
     )
     albumReminder = (
-      <a href={frontmatter.album} target="_blank">
+      <OutboundLink href={frontmatter.album} target="_blank">
         <div className="album-reminder">
           <AlbumIcon /> Check out the full album of images for this post!
         </div>
-      </a>
+      </OutboundLink>
     )
   }
 
