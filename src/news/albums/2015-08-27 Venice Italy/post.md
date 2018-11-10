@@ -1,6 +1,6 @@
 ---
 title: "Venice, Italy"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/q77eL2XDEPUxxbZk7"
 ---
 We finished our trip to Europe by visiting one of my favorite places Venice.

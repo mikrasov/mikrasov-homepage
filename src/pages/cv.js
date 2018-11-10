@@ -148,8 +148,8 @@ const CVPage = ({ children }) => (
   <Section name={"Publications"}>
     <a id="publications" />
         <div className="mb-2">
-          PENDING: Nekrasov, M, et al. “Anonymity and Reputation on Social Media in an Age of Global Internet
-          Dependence.” Journal of Internet Services and Applications. 2018.
+          Nekrasov, M, et al. <a target="_blank" href={withPrefix("papers/Nekrasov_2018_11_JISA.pdf")}>"Anonymity and Reputation on Social Media in an Age of Global Internet
+          Dependence.</a> Journal of Internet Services and Applications. 2018.
         </div>
         <div className="mb-2">
           Nekrasov, M, et al. <a target="_blank" href={withPrefix("papers/Nekrasov_2017_foci.pdf")}>"SecurePost: Verified Group-Anonymity on
