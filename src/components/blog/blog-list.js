@@ -24,11 +24,35 @@ export default class BlogList extends React.Component {
       <ul>
         {
           !isFirst &&
-          <li><Link to={prevPage} rel="prev">← Newer</Link></li>
+          <li><Link to="/" rel="prev"> Newest</Link></li>
+        }
+        {
+          !isFirst &&
+          <li><Link to={prevPage} rel="prev">Newer ←</Link></li>
+        }
+        {
+          isFirst &&
+          <li>At Newest</li>
+        }
+        {
+          isFirst &&
+          <li>No Newer</li>
         }
         {
           !isLast &&
           <li><Link to={nextPage} rel="next">Older →</Link></li>
+        }
+        {
+          !isLast &&
+          <li><Link to={numPages} rel="next">Oldest</Link></li>
+        }
+        {
+          isLast &&
+          <li>At Oldest</li>
+        }
+        {
+          isLast &&
+          <li>None Older</li>
         }
       </ul>
     </p>)
