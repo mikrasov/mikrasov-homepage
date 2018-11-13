@@ -3,7 +3,7 @@ import Layout from '../../components/layout'
 import { graphql, StaticQuery } from 'gatsby'
 import NpsMap from '../../components/nps/nps-map'
 
-
+import {StackedArea} from 'britecharts-react'
 
 const NpsIndexPage = ({ children }) => (
   <StaticQuery
@@ -32,6 +32,13 @@ const NpsIndexPage = ({ children }) => (
 
         <NpsMap width={"100px"} height={"600px"} />
 
+
+
+        <StackedArea
+          data={stackedAreaData.with2Sources()}
+          width={600}
+          height={400}
+        />
       </Layout>
 
       )}
