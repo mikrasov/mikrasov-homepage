@@ -13,6 +13,7 @@ const lived = {
     "Russia",
     "Thailand",
     "United States",
+    "United Kingdom",
     "Taiwan",
   ]
 }
@@ -65,7 +66,6 @@ const visited = {
     "Spain",
     "Finland",
     "France",
-    "United Kingdom",
     "Greece",
     "Hong Kong",
     "Croatia",

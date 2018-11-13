@@ -1,0 +1,81 @@
+.mapContainer {
+    width: 100%;
+    maxWidth: 1024;
+    margin: 0 auto;
+}
+
+.mapBox {
+    width: 100%;
+    height: auto;
+}
+
+.NationalPark{
+    fill: #229d39;
+    stroke: none;
+    border: none;
+    background-color: #229d39;
+}
+
+.NationalHistoricalReserve, .NationalHistoricalPark, .NationalBattlefieldPark, .NationalMilitaryPark, .NationalHistoricTrail, .NationalMemorial, .InternationalHistoricSite, .NationalBattlefieldSite, .NationalBattlefield, .NationalMonumentandHistoricShrine, .NationalHistoricSite{
+    fill: #d48f01;
+    stroke: none;
+    border: none;
+    background-color: #d48f01;
+}
+
+
+.NationalMonument, .NationalRecreationArea, .Park, .NationalPreserve, .NationalReserve, .NationalScenicTrail, .NationalHistoricalParkandPreserve, .EcologicalandHistoricPreserve{
+    fill: #42d49c;
+    stroke: none;
+    border: none;
+    background-color: #42d49c;
+}
+
+.NationalSeashore, .NationalRiver, .WildandScenicRiver, .NationalScenicRiver, .NationalScenicRiverway, .WildRiver, .NationalRecreationRiver, .NationalRiverandRecreationArea, .ScenicandRecreationalRiver, .NationalLakeshore{
+    fill: #1964d4;
+    stroke: none;
+    border: none;
+    background-color: #1964d4;
+
+}
+
+
+.Parkway, .NationalParkway, .OtherDesignation{
+    fill: #9f2cd4;
+    stroke: none;
+    border: none;
+    background-color: #9f2cd4;
+}
+
+.state{
+    fill: rgba(255, 253, 97, 0.13);
+    stroke: #aaaaaa;
+}
+
+.critical{
+    fill: #ff000011;
+    stroke: #ff000033;
+    border: solid 1px #ff000033;
+    background-color: #ff000011;
+
+}
+
+.key{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
+.mapDefault{
+    fill: none;
+    stroke: #aaaaaa;
+}
+
+
+.hidden{
+    display: none;
+}

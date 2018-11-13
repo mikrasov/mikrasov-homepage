@@ -15,8 +15,12 @@ import twitterLogo from '../images/icons/twitter.png'
 import linkedinLogo from '../images/icons/in.png'
 import gitLogo from '../images/icons/git.png'
 
-
 class Layout extends React.Component {
+
+
+
+
+
   render() {
     return (
       <>
@@ -51,33 +55,39 @@ class Layout extends React.Component {
         </Navbar>
 
 
-        <div className={'container'}>
-          <div className={'row no-gutters'}>
-            <div id='content' className={'col-md-9'}>{this.props.children}</div>
-            <div className='col-md-3 ' id={"sidebar"}>
-              <div className="sidebarProfileBlock">
-                {
-                  (this.props.sideImage !== undefined) &&
-                  <Img className="sidebarProfile" fluid={this.props.sideImage.childImageSharp.fluid}  />
-                }
+        {(this.props.noSidebar === true) ? (<div className={'container'}><div id='content'>{this.props.children}</div></div>) : (
+          <div className={'container'}>
+            <div className={'row no-gutters'}>
+              <div id='content' className={'col-md-9'}>{this.props.children}</div>
+              <div className='col-md-3 ' id={"sidebar"}>
+                <div className="sidebarProfileBlock">
+                  {
+                    (this.props.sideImage !== undefined) &&
+                    <Img className="sidebarProfile" fluid={this.props.sideImage.childImageSharp.fluid}/>
+                  }
 
-              </div>
-              <div className="sideLinkBox">
-                <a className="sidebarIconA" href="https://github.com/mikrasov" target="_blank" ><img src={twitterLogo} /></a><br/>
-                <a className="sidebarIconB" href="https://twitter.com/mikrasov" target="_blank"><img src={linkedinLogo}  /></a>
-                <a className="sidebarIconC" href="https://www.linkedin.com/in/mikrasov" target="_blank"><img src={gitLogo} /></a>
+                </div>
+                <div className="sideLinkBox">
+                  <a className="sidebarIconA" href="https://github.com/mikrasov" target="_blank"><img
+                    src={twitterLogo}/></a><br/>
+                  <a className="sidebarIconB" href="https://twitter.com/mikrasov" target="_blank"><img
+                    src={linkedinLogo}/></a>
+                  <a className="sidebarIconC" href="https://www.linkedin.com/in/mikrasov" target="_blank"><img
+                    src={gitLogo}/></a>
+                </div>
+
+                <h1>Michael Nekrasov</h1>
+                <h2 style={{ textAlign: 'center' }}>Ph.D Candidate in C.S., Web Designer, Photographer, Traveler.</h2>
+
+                <div className="sidebar-content">
+                  {this.props.sideContent}
+                </div>
               </div>
 
-              <h1  >Michael Nekrasov</h1>
-              <h2 style={{textAlign : 'center'}}>Ph.D Candidate in C.S., Web Designer, Photographer, Traveler.</h2>
-
-              <div className="sidebar-content">
-                {this.props.sideContent}
-              </div>
             </div>
-
           </div>
-        </div>
+        )
+        }
 
         <div id="footer" className="row">
           <div className="col-md-4">
