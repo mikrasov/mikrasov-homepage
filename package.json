@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Micheal Nekrasov <mikrasov@gmail.com>",
   "dependencies": {
-    "d3-node": "^2.1.0",
+
     "gatsby": "^2.0.21",
     "gatsby-image": "^2.0.14",
     "gatsby-plugin-catch-links": "^2.0.4",
@@ -18,12 +18,10 @@
     "gatsby-plugin-robots-txt": "^1.3.0",
     "gatsby-plugin-sharp": "^2.0.6",
     "gatsby-plugin-sitemap": "^2.0.2",
-    "gatsby-plugin-typography": "^2.2.1",
     "gatsby-remark-copy-linked-files": "^2.0.5",
     "gatsby-remark-embed-video": "^1.4.0",
     "gatsby-remark-images": "^2.0.4",
     "gatsby-remark-prismjs": "^3.0.2",
-    "gatsby-source-contentful": "^2.0.4",
     "gatsby-source-filesystem": "^2.0.3",
     "gatsby-transformer-json": "^2.1.4",
     "gatsby-transformer-remark": "^2.1.7",
@@ -33,10 +31,7 @@
     "react-bootstrap": "1.0.0-beta.1",
     "react-dom": "^16.x",
     "react-helmet": "^5.x",
-    "react-infinite-scroll-component": "^4.2.0",
-    "react-simple-maps": "^0.12.1",
-    "react-typography": "^0.16.13",
-    "typography": "^0.16.17"
+    "react-simple-maps": "^0.12.1"
   },
   "keywords": [
     "gatsby"
