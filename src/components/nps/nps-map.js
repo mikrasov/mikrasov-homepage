@@ -84,14 +84,14 @@ class NpsMap extends React.Component {
   render() {
 
     return (
-      <div className="mapContainer">
+      <div className="mapContainer"  style={{marginBottom:"1rem"}}>
 
 
         <ComposableMap
           projection="albersUsa"
           projectionConfig={{ scale: 1240 }}
           width={980}
-          height={551}
+          height={600}
 
         >
           <ZoomableGroup center={this.state.center} zoom={ 1}>

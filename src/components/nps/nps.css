@@ -79,3 +79,8 @@
 .hidden{
     display: none;
 }
+
+
+path {
+    fill: none;
+}
