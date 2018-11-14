@@ -1,6 +1,6 @@
 ---
 title: "Spain"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/6ixfR74XKjFsVnseA"
 ---
 After years of delay, Sherri and I took a full trip to the south of Spain.

@@ -1,6 +1,6 @@
 ---
 title: "Winter in California"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/N3XhWhJQhGSu9NvV6"
 ---
 Unlike many other places in the U.S. winter in california means flowers, butterflies, birds, and stunning cloudscapes.

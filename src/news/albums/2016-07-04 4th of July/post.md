@@ -1,6 +1,6 @@
 ---
 title: "4th of July, Catalina"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/ePKzNe2LB5ixkQWb8"
 ---
 Went with our friends to celebrate 4th of July in Avalon, Catalina.

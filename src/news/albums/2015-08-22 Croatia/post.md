@@ -1,6 +1,6 @@
 ---
 title: "Croatia"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/bEjzwMchn2k2D6xr6"
 ---
 The highlight of our trip was a visit to the croatian Plitvice lakes region. The lakes themselves are astounding

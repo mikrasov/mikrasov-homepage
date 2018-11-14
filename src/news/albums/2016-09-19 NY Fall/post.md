@@ -1,6 +1,6 @@
 ---
 title: "New York Fall"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/uf1V6CJiMW7H1Udf9"
 ---
 My family got together in the New York Finger Lake region.

@@ -1,6 +1,6 @@
 ---
 title: "Montenegro"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/r6P4YocDkCksdoRQ7"
 ---
 For the second stage in our Balkan journey, we met my relatives in Kotor, Montenegro. We rented a Airbnb and

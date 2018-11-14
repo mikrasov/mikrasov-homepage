@@ -1,6 +1,6 @@
 ---
 title: "Muslim Ban Protest"
-featuredImage: "./featured-image.png" 
+featuredImage: "./featured-image.jpg" 
 album: "https://goo.gl/photos/Tg2Zu2sXZnctHp7h9"
 ---
 “Give me your tired, your poor,

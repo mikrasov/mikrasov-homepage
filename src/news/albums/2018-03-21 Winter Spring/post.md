@@ -1,6 +1,6 @@
 ---
 title: "Winter/Spring"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/unUXOLsERXtWC9wA2"
 ---
 As usual the winter rains have brought out some of the lush greens of Santa Barbara. This album contains snapshots

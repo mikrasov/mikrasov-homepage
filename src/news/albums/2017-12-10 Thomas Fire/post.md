@@ -1,6 +1,6 @@
 ---
 title: "Thomas Fire"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/HHlCYMA0vrqEH7Is2"
 ---
 Incredible shots of the Thomas Fire assaulting Ventura and causing periodic blackouts here in Goleta.

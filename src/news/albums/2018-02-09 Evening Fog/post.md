@@ -1,6 +1,6 @@
 ---
 title: "Evening Fog"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/jSHkMOjLfCZaMAVj1"
 ---
 One of my favorite times of the year on the California coast is winter when we get heavy fog.

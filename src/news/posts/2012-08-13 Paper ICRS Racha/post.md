@@ -1,6 +1,6 @@
 ---
 title: "Paper on Racha Observatory presented at ICRS "
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 Our paper: **[Sensor Networks Applications for Reefs at Racha Island, Thailand](/Nekrasov_2012_07_Sensor_Networks_Reefs.pdf)** was published and presented at the *[12th International Coral Reef Symposium](http://www.icrs2012.com/)* in Cairns, Australia.

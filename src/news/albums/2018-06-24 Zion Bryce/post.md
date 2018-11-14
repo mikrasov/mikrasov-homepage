@@ -1,6 +1,6 @@
 ---
 title: "Zion & Bryce"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/mqkmYTLqsR22mfiG6"
 ---
 My partner Sherri and I took a much needed getaway to the southwest. Aside from some annoying camp neighbors and scorching heat we had a blast.

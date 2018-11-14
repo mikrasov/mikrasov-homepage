@@ -1,6 +1,6 @@
 ---
 title: "Falcon 9 SAOCOM1A Launch"
-featuredImage: "./featured-image.png" 
+featuredImage: "./featured-image.jpg" 
 album: "https://photos.app.goo.gl/64xMumNPckP4eCNm8"
 ---
 

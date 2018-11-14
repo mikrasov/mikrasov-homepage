@@ -1,6 +1,6 @@
 ---
 title: "Carrizo Plains"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://goo.gl/photos/fD4op1g6cQjKNB217"
 ---
 Carrizo Plain is one of the 23 National monuments threatened by Donald Trump's executive order trying to strip the power

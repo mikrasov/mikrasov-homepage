@@ -1,6 +1,6 @@
 ---
 title: "Women's March"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/sb4itYwAOyTe7QYb2"
 ---
 I was proud to be among the hundreds gathered at the Santa Barbara Women's March.

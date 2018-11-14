@@ -1,6 +1,6 @@
 ---
 title: "Organ Pipe"
-featuredImage: "./featured-image.png"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/Oeul1AsYwdnsZs5G2"
 ---
 We started the year with a trip to the Organ Pipe National monument with my loving partner Sherri Conklin and
