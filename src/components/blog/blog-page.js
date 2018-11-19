@@ -1,11 +1,11 @@
 import React from "react"
 import {Link, graphql } from "gatsby"
 import Layout from "../layout"
-import BlogPreview from "./blogPreview"
+import BlogPreview from "./blog-preview"
 import "./blog.css"
 
 
-export default class BlogList extends React.Component {
+export default class BlogPage extends React.Component {
 
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -107,7 +107,7 @@ export default class BlogList extends React.Component {
 }
 
 export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+  query blogPageQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
       filter: {fields:{draft:{eq:false}}}

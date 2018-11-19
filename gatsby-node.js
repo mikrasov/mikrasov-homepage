@@ -87,7 +87,7 @@ exports.createPages = ({ graphql, actions }) => {
         _.times(numPages, i => {
           createPage({
             path: i === 0 ? `/` : `/${i + 1}`,
-            component: path.resolve('./src/components/blog/blog-list.js'),
+            component: path.resolve('./src/components/blog/blog-page.js'),
             context: {
               limit: postsPerPage,
               skip: i * postsPerPage,
