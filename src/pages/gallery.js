@@ -24,7 +24,7 @@ const GalleryPage = ({ children }) => (
             type
             slug
             year
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
           }
           frontmatter {
             title

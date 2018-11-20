@@ -3,8 +3,8 @@ import {Link, graphql } from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../layout'
 import "./blog.css"
-import SocialCard from "../socialCard"
 import AlbumIcon from './album.svg'
+import Metadata from "../metadata"
 
 export default function Template({ data, }) {
 
@@ -32,8 +32,12 @@ export default function Template({ data, }) {
 
   return (
     <Layout sideContent={sidebar} sideImage={data.profileImage} active={"news"}>
-      <SocialCard title={frontmatter.title} url={fields.slug} description={markdownRemark.excerpt} featuredImage={frontmatter.featuredImage.childImageSharp.sizes.src} />
-
+      <Metadata
+        pageTitle={frontmatter.title}
+        pageUrl={fields.slug}
+        description={markdownRemark.excerpt}
+        featuredImage={frontmatter.featuredImage.childImageSharp.sizes.src}
+      />
       <p className="blog-date">{fields.date}</p>
       <h1>{frontmatter.title}{albumReminderIcon}</h1>
 

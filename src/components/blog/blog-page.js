@@ -4,7 +4,6 @@ import Layout from "../layout"
 import BlogPreview from "./blog-preview"
 import "./blog.css"
 
-
 export default class BlogPage extends React.Component {
 
   render() {
@@ -22,38 +21,10 @@ export default class BlogPage extends React.Component {
     const sidebar = (<p className="mb-9">
       <h3>Navigation</h3>
       <ul>
-        {
-          !isFirst &&
-          <li><Link to="/" rel="prev"> Newest</Link></li>
-        }
-        {
-          !isFirst &&
-          <li><Link to={prevPage} rel="prev">Newer ←</Link></li>
-        }
-        {
-          isFirst &&
-          <li>At Newest</li>
-        }
-        {
-          isFirst &&
-          <li>No Newer</li>
-        }
-        {
-          !isLast &&
-          <li><Link to={nextPage} rel="next">Older →</Link></li>
-        }
-        {
-          !isLast &&
-          <li><Link to={numPages} rel="next">Oldest</Link></li>
-        }
-        {
-          isLast &&
-          <li>At Oldest</li>
-        }
-        {
-          isLast &&
-          <li>None Older</li>
-        }
+        { isFirst? (<li>At Newest</li>):  (<li><Link to="/" rel="first"> Newest</Link></li>) }
+        { isFirst? (<li>No Newer</li>):   (<li><Link to={prevPage} rel="prev">Newer ←</Link></li>) }
+        { isLast?  (<li>At Oldest</li>):  (<li><Link to={nextPage} rel="next">Older →</Link></li>) }
+        { isLast?  (<li>None Older</li>): (<li><Link to={numPages} rel="last">Oldest</Link></li>) }
       </ul>
     </p>)
 
@@ -63,15 +34,9 @@ export default class BlogPage extends React.Component {
         <div className="row mb-3 align-items-end">
           <div className="col"> <h1 className="m-0"> News </h1> </div>
           <div className="col date-range" >
-            {
-              !isFirst &&
-              <Link to={prevPage} rel="prev">← </Link>
-            }
+            { !isFirst && <Link to={prevPage} rel="prev">← </Link> }
             {fromLabel} - {toLabel}
-            {
-              !isLast &&
-              <Link to={nextPage} rel="next"> →</Link>
-            }
+            { !isLast && <Link to={nextPage} rel="next"> →</Link> }
             </div>
         </div>
         <div className="blog-posts">
@@ -86,21 +51,12 @@ export default class BlogPage extends React.Component {
 
         <div className="row">
           <div className="col">
-            {
-              !isFirst &&
-              <Link to={prevPage} rel="prev">← Newer</Link>
-            }
+            { !isFirst && <Link to={prevPage} rel="prev">← Newer</Link> }
           </div>
           <div className="col" style={{textAlign:"right"}}>
-            {
-              !isLast &&
-              <Link to={nextPage} rel="next">Older →</Link>
-            }
+            { !isLast &&  <Link to={nextPage} rel="next">Older →</Link> }
           </div>
         </div>
-
-
-
       </Layout>
     )
   }
@@ -147,5 +103,3 @@ export const blogListQuery = graphql`
     }
   }
 `;
-
-

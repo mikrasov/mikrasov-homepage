@@ -1,16 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { Link, StaticQuery } from 'gatsby'
+import {Nav, Navbar} from 'react-bootstrap'
+import Img from 'gatsby-image'
+import Metadata from './metadata'
 
 import './bootstrap.min.css'
 import './layout.css'
 import './sidebar.css'
 import './specialized.css'
 
-import {Nav, Navbar} from 'react-bootstrap'
-
-import Img from 'gatsby-image'
 import twitterLogo from '../images/icons/twitter.png'
 import linkedinLogo from '../images/icons/in.png'
 import gitLogo from '../images/icons/git.png'
@@ -24,20 +21,7 @@ class Layout extends React.Component {
   render() {
     return (
       <>
-        <Helmet
-          title={"Mikrasov Design"}
-          meta={[
-            { name: 'description', content: 'The homepage of Michael Nekrasov. I am currently finishing a PhD in ' +
-                'Computer Science at UC Santa Barbara. My research focuses on wireless aerial networks for environmental ' +
-                'and disaster applications. In addition to my academic and professional work, I am a photographer, hiker, ' +
-                'and adventurer. ' },
-            { name: 'keywords', content: 'Michael Nekrasov, computer science, photography, wireless networks, ' +
-                'sensor networks, aerial networks, UAV, UAS, drone, programing, web design, environment, disaster, ' +
-                'travel, hiking' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+        <Metadata />
 
         <Navbar  className="navbar-dark" expand="sm" fixed="top" style={{backgroundColor: "#134699"}}>
           <Navbar.Brand href="/">Michael Nekrasov</Navbar.Brand>
@@ -103,9 +87,4 @@ class Layout extends React.Component {
   }
 }
 
-
 export default Layout
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
