@@ -17,7 +17,7 @@ At the core of React are [components](https://reactjs.org/docs/react-component.h
 
 Say we wanted to create a component that will give us automatic styling for a section of a post. This component will have a *title* and have some *content*. We will create a file component **section.js** which will contain:
 
-```javascript
+```jsx
 import React from 'react'
 
 class Section extends React.Component {
@@ -41,7 +41,7 @@ First we import the *React* module. We create a class we name *Section* extendin
 ##Using Components
 That brings us to putting our component to use. 
 
-```javascript
+```jsx
 import React from 'react'
 import Section from 'section.js'
 
@@ -56,7 +56,7 @@ Here we import from **section.js**. We don't necessarily have to call it Section
 
 We store the resulting HTML node in a constant called *pageContent*. Depending on how you are using React you can now display it. For example passing the page content to **ReactDOM.render()**:
 
-```javascript
+```jsx
 ReactDOM.render(
   pageContent, 
   document.getElementById('root')
@@ -78,7 +78,7 @@ Yay! Wait... but we are just pasting the same text over again. That is not very 
 ##Component Properties
 Components can take properties in the form of HTML attributes. So lets pass some in.
 
-```javascript
+```jsx
 import React from 'react'
 import Section from 'section.js'
 
@@ -89,7 +89,7 @@ const pageContent = (
 
 Now we need to modify **section.js** to accept them. Thankfully react does all the work by providing a *props* class property.
 
-```javascript
+```jsx
 class Section extends React.Component {
   render() {    
     return (
@@ -119,7 +119,7 @@ Now that's more like it!
 ##Default Props
 While our *Section* component may not benefit much from default values to the props, in other situations it may be beneficial to set default values in the event that no attribute was passed to the HTML tag. For this we have **defaultProps** class property. Simply set it to an object with the names of the props you want to set to default values as keys. 
 
-```javascript
+```jsx
 import React from 'react'
 
 class Section extends React.Component {
@@ -147,7 +147,7 @@ export default Section
 Now if we use the tag:
 
 
-```javascript
+```jsx
 import React from 'react'
 import Section from 'section.js'
 

@@ -30,7 +30,7 @@ const Metadata = (props) => (
           <meta name="twitter:creator"    content={"@"+meta.twitterUsername} />
           <meta property="twitter:title"  content={title} />
           <meta property="og:site_name"   content={props.siteName} />
-          <meta property="og:url"         content={meta.siteUrl+props.url} />
+          <meta property="og:url"         content={meta.siteUrl+props.pageUrl} />
           <meta property="og:title"       content={title} />
           <meta property="og:description" content={props.description} />
           <meta property="og:image"       content={meta.siteUrl+props.featuredImage} />

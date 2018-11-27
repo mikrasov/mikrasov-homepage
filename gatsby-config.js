@@ -13,6 +13,7 @@ module.exports = {
   siteMetadata: {
     title: 'Mikrasov Design',
     twitterUsername: 'mikrasov',
+    disqusShortname: "mikrasov-design",
     siteUrl
   },
   plugins: [
@@ -85,7 +86,6 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 500,
               linkImagesToOriginal: false,
               withWebp: true
             }

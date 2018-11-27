@@ -2,6 +2,8 @@
 title: "Paper Presented at ACM LIMITS "
 featuredImage: "./featured-image.jpg"
 keywords: "Social Media, Internet Freedoms, Free Speech, Censorship, Anonymity, ICTD."
+nextPage: "/posts/2018-11-02-flownet-paper/"
+prevPage: "/posts/2016-12-03-zambia-work/"
 ---
 Our paper on: **[Limits to Internet Freedoms: Being Heard in an Increasingly Authoritarian World](/papers/Nekrasov_2017_10_LIMITS.pdf)** was published and presented at *Workshop on Computing Within Limits*.
 

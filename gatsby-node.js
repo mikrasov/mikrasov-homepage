@@ -15,7 +15,7 @@ function slugify(text)
   var cls = text.toString().toLowerCase()
     .replace("post/",'')
     .replace(/\s+/g, '-')
-    .replace(/\-\-+/g, '-')
+    .replace(/--+/g, '-')
   return cls+""
 }
 
@@ -25,15 +25,16 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/components/blog/blog-post.js')
+
     resolve(
-      graphql(
-        `
+      graphql(`
           {
-            allMarkdownRemark(limit: 1000 ) {
+            allMarkdownRemark(sort: { order: DESC, fields: [fields___date] }, filter:{fields:{draft:{ne:true}}} ){
               edges {
                 node {
                   fields {
-                    type
+                    external
+                    tags                  
                     draft
                     slug
                     date
@@ -50,38 +51,31 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
 
-
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
+        const internalPosts = posts.filter(post => !post.node.fields.external)
 
-        var numDrafts = 0;
-        _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
+        _.each(internalPosts, (post, index) => {
 
-          if (post.node.fields.draft) {
-            numDrafts++;
-            return;
-          }
+          const previous = index === internalPosts.length - 1 ? null : internalPosts[index + 1].node;
+          const next = index === 0 ? null : internalPosts[index - 1].node;
 
-          if (post.node.fields.type !== "album") {
-            createPage({
-              path: post.node.fields.slug,
-              component: blogPost,
-              context: {
-                slug: post.node.fields.slug,
-                date: post.node.fields.date,
-                previous,
-                next,
-              },
-            })
-          }
+          createPage({
+            path: post.node.fields.slug,
+            component: blogPost,
+            context: {
+              slug: post.node.fields.slug,
+              date: post.node.fields.date,
+              previous,
+              next,
+            },
+          })
 
         })
 
         // Create blog post list pages
         const postsPerPage = 5;
-        const numPages = Math.ceil( (posts.length - numDrafts)/ postsPerPage);
+        const numPages = Math.ceil( posts.length / postsPerPage);
 
 
         _.times(numPages, i => {
@@ -107,27 +101,58 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const path = createFilePath({ node, getNode })
-    var slug = slugify(path)
-    date = slug.match(/(\d{4})-(\d{2})-(\d{2})/ )
+    let slug = slugify(path)
+    const date = slug.match(/(\d{4})-(\d{2})-(\d{2})/ )
 
+    let tags = new Set()
+    let external = false
+    let style = "blueAccent"
+
+    //Tag by origin folder
     if(path.includes("/posts")){
-      type = "post";
+      tags.add("post")
+      style = "blueAccent"
     }
     else if(path.includes("/tutorials")){
-      type = "tutorial";
+      tags.add("tutorial")
+      style = "redAccent"
     }
     else if(path.includes("/albums")){
-      type = "album";
+      tags.add("album")
+      style = "greenAccent"
+      external = true
+      slug = node.frontmatter.album
     }
-    else {
-      type = "unknown";
+    else if(path.includes("/papers")){
+      tags.add("paper")
+      style = "redAccent"
+    }
+
+
+    //Tag the types based on content
+    if(node.frontmatter.album) {
+      tags.add("album")
+    }
+
+    if(node.frontmatter.project) {
+      tags.add("project")
     }
 
 
     createNodeField({
       node,
-      name: `type`,
-      value: type,
+      name: `external`,
+      value: external,
+    })
+    createNodeField({
+      node,
+      name: `tags`,
+      value: Array.from(tags),
+    })
+    createNodeField({
+      node,
+      name: `style`,
+      value: style,
     })
     createNodeField({
       node,
@@ -149,5 +174,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `year`,
       value: date[1],
     })
+
   }
 }

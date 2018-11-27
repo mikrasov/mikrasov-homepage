@@ -9,8 +9,8 @@ export default (props) => (
   <div>
     {props.data.edges
       .map(({ node: album }) => {
-        var subtitle = ""
-        var year = album.fields.year;
+        let subtitle = ""
+        let year = album.fields.year;
         if(!years.includes(year)){
           years.push(year)
           subtitle = <h2 id={year}>{year}</h2>

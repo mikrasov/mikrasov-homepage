@@ -9,23 +9,17 @@ import BlogPreview from '../components/blog/blog-preview'
 const sidebar = (<div>
 </div>)
 
-const NewsListPage = ({ children }) => (
+export default (props) => (
   <StaticQuery
     query={graphql`
   {
-      profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
       allMarkdownRemark(sort: { order: DESC, fields: [fields___date] }, filter: {fields:{draft:{eq:false}}} ) {
         edges {
           node {
             id
             fields {
-              type
+              tags
+              style
               slug
               year
               date(formatString: "YYYY-MM-DD")
@@ -42,27 +36,19 @@ const NewsListPage = ({ children }) => (
 
     render={data => (
 
-      <Layout sideContent={sidebar} sideImage={data.profileImage} active={"news"}>
+      <Layout sideContent={sidebar}  active={"news"}>
 
         <div className="mb-3 align-items-end">
           <h1 className="m-0"> News - Full List</h1>
           <div className="blog-posts">
 
             {data.allMarkdownRemark.edges.map(({ node: post }) => {
-              return(
-                <BlogPreview post={post} />
-              )
+              return <BlogPreview post={post} />
             })}
-
           </div>
-
-
-
         </div>
       </Layout>
       )}
   />
 )
-
-export default NewsListPage
 

@@ -13,23 +13,25 @@ export default class BlogPage extends React.Component {
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
     const nextPage = (currentPage + 1).toString()
+    const firstPage = "/"
+    const lastPage = numPages.toString()
 
     const fromLabel = isFirst? "Newest":posts[0].node.fields.date
     const toLabel = isLast?"End":posts[posts.length - 1].node.fields.date
 
 
-    const sidebar = (<p className="mb-9">
+    const sidebar = (<div className="mb-9">
       <h3>Navigation</h3>
       <ul>
-        { isFirst? (<li>At Newest</li>):  (<li><Link to="/" rel="first"> Newest</Link></li>) }
-        { isFirst? (<li>No Newer</li>):   (<li><Link to={prevPage} rel="prev">Newer ←</Link></li>) }
-        { isLast?  (<li>At Oldest</li>):  (<li><Link to={nextPage} rel="next">Older →</Link></li>) }
-        { isLast?  (<li>None Older</li>): (<li><Link to={numPages} rel="last">Oldest</Link></li>) }
+        { isFirst? (<li>At Newest</li>):  (<li><Link to={firstPage} rel="first"> Newest</Link></li>) }
+        { isFirst? (<li>No Newer</li>):   (<li><Link to={prevPage} rel="prev">Newer</Link></li>) }
+        { isLast?  (<li>At Oldest</li>):  (<li><Link to={nextPage} rel="next">Older</Link></li>) }
+        { isLast?  (<li>None Older</li>): (<li><Link to={lastPage} rel="last">Oldest</Link></li>) }
       </ul>
-    </p>)
+    </div>)
 
     return (
-      <Layout sideContent={sidebar} sideImage={this.props.data.profileImage} active={"news"}>
+      <Layout sideContent={sidebar} active={"news"}>
 
         <div className="row mb-3 align-items-end">
           <div className="col"> <h1 className="m-0"> News </h1> </div>
@@ -42,11 +44,8 @@ export default class BlogPage extends React.Component {
         <div className="blog-posts">
           {posts
             .filter(post => (post.node.frontmatter.title.length > 0) )
-            .map(({ node: post }) => {
-              return(
-                <BlogPreview post={post} />
-              )
-            })}
+            .map( ({ node: post }) => <BlogPreview post={post}  key={post.id} /> )
+          }
         </div>
 
         <div className="row">
@@ -75,8 +74,10 @@ export const blogListQuery = graphql`
           excerpt(pruneLength: 215)
           id
           fields {
+            external
             draft
-            type
+            tags
+            style
             slug
             date(formatString: "MMM DD, YYYY")
           }
@@ -91,13 +92,6 @@ export const blogListQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-    profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 225) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

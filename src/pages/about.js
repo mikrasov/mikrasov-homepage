@@ -23,7 +23,7 @@ const AboutPage = ({ children }) => (
   <StaticQuery
     query={graphql`
     {
-      profileImage: file(relativePath: { eq: "profile/profile-about.jpg" }) {
+      profileImage: file(relativePath: { eq: "paww35rofile/profile-about.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG

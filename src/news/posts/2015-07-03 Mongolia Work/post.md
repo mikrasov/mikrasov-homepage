@@ -2,6 +2,8 @@
 title: "Mongolia Research Trip"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/L85dEr5ryqRrZWyj6"
+nextPage: "/posts/2015-07-03-mongolia-work/"
+prevPage: "/posts/2014-12-20-turkey-research/"
 ---
 
 

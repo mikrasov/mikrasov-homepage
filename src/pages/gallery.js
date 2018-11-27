@@ -21,7 +21,8 @@ const GalleryPage = ({ children }) => (
         node {
           id
           fields {
-            type
+            style
+            tags
             slug
             year
             date(formatString: "MMM DD, YYYY")

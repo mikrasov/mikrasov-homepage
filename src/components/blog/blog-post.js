@@ -1,19 +1,33 @@
 import React from "react"
 import {Link, graphql } from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { DiscussionEmbed } from "disqus-react";
 import Layout from '../layout'
 import "./blog.css"
 import AlbumIcon from './album.svg'
 import Metadata from "../metadata"
 
-export default function Template({ data, }) {
+export default function Template(props) {
 
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { fields, frontmatter, html } = markdownRemark
+  const disqusShortname = props.data.site.siteMetadata.disqusShortname
 
-  const sidebar = ""
-  var albumReminder = "";
-  var albumReminderIcon = "";
+  const post = props.data.markdownRemark
+  const { fields, frontmatter, html } = post
+
+  const nextPage = props.pageContext.next
+  const prevPage = props.pageContext.previous
+
+  const sidebar = (<div className="mb-9">
+  </div>)
+
+
+  let albumReminder = ""
+  let albumReminderIcon = ""
+
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+  };
 
   if(frontmatter.album != null){
     albumReminderIcon = (
@@ -31,15 +45,23 @@ export default function Template({ data, }) {
   }
 
   return (
-    <Layout sideContent={sidebar} sideImage={data.profileImage} active={"news"}>
+    <Layout sideContent={sidebar} active={"news"}>
       <Metadata
         pageTitle={frontmatter.title}
         pageUrl={fields.slug}
-        description={markdownRemark.excerpt}
+        pageKeywords={frontmatter.keywords}
+        description={post.excerpt}
         featuredImage={frontmatter.featuredImage.childImageSharp.sizes.src}
       />
       <p className="blog-date">{fields.date}</p>
-      <h1>{frontmatter.title}{albumReminderIcon}</h1>
+
+      <h1 className="row">
+        <div className="col-10">{frontmatter.title}{albumReminderIcon}</div>
+        <div className="col-1">{ prevPage && (<Link to={prevPage.fields.slug} rel="prev">←</Link>) }</div>
+          <div className="col-1">{ nextPage && (<Link to={nextPage.fields.slug} rel="next">→</Link>) }</div>
+
+      </h1>
+
 
       <div
         className="blog-content"
@@ -47,6 +69,8 @@ export default function Template({ data, }) {
       />
 
       {albumReminder}
+
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </Layout>
 
   )
@@ -54,7 +78,15 @@ export default function Template({ data, }) {
 
 export const pageQuery = graphql`
   query($path: String!) {
+    site {
+      siteMetadata {
+        title
+        disqusShortname
+        siteUrl
+      }
+    }
     markdownRemark(fields: { slug: { eq: $path } }) {
+      id
       html
       excerpt(pruneLength: 215)
       fields {
@@ -64,6 +96,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         album
+        nextPage
+        prevPage
+        keywords
         featuredImage {
             childImageSharp{
                 sizes(maxWidth: 630) {
@@ -73,12 +108,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    profileImage: file(relativePath: { eq: "profile/profile-news.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 225) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
+    
   }
 `
