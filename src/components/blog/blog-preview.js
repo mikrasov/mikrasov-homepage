@@ -25,8 +25,8 @@ const Link = ({ children, post, ...other }) => {
 class BlogPreview extends React.Component {
   render() {
     const post = this.props.post
-    const cls = post.fields.style
-    console.log(post.fields.tags)
+    const cls = post.fields.tags[0]
+
     if(post.excerpt) return (
         <Link post={post} >
           <div className={cls + " row blog-preview"}>

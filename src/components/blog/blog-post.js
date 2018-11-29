@@ -4,9 +4,10 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { DiscussionEmbed } from "disqus-react";
 import Layout from '../layout'
 import "./blog.css"
-import AlbumIcon from './album.svg'
+
 import Metadata from "../metadata"
 import Img from 'gatsby-image'
+import Reminder from './reminder'
 
 export default function Template(props) {
 
@@ -29,28 +30,10 @@ export default function Template(props) {
   </div>)
 
 
-  let albumReminder = ""
-  let albumReminderIcon = ""
-
   const disqusConfig = {
     identifier: post.id,
     title: post.frontmatter.title,
   };
-
-  if(album){
-    albumReminderIcon = (
-      <OutboundLink href={album} target="_blank" className="album-reminder-icon">
-        <AlbumIcon />
-      </OutboundLink>
-    )
-    albumReminder = (
-      <OutboundLink href={album} target="_blank">
-        <div className="album-reminder">
-          <AlbumIcon /> Check out the full album of images for this post!
-        </div>
-      </OutboundLink>
-    )
-  }
 
   return (
     <Layout sideContent={sidebar} active={"news"}>
@@ -61,28 +44,28 @@ export default function Template(props) {
         description={post.excerpt}
         featuredImage={frontmatter.featuredImage.childImageSharp.sizes.src}
       />
-      <p className="blog-date">{fields.date}</p>
+      <div className="blog-content">
+        <p className="blog-date">{fields.date}</p>
 
-      <h1 className="row">
-        <div className="col-10">{frontmatter.title}{albumReminderIcon}</div>
-        <div className="col-1">{ prevPage && (<Link to={prevPage.fields.slug} rel="prev">←</Link>) }</div>
-        <div className="col-1">{ nextPage && (<Link to={nextPage.fields.slug} rel="next">→</Link>) }</div>
-      </h1>
+        <h1 className="row">
+          <div className="col-10">{frontmatter.title}<Reminder icon post={post} /></div>
+          <div className="col-1">{ prevPage && (<Link to={prevPage.fields.slug} rel="prev">←</Link>) }</div>
+          <div className="col-1">{ nextPage && (<Link to={nextPage.fields.slug} rel="next">→</Link>) }</div>
+        </h1>
 
+        {fields.external && (<div className="img-left">
+          <Img className="gallery-image" sizes={frontmatter.featuredImage.childImageSharp.sizes}/>
+        </div>)}
+        <div
+          className="blog-text"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
+        <div style={{clear:"both"}} />
+        <Reminder post={post} />
 
-      {fields.external && (<div className="img-left">
-        <Img className="gallery-image" sizes={frontmatter.featuredImage.childImageSharp.sizes}/>
-      </div>)}
-      <div
-        className="blog-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-
-      <div style={{clear:"both"}} />
-      {albumReminder}
-
-      { !fields.external && (<DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />)}
+        { !fields.external && (<DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />)}
+      </div>
     </Layout>
 
   )
@@ -109,8 +92,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         album
-        nextPage
-        prevPage
+        paper
+        citation
         keywords
         featuredImage {
             childImageSharp{

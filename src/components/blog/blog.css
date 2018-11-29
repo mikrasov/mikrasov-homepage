@@ -1,15 +1,42 @@
-
-.blog-preview{
+.blog-preview {
     font-size: 90%;
-    border: 1px solid #dfdfdf;
+    border: 1px solid;
     padding: 0;
     margin: 0.5rem;
     width: 100%;
-    color: #000000;
+    color: #000000 !important;
     background-repeat: no-repeat;
 
     background-position: bottom right;
 }
+
+
+.blog-posts .post, .blog-content .post{
+    color: #1856ba99;
+    background-color: #0000FF07;
+    border-color: #1856ba99;
+
+}
+
+.blog-posts .album, .blog-content .album{
+    color: #18ba5699;
+    background-color: #00FF0007;
+    border-color: #18ba5699;
+}
+
+.blog-posts .tutorial, .blog-content .tutorial{
+    color: #ba185699;
+    background-color: #FF000007;
+    border-color: #ba185699;
+}
+
+.blog-posts .paper, .blog-content .paper{
+    color: #9623ba99;
+    background-color: #9623ba07;
+    border-color: #dfbcb7;
+}
+
+
 
 
 
@@ -27,22 +54,6 @@
 }
 
 
-
-.blog-preview.blueAccent{
-    background-color: #0000FF05;
-}
-
-.blog-preview.greenAccent{
-    background-color: #00FF0005;
-    border: 1px solid #c6dfbf;
-}
-
-
-.blog-preview.redAccent{
-    background-color: #FF000005;
-    border: 1px solid #dfbcb7;
-}
-
 .blog-marker-row{
     position: absolute;
     right: 0.5rem;
@@ -54,23 +65,10 @@
     text-transform: capitalize;
     text-align: right;
     margin: 0 0 0 0.5rem;
+    padding: 0.1rem;
+    background-color: transparent !important;
 }
 
-.blog-marker.post{
-    color: #1856ba99;
-}
-
-.blog-marker.album{
-    color: #18ba5699;
-}
-
-.blog-marker.tutorial{
-    color: #ba185699;
-}
-
-.blog-marker.paper{
-    color: #9623ba99;
-}
 
 .blog-featured-image{
     padding: 0;
@@ -103,18 +101,15 @@
 
 
 
-.album-reminder{
+.blog-reminder{
     max-width: 25rem;
     margin: 0.5rem auto 0.5rem auto;
-    color: #18ba56;
-    background-color: #00FF0007;
-    border: 1px solid #c6dfbf;
+    border: 1px solid ;
     padding: 0.5rem;
     text-align: center;
-
 }
 
-.album-reminder svg{
+.blog-reminder svg{
     max-height: 1rem;
     max-width: 1rem;
     margin: 0 0.5rem 0 0.5rem;
@@ -122,12 +117,21 @@
 }
 
 
-.album-reminder:hover{
+
+
+
+.blog-reminder.album{
+    color: #18ba56;
+    background-color: #00FF0007;
+    border-color: #c6dfbf;
+}
+
+.blog-reminder.album:hover{
     color: rgb(34, 255, 117);
     fill: rgb(34, 255, 117);
 }
 
-.album-reminder-icon svg{
+.blog-reminder-icon svg{
     max-height: 1.3rem;
     max-width: 1.3rem;
     margin: 0 0.5rem 0 0.5rem;
@@ -136,7 +140,7 @@
 }
 
 
-.album-reminder-icon svg:hover{
+.blog-reminder-icon svg:hover{
     color: rgb(34, 255, 117);
     fill: rgb(34, 255, 117);
 }
