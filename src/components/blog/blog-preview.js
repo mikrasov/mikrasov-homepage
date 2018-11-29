@@ -4,33 +4,31 @@ import Img from 'gatsby-image'
 import { Link as GatsbyLink } from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-const Link = ({ children, to, ...other }) => {
-
-  const internal = /^\/(?!\/)/.test(to)
+const Link = ({ children, post, ...other }) => {
 
   // Use Gatsby Link for internal links, and <a> for others
-  if (internal) {
+  if (post.fields.external) {
     return (
-      <GatsbyLink to={to} {...other}>
+      <OutboundLink href={post.fields.external} {...other} target="_blank">
         {children}
-      </GatsbyLink>
+      </OutboundLink>
     )
   }
   return (
-    <OutboundLink href={to} {...other} target="_blank">
+    <GatsbyLink to={post.fields.slug} {...other}>
       {children}
-    </OutboundLink>
+    </GatsbyLink>
   )
 }
+
 
 class BlogPreview extends React.Component {
   render() {
     const post = this.props.post
-    const link = post.fields.slug
     const cls = post.fields.style
-
-    if(post.excerpt !== undefined) return (
-        <Link to={link} >
+    console.log(post.fields.tags)
+    if(post.excerpt) return (
+        <Link post={post} >
           <div className={cls + " row blog-preview"}>
 
             <div className="blog-featured-image col-3 col-md-3 ">
@@ -40,27 +38,25 @@ class BlogPreview extends React.Component {
             <div className="col-9 col-md-9">
               <div className="d-flex">
                 <div className="blog-title mr-auto">{post.frontmatter.title}</div>
-
                 <div className="blog-date">{post.fields.date}</div>
               </div>
-              <div className="blog-content">{post.excerpt}</div>
-            </div>
 
+              <div className="blog-content">{post.excerpt}</div>
+              <div className="d-flex blog-marker-row">
+              {post.fields.tags.map(tag=><div className={"blog-marker "+tag}>{tag}</div>)}
+              </div>
+            </div>
           </div>
         </Link>
       )
 
     else return (
-      <Link to={link} >
+      <Link post={post} >
         <div className={cls + " row blog-preview"} >
-
-
             <div className="d-flex">
               <div className="blog-title mr-auto">{post.frontmatter.title}</div>
-
               <div className="blog-date">{post.fields.date}</div>
             </div>
-
         </div>
       </Link>
 

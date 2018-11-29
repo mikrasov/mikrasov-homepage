@@ -42,10 +42,7 @@ export default class BlogPage extends React.Component {
             </div>
         </div>
         <div className="blog-posts">
-          {posts
-            .filter(post => (post.node.frontmatter.title.length > 0) )
-            .map( ({ node: post }) => <BlogPreview post={post}  key={post.id} /> )
-          }
+          {posts.map( ({node}) => <BlogPreview post={node}  key={node.id} /> ) }
         </div>
 
         <div className="row">

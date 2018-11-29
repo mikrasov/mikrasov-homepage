@@ -1,7 +1,7 @@
 ---
 title: "Paper on Verified Group Anonymity Published"
 featuredImage: "./featured-image.jpg" 
-prevPage: "/posts/2017-07-22-paper-limits/"
+citation: "Nekrasov, M, et al. \"Anonymity and Reputation on Social Media in an Age of Global Internet Dependence\". Journal of Internet Services and Applications. 2018.
 ---
 
 After a long delay, our paper: **[A user-driven free speech application for anonymous and verified online, public group discourse](/papers/Nekrasov_2018_11_JISA.pdf)** has finally been published in the *Journal of Internet Services and Applications*.

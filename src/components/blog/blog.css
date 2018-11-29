@@ -15,76 +15,62 @@
 
 .blog-title{
     font-weight: bold;
-    margin-bottom: 0.2rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0 0;
 }
 
 .blog-date{
     color: #c8cbcf;
     font-size: 75%;
+    margin: 0.65rem 0 0 0;
+    min-width: 4rem;
     text-align: right;
-    margin-bottom: 0;
-    margin-top: 0.5rem;
 }
 
 
-.blog-preview.blog-album .blog-title{
-    color: #18ba56;
+
+.blog-preview.blueAccent{
+    background-color: #0000FF05;
 }
 
-.blog-preview.blog-post .blog-title{
-    color: #1856ba;
-}
-
-.blog-preview.blog-tutorial .blog-title{
-    color: #ba1856;
-}
-
-
-.blog-preview.blog-post{
-    background-color: #0000FF07;
-}
-
-.blog-preview.blog-album{
-    background-color: #00FF0007;
+.blog-preview.greenAccent{
+    background-color: #00FF0005;
     border: 1px solid #c6dfbf;
 }
 
 
-.blog-preview.blog-tutorial{
-    background-color: #FF000007;
+.blog-preview.redAccent{
+    background-color: #FF000005;
     border: 1px solid #dfbcb7;
 }
 
-
-
-.marker-post{
-    color: #1856ba;
-    font-size: 75%;
-    text-align: right;
-    margin-bottom: 0;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
+.blog-marker-row{
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
 }
 
-.marker-album{
-    color: #18ba56;
+.blog-marker{
     font-size: 75%;
+    text-transform: capitalize;
     text-align: right;
-    margin-bottom: 0;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
+    margin: 0 0 0 0.5rem;
 }
 
-.marker-tutorial{
-    color: #ba1856;
-    font-size: 75%;
-    text-align: right;
-    margin-bottom: 0;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
+.blog-marker.post{
+    color: #1856ba99;
 }
 
+.blog-marker.album{
+    color: #18ba5699;
+}
+
+.blog-marker.tutorial{
+    color: #ba185699;
+}
+
+.blog-marker.paper{
+    color: #9623ba99;
+}
 
 .blog-featured-image{
     padding: 0;
@@ -96,7 +82,9 @@
 }
 
 .blog-content{
-    padding-top: 0.5em;
+    padding: 0.2rem 0 0.5rem 0;
+
+    margin-bottom: 2rem;
 }
 .blog-preview h1{
     font-size: large;

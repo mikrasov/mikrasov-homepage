@@ -39,6 +39,9 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                     date
                   }
+                  frontmatter {
+                    title
+                  }
                 }
               }
             }
@@ -53,7 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
-        const internalPosts = posts.filter(post => !post.node.fields.external)
+        const internalPosts = posts //posts.filter(post => !post.node.fields.external)
 
         _.each(internalPosts, (post, index) => {
 
@@ -105,7 +108,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const date = slug.match(/(\d{4})-(\d{2})-(\d{2})/ )
 
     let tags = new Set()
-    let external = false
+    let external = null
     let style = "blueAccent"
 
     //Tag by origin folder
@@ -120,8 +123,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     else if(path.includes("/albums")){
       tags.add("album")
       style = "greenAccent"
-      external = true
-      slug = node.frontmatter.album
+      external = node.frontmatter.album
     }
     else if(path.includes("/papers")){
       tags.add("paper")
