@@ -1,5 +1,5 @@
 import React from "react"
-import {Link, graphql } from "gatsby"
+import {Link, graphql, withPrefix} from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { DiscussionEmbed } from "disqus-react";
 import Layout from '../layout'
@@ -19,6 +19,7 @@ export default function Template(props) {
   const nextPage = props.pageContext.next
   const prevPage = props.pageContext.previous
   const album = frontmatter.album
+  const paper = frontmatter.paper
 
   const sidebar = (<div className="mb-9">
     <h3>Navigation</h3>
@@ -26,14 +27,16 @@ export default function Template(props) {
       { nextPage &&  (<li>Newer: <Link to={nextPage.fields.slug} rel="first"> {nextPage.frontmatter.title}</Link></li>) }
       { prevPage && (<li>Older: <Link to={prevPage.fields.slug} rel="prev">{prevPage.frontmatter.title}</Link></li>) }
       { album && (<li><OutboundLink href={album} target="_blank">Go to Album</OutboundLink></li>) }
+      { paper && (<li><a href={withPrefix("papers/"+paper)} target="_blank">Go to Paper</a></li>) }
     </ul>
   </div>)
 
 
   const disqusConfig = {
-    identifier: post.id,
+    identifier: post.fields.slug.replace(/\//g,""),
     title: post.frontmatter.title,
   };
+
 
   return (
     <Layout sideContent={sidebar} active={"news"}>

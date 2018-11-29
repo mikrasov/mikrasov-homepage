@@ -201,14 +201,14 @@ const NpsIndexPage = ({ children }) => (
           The United States national park system contains some of the most iconic places in the world. Millions of people (from the USA and other nations) visit them every year. In addition to the touristic, cultural, and historical significance, these protected lands also intersect with critical habitats, and vital watersheds.
         </p>
 
-        <BillboardChart   data={chart_annual} axis={chart_annual_axis} />
+        <BillboardChart className={"nps"} data={chart_annual} axis={chart_annual_axis} />
         <p>
           When looking at raw growth rates (<strong>above</strong>), National Parks and National Monuments and National Recreation Areas appear to be doing well with an all time high visitation rate, and a steady growth since the funding of the national park system in 1916. In the chart above we can see that our national parks received a record 109 million visitors in 2017. On FiveThirtyEight Andrew Flowers even wrote an article that <a target="_blank" href={"https://fivethirtyeight.com/features/the-national-parks-have-never-been-more-popular/"}>The National Parks Have Never Been More Popular</a>.
         </p>
         <p>
           Does this mean that Americans are increasingly interested in our parks and being outside?</p>
 
-        <BillboardChart  data={chart_annual_pc} axis={chart_annual_pc_axis}/>
+        <BillboardChart className={"nps"}  data={chart_annual_pc} axis={chart_annual_pc_axis}/>
 
 
         <p>When adjusting for population growth (<strong>above</strong>), we see a more complete story. By looking at the historical data provided by the national park service, grouped by park type, and corrected by population, we see that visitation is not growing as fast as our population. In the last two decades, a smaller percent of Americans are visiting national parks.</p>
@@ -221,7 +221,7 @@ const NpsIndexPage = ({ children }) => (
         </p>
 
 
-        <BillboardChart  data={chart_monthly_pc} axis={chart_monthly_pc_axis}  />
+        <BillboardChart className={"nps"}  data={chart_monthly_pc} axis={chart_monthly_pc_axis}  />
 
         <p>
           Perhaps there are changes in the behavior of visitors. By looking at changes in visitation total for recreational use in a given month, comparing to past decades, and adjusting for population growth (<strong>above</strong>), we see that there is a change in visitation pattern. In the last few decades visitors are decreasing their summer visits while going during off season times such as winter. It might be interesting to compare this to changes in climate as globally we have been experiencing warmer summers which may push people out of some of the most visited, desert situated, parks. An interesting anomaly to observe is the change in peak visitation from august in the 1970s to July in the subsequent decades.
@@ -237,15 +237,6 @@ const NpsIndexPage = ({ children }) => (
         <p>
           I propose to go beyond the cultural, historical, and aesthetic significant of our parks, and investigate the quantitative utility and utilization by cross analyzing publicly available data sets. Based on this analysis I will create an interactive map-centric web app to visualize some of the findings.  This work can have two positive impacts (1) by understand peak utilization times of various parks, visitors can better plan trips to avoid crowds, traffic, and over taxed local infrastructure and (2) both visitors and policy makers will also be able to see some of the utility each parks provides by seeing some of the resources (such as critical habitats of species) that they preserve as well as the tourism they generate. I believe this project will do well to showcase my ability as well as provide a public good.
         </p>
-
-
-
-
-
-
-
-
-
 
       </Layout>
 

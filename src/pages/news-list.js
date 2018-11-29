@@ -19,7 +19,6 @@ export default (props) => (
             id
             fields {
               tags
-              style
               slug
               year
               date(formatString: "YYYY-MM-DD")

@@ -6,7 +6,6 @@
     width: 100%;
     color: #000000 !important;
     background-repeat: no-repeat;
-
     background-position: bottom right;
 }
 
@@ -15,6 +14,7 @@
     color: #1856ba99;
     background-color: #0000FF07;
     border-color: #1856ba99;
+    fill: #1856ba99;
 
 }
 
@@ -22,18 +22,21 @@
     color: #18ba5699;
     background-color: #00FF0007;
     border-color: #18ba5699;
+    fill: #18ba5699;
 }
 
 .blog-posts .tutorial, .blog-content .tutorial{
     color: #ba185699;
     background-color: #FF000007;
     border-color: #ba185699;
+    fill: #ba185699;
 }
 
 .blog-posts .paper, .blog-content .paper{
     color: #9623ba99;
     background-color: #9623ba07;
     border-color: #dfbcb7;
+    fill: #9623ba99;
 }
 
 
@@ -69,21 +72,19 @@
     background-color: transparent !important;
 }
 
-
 .blog-featured-image{
     padding: 0;
     margin: 0;
     background-color: #FFFFFF;
     border-right: 1px solid #dfdfdf;
     align-self: center!important;
-
 }
 
 .blog-content{
     padding: 0.2rem 0 0.5rem 0;
-
     margin-bottom: 2rem;
 }
+
 .blog-preview h1{
     font-size: large;
 }
@@ -93,12 +94,21 @@
     margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
-
 .no-border img{
-
     border: none;
 }
 
+.blog-reminder-icon {
+
+    background-color: transparent !important;
+}
+
+
+.blog-reminder-icon svg{
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    margin-left: 0.3rem;
+}
 
 
 .blog-reminder{
@@ -107,43 +117,16 @@
     border: 1px solid ;
     padding: 0.5rem;
     text-align: center;
+    fill: #000000 !important;
 }
 
 .blog-reminder svg{
     max-height: 1rem;
     max-width: 1rem;
     margin: 0 0.5rem 0 0.5rem;
-
 }
 
 
-
-
-
-.blog-reminder.album{
-    color: #18ba56;
-    background-color: #00FF0007;
-    border-color: #c6dfbf;
-}
-
-.blog-reminder.album:hover{
-    color: rgb(34, 255, 117);
-    fill: rgb(34, 255, 117);
-}
-
-.blog-reminder-icon svg{
-    max-height: 1.3rem;
-    max-width: 1.3rem;
-    margin: 0 0.5rem 0 0.5rem;
-    fill: #18ba56;
-
-}
-
-
-.blog-reminder-icon svg:hover{
-    color: rgb(34, 255, 117);
-    fill: rgb(34, 255, 117);
-}
 
 .img-left{
     float: left;

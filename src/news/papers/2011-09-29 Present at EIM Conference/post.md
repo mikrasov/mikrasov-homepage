@@ -1,10 +1,15 @@
 ---
 title: "Present at Environmental Information Management Conference"
 featuredImage: "./featured-image.jpg"
+
+
+paper: "Nekrasov_2011_09_EIM.pdf"
+citation: "Jaroensutasinee, M., Jaroensutasinee, K., Fountain, T., Nekrasov, M. et al.\"Coral Sensor Network at Racha Island, Thailand.\" Proceedings of the Environmental Information Management Conference. 2011."
+keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 
 
-Our paper: **[Coral sensor network at Racha Island, Thailand](/papers/Nekrasov_2011_09_Coral_Sensor_Network.pdf)** was published and presented at the *[Environmental Information Management Conference](https://eim.ecoinformatics.org/eim2011)* in Santa Barbara, CA.
+Our paper: **[Coral sensor network at Racha Island, Thailand](/papers/Nekrasov_2011_09_EIM.pdf)** was published and presented at the *[Environmental Information Management Conference](https://eim.ecoinformatics.org/eim2011)* in Santa Barbara, CA.
 
 
 Environmental observation stations are systems which allow researchers to observe rare events and to document long-term changes in ecological systems. Here we describe a system used for acquiring and sharing numerical data and imagery with ecological researchers that is deployed at the Racha Island, Phuket, Thailand. This is a new observatory that aims to provide publicly accessible scientific data for researching the environmental changes of coral reefs.

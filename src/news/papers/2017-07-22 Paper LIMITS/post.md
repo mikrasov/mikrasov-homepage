@@ -1,11 +1,13 @@
 ---
 title: "Paper Presented at ACM LIMITS "
 featuredImage: "./featured-image.jpg"
-keywords: "Social Media, Internet Freedoms, Free Speech, Censorship, Anonymity, ICTD."
-nextPage: "/posts/2018-11-02-flownet-paper/"
-prevPage: "/posts/2016-12-03-zambia-work/"
+
+project: "flownet"
+paper: "Nekrasov_2017_07_LIMITS.pdf"
+citation: "Nekrasov, M, Parks, L., and Belding, E. \"Limits to internet freedoms: Being heard in an increasingly authoritarian world\". Proceedings of the 2017 Workshop on Computing Within Limits. ACM, 2017."
+keywords: "Social Media, Internet Freedoms, Free Speech, Censorship, Anonymity, ICTD, Survey."
 ---
-Our paper on: **[Limits to Internet Freedoms: Being Heard in an Increasingly Authoritarian World](/papers/Nekrasov_2017_10_LIMITS.pdf)** was published and presented at *Workshop on Computing Within Limits*.
+Our paper on: **[Limits to Internet Freedoms: Being Heard in an Increasingly Authoritarian World](/papers/Nekrasov_2017_07_LIMITS.pdf)** was published and presented at *Workshop on Computing Within Limits*.
 
 The Internet is a critical tool for communication and knowledge acquisition in societies across the globe. Unfortunately, its use has become a battlefield for governments, corporations, and individuals to censor speech and access to information.
 

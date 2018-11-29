@@ -1,11 +1,14 @@
 ---
 title: "Paper on DataTurbine Published "
 featuredImage: "./featured-image.jpg"
+
+paper: "Nekrasov_2012_07_ESA_DataTurbine.pdf"
+citation: "Fountain, T., Sameer, T., Shin, P. Nekrasov, M. \"The Open Source DataTurbine Initiative: Empowering the Scientific Community with Streaming Data Middleware.\" Bulletin of the Ecological Society of America. 2012."
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 
 
-Our research on: **[The Open Source DataTurbine Initiative: Empowering the Scientific Community with Streaming Data Middleware](/papers/Nekrasov_2012_07_DataTurbine.pdf)** was published in *The Bulletin of the Ecological Society of America*.
+Our research on: **[The Open Source DataTurbine Initiative: Empowering the Scientific Community with Streaming Data Middleware](/papers/Nekrasov_2012_07_ESA_DataTurbine.pdf)** was published in *The Bulletin of the Ecological Society of America*.
 
 As stated in the note " DataTurbine is a robust real-time streaming data engine that lets you quickly stream live data from
 experiments, labs, web cams and even Java-enabled cell phones. It acts as a “black box” to which

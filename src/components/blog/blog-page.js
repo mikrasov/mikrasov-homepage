@@ -74,7 +74,6 @@ export const blogListQuery = graphql`
             external
             draft
             tags
-            style
             slug
             date(formatString: "MMM DD, YYYY")
           }
