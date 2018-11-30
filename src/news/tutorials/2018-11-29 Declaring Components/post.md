@@ -8,7 +8,7 @@ keywords: "react, javascript, components, class components, functional Stateless
 One thing I had difficulty understanding at first is the variations between *functional stateless components* and *component classes*. When looking up introductory examples, you may come across both and it might get confusing as to what is happening. 
 
 ## Component Classes
-Lets start with the component we wrote last time.
+Lets start with the component we wrote [last time](/tutorials/2018-11-20-react-components/).
 
 ```jsx
 import React from 'react'

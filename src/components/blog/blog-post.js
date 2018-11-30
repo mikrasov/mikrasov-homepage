@@ -14,7 +14,7 @@ export default function Template(props) {
   const disqusShortname = props.data.site.siteMetadata.disqusShortname
 
   const post = props.data.markdownRemark
-  const { fields, frontmatter, html } = post
+  const { fields, frontmatter, html, tableOfContents} = post
 
   const nextPage = props.pageContext.next
   const prevPage = props.pageContext.previous
@@ -23,6 +23,11 @@ export default function Template(props) {
 
   const sidebar = (<div className="mb-9">
     <h3>Navigation</h3>
+
+    <div
+      className="blog-toc"
+      dangerouslySetInnerHTML={{ __html: tableOfContents }}
+    />
     <ul>
       { nextPage &&  (<li>Newer: <Link to={nextPage.fields.slug} rel="first"> {nextPage.frontmatter.title}</Link></li>) }
       { prevPage && (<li>Older: <Link to={prevPage.fields.slug} rel="prev">{prevPage.frontmatter.title}</Link></li>) }
@@ -36,6 +41,8 @@ export default function Template(props) {
     identifier: post.fields.slug.replace(/\//g,""),
     title: post.frontmatter.title,
   };
+
+  console.log(html)
 
 
   return (
@@ -87,6 +94,7 @@ export const pageQuery = graphql`
       id
       html
       excerpt(pruneLength: 215)
+      tableOfContents
       fields {
         slug
         external
