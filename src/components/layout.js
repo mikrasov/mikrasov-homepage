@@ -38,7 +38,6 @@ export default (props) => (
             <Nav.Link href="/about" className={(props.active==="about")?"active":""}>About</Nav.Link>
             <Nav.Link href="/cv" className={(props.active==="cv")?"active":""}>CV</Nav.Link>
             <Nav.Link href="/" className={(props.active==="news")?"active":""}>News</Nav.Link>
-            <Nav.Link href="/" className={(props.active==="projects")?"active":""}>Projects</Nav.Link>
 
             <Nav.Link href="/travel" className={(props.active==="travel")?"active":""}>Travel</Nav.Link>
             <Nav.Link href="/gallery" className={(props.active==="gallery")?"active":""}>Photography</Nav.Link>
