@@ -27,7 +27,7 @@ export default function(props) {
     )
   }
 
-  console.log(post.paper)
+
   if(post.paper) {
     if (props.icon) return (
       <Link to={"/papers/"+post.paper} target="_blank" className="blog-reminder-icon paper">
