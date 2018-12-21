@@ -9,7 +9,7 @@ So if you are first starting off with a new framework, you may (like me) want to
 
 My introduction to [React](https://reactjs.org/) was via [Gatsby](https://www.gatsbyjs.org/) which is what this website is built using. However as I was not familiar with React prior to starting Gatsby and had not used [Es6](http://es6-features.org) when I first started out, I had a few points of confusion that I wanted to clarify in this guide. 
 
-First I want to review how to create and use [React components](https://reactjs.org/docs/react-component.html) to make sure we are on the same page. In the next guide I will go over the different ways we can declare components, as well as the difference between *functional stateless components* and *component classes*. Lastly I will introduce you to component states.
+First I want to review how to create and use [React components](https://reactjs.org/docs/react-component.html) to make sure we are on the same page. In the [next tutorial](/tutorials/2018-11-29-declaring-components/) I will go over the different ways we can declare components, as well as the difference between *functional stateless components* and *component classes*. Lastly I will introduce you to component states.
 
 
 ##Defining Components
@@ -168,4 +168,4 @@ ___
 ___
 
 ##Wrapping up
-So far we have been writing components as *component classes*. However if you have looked up examples of React code you may see components expressed in a different syntax. In the next tutorial I will go over the difference between *functional stateless components* and *component classes* and when to use each. 
+So far we have been writing components as *component classes*. However if you have looked up examples of React code you may see components expressed in a different syntax. In the [next tutorial](/tutorials/2018-11-29-declaring-components/) I will go over the difference between *functional stateless components* and *component classes* and when to use each. 
