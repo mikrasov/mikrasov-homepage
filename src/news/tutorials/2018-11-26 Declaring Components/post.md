@@ -71,22 +71,22 @@ Since our React components are written in [JSX](https://reactjs.org/docs/introdu
 
 
 ##Arrow Notation
-We can further compact the functional component by rewriting the function using [javascript arrow notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Arrow notation is like the lambda notation of other languages that allows a compact way of defining an anonymous function inline mapping input arguments to a return value.
+We can further compact the functional component by rewriting the function using [javascript arrow notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Arrow notation is like the *lambda* notation of other languages that allows a compact way of defining an anonymous function inline mapping input arguments to a return value.
 
 ```jsx
 import React from 'react'
 
 const Section = props => (
-      <div className="section">
-        <h3>{props.title}</h3>
-        {props.children}
-      </div>
+  <div className="section">
+    <h3>{props.title}</h3>
+    {props.children}
+  </div>
 )
 
 export default Section
 ```
 
-This transformation is equivalent to the full function form, but is even more compact as it drops the need for a *return* statement or a call to the function keyword.
+This transformation is equivalent to the full function form, but is even more compact as it drops the need for a *return* statement or th use of the *function* keyword.
 
 ##Combining Export Statement
 
@@ -112,10 +112,10 @@ Just like in the *component class* example, we can define default props by setti
 import React from 'react'
 
 const Section = props => (
-      <div className="section">
-        <h3>{props.title}</h3>
-        {props.children}
-      </div>
+  <div className="section">
+    <h3>{props.title}</h3>
+    {props.children}
+  </div>
 )
 
 Section.defaultProps = {
@@ -126,7 +126,7 @@ export default Section
 ```
 
 ##Unpacking Props
-ES6 also introduced the ability to write a [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) in javascript. If you used python before, this is just the javascript version of unpacking variables from arrays or properties of object.
+ES6 also introduced the ability to write a [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) in javascript. If you used python before, this is just the javascript version of *unpacking* variables from arrays or properties of object.
 
 Destructuring an object **myObj** looks like this in ES6:
 
@@ -151,7 +151,7 @@ world
 
 What this does is break out *foo* and *bar* into their own constants (skipping *ext*).
 
-How does this help us when dealing with component? Well if we want to minimize writing **props.** in our code, we can unpack the **props** function argument.
+How does this help us when dealing with component? Well if we want to minimize writing **props.** in our code, we can *unpack* the **props** argument.
 
 ```jsx
 function Section(props) {
@@ -175,6 +175,7 @@ export default ({title="Introduction", children}) => <div className="section">
 Here we both unpack the props, and assign the default value of *title* to "Introduction". While this is super compact, I think that it does make the code a bit harder to follow.
 
 Note that we can similarly do prop unpacking in *class components*.
+
 
 ##Trade Offs
 So would one use a *functional component* and when would one use a *component class*. Lets review.

@@ -18,8 +18,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-
-
+    `gatsby-plugin-react-svg`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -113,7 +112,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-svg',
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`, //KEEP LAST!
   ],

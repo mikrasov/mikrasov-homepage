@@ -5,6 +5,10 @@ import Img from 'gatsby-image'
 
 const sidebar =<div>
 
+
+  <h3>Contact Me </h3>
+    <a href={"mailto:mikrasov@gmail.com"}>mikrasov@gmail.com</a><br/><br/>
+
   <h3>Current Occupation:</h3>
   <p>
   Ph.D Student at UC Santa Barbara
@@ -12,8 +16,9 @@ const sidebar =<div>
 
   <h3>Next Step:</h3>
   <p>
-  Looking for a career position starting in August 2019.
+  Looking for a career position starting in <strong>August 2019</strong>.
   </p>
+
 
 
 

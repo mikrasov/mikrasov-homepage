@@ -21,7 +21,6 @@ const GalleryPage = ({ children }) => (
         node {
           id
           fields {
-            style
             tags
             slug
             year

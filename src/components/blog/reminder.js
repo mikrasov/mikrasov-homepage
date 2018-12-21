@@ -1,14 +1,13 @@
 import React from 'react'
-import {Link} from "gatsby"
+import {withPrefix} from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import AlbumIcon from './album.svg'
+import PdfIcon from '../../images/icons/pdf.svg'
 import "./blog.css"
 
 export default function(props) {
 
   const post = props.post.frontmatter
-
-  console.log(post)
 
   if(post.album) {
     if (props.icon) return (
@@ -27,21 +26,20 @@ export default function(props) {
     )
   }
 
-
   if(post.paper) {
     if (props.icon) return (
-      <Link to={"/papers/"+post.paper} target="_blank" className="blog-reminder-icon paper">
-        <AlbumIcon/>
-      </Link>
+      <a href={withPrefix("papers/"+post.paper)} target="_blank" className="blog-reminder-icon paper">
+        <PdfIcon />
+      </a>
     )
 
     else return (
 
-      <Link to={"/papers/"+post.paper} target="_blank">
+      <a href={withPrefix("papers/"+post.paper)} target="_blank">
         <div className="blog-reminder paper">
-          <AlbumIcon/> Read the full paper.
+          <PdfIcon/> Read the full paper.
         </div>
-      </Link>
+      </a>
     )
   }
 

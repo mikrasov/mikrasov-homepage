@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql, StaticQuery, withPrefix } from 'gatsby'
+import { graphql, withPrefix } from 'gatsby'
 
 import Layout from '../components/layout'
+import Reminder from '../components/blog/reminder'
 import Section from '../components/cv/section.js'
 import Subsection from '../components/cv/subsection.js'
 import Subsubsection from '../components/cv/subsubsection.js'
@@ -11,7 +12,7 @@ import "../components/cv/skill.css"
 
 function slugify(text)
 {
-  var cls = text[0].toString().toLowerCase()
+  let cls = text[0].toString().toLowerCase()
     .replace(/\+/g,'p')
     .replace(/\s+/g, '-')           // Replace spaces with -
     .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
@@ -83,9 +84,7 @@ const skills = {
   ]
 }
 
-
-
-var classes = {
+const classes = {
   "Undergraduate":[
     "Artificial Intelligence",
     "Programming Languages",
@@ -159,22 +158,14 @@ const sidebar = <div>
 
 
 
-const CVPage = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-    {
-      profileImage: file(relativePath: { eq: "profile/profile-cv.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `}
+export default class CvPage extends React.Component {
 
-    render={data => (
-      <Layout sideImage={data.profileImage} sideContent={sidebar} active={"cv"}>
+  render() {
+    const profileImage = this.props.data.profileImage
+    const papers = this.props.data.allMarkdownRemark.edges
+
+    return (
+      <Layout sideImage={profileImage} sideContent={sidebar} active={"cv"}>
 
 
         <Section name={"Education"}>
@@ -310,58 +301,13 @@ const CVPage = ({ children }) => (
 
 
   <Section name={"Publications"}>
-    <a id="publications" />
-        <div className="mb-2">
-          Nekrasov, M, et al. <a target="_blank" href={withPrefix("papers/Nekrasov_2018_11_JISA.pdf")}>"Anonymity and Reputation on Social Media in an Age of Global Internet
-          Dependence.</a> Journal of Internet Services and Applications. 2018.
-        </div>
-        <div className="mb-2">
-          Nekrasov, M, et al. <a target="_blank" href={withPrefix("papers/Nekrasov_2017_foci.pdf")}>"SecurePost: Verified Group-Anonymity on
-          Social Media."</a> 7th USENIX Workshop on Free and Open Communications on the Internet FOCI 17. USENIX
-          Association, 2017.
-        </div>
-        <div  className="mb-2">
-          Nekrasov, M, Parks, L., and Belding, E. <a target="_blank" href={withPrefix("papers/Nekrasov_2017_10_LIMITS.pdf")}>"Limits to
-          internet freedoms: Being heard in an increasingly authoritarian world.</a> Proceedings of the 2017 Workshop on
-          Computing Within Limits. ACM, 2017.
-        </div>
-        <div  className="mb-2">
-          Zheleva, M., Nekrasov, M. (2013). <a target="_blank" href={withPrefix("papers/Nekrasov_2013_10_MobiSys.pdf")}>"MobiSys
-          2013."</a> IEEE Pervasive Computing 12 (4), 0084-88.
-        </div>
+  <a id="publications" />
 
-
-        <div className="mb-2">
-          Nekrasov, M., Chumkiew, S., Shin, P. <a target="_blank" href={withPrefix("papers/Nekrasov_2013_10_Android_Bandon_Bay.pdf")}>"Android
-          at Bandon Bay: Low-Cost Environmental Monitoring and Event Detection Using Smartphones."</a> GSWC. 2013.
-        </div>
-        <div className="mb-2">
-          Fountain, T., Sameer, T., Shin, P. Nekrasov, M. <a target="_blank" href={withPrefix("papers/Nekrasov_2012_07_DataTurbine.pdf")}>"The Open
-          Source DataTurbine Initiative: Empowering the Scientific Community with Streaming Data
-          Middleware."</a> Bulletin of the Ecological Society of America. 2012.
-        </div>
-        <div className="mb-2">
-          Jaroensutasinee, M., Jaroensutasinee, K., Bainbridge, S., Fountain, T., Chumkiew, S., Noonsang, P. Kuhapon, U.
-          Vannarat, S. Poyai, S. Nekrasov, M.
-          <a target="_blank" href={withPrefix("papers/Nekrasov_2012_07_Sensor_Networks_Reefs.pdf")}>"Sensor
-          Networks Applications for Reefs at Racha Island, Thailand."</a> Published in the Proceedings of the 12th
-          International Coral Reef Symposium. Cairns, Australia. 9-13 July 2012.
-        </div>
-        <div className="mb-2">
-          Jaroensutasinee, K., Jaroensutasinee, M., Bainbridge, S., Fountain, T., Holbrook, S., Nekrasov, M. <a
-          target="_blank" href={withPrefix("papers/Nekrasov_2012_07_CREON.pdf")}>"CREON – Integrating Disparate Sources of Remote
-          Coral Reef Sensor Data."</a> Proceedings of the 12th International Coral Reef Symposium. 2012.
-        </div>
-        <div className="mb-2">
-          Jaroensutasinee, M., Jaroensutasinee, K., Fountain, T., Nekrasov, M. et al.
-          <a target="_blank" href={withPrefix("papers/Nekrasov_2011_09_Coral_Sensor_Network.pdf")}>"Coral Sensor Network at Racha Island, Thailand."</a>
-          Published in the Proceedings of the Environmental Information Management Conference. 2011.
-        </div>
-        <div className="mb-2">
-          Lu, S. Perry, M. Nekrasov, et al.. (2011).
-          <a target="_blank" href={withPrefix("papers/Nekrasov_2011_05_Bees.pdf")}>"Automatic analysis of Camera Image Data: an Example of Honey Bee (Apis cerana) Images from Shanping Wireless Sensor Network."</a>
-          Taiwan Journal of Forest Science. 6 (26); 305-311. 2011.
-        </div>
+    {papers.map( ({node:paper}) => (
+      <div className="mb-2" key={paper.id}>
+        {paper.frontmatter.citation} <Reminder icon post={paper}/>
+      </div>
+    ))}
 
   </Section>
 
@@ -385,9 +331,38 @@ const CVPage = ({ children }) => (
 
   </Section>
 
-</Layout>
-    )}
-  />
-)
+  </Layout>
+    )
+  }
+}
 
-export default CVPage
+
+export const pageQuery =  graphql`
+  query {
+    profileImage: file(relativePath: { eq: "profile/profile-cv.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+    }
+    allMarkdownRemark(
+      sort: { fields: [fields___date], order: DESC }
+      filter: {fields:{draft:{eq:false}},frontmatter:{ paper:{ne:null}}}
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            date(formatString: "MMM DD, YYYY")
+          }
+          frontmatter {
+            title
+            paper
+            citation
+          }
+        }
+      }
+    }
+  }
+`;

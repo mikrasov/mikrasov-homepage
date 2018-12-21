@@ -1,9 +1,12 @@
 ---
 title: "Paper on Racha Observatory presented at ICRS "
 featuredImage: "./featured-image.jpg"
+
+paper: "Nekrasov_2012_07_ICRS_Racha.pdf"
+citation: "Jaroensutasinee, M., Jaroensutasinee, K., Bainbridge, S., Fountain, T., Chumkiew, S., Noonsang, P. Kuhapon, U. Vannarat, S. Poyai, S. Nekrasov, M. \"Sensor Networks Applications for Reefs at Racha Island, Thailand.\" Proceedings of the 12th International Coral Reef Symposium. Cairns, Australia. 9-13 July 2012."
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
-Our paper: **[Sensor Networks Applications for Reefs at Racha Island, Thailand](/Nekrasov_2012_07_Sensor_Networks_Reefs.pdf)** was published and presented at the *[12th International Coral Reef Symposium](http://www.icrs2012.com/)* in Cairns, Australia.
+Our paper: **[Sensor Networks Applications for Reefs at Racha Island, Thailand](/papers/Nekrasov_2012_07_ICRS_Racha.pdf)** was published and presented at the *[12th International Coral Reef Symposium](http://www.icrs2012.com/)* in Cairns, Australia.
 
 Remote coral reef islands present a series of challenges for deploying coral reef sensor networks.
 This paper presents the experience of deploying sensor networks at Racha Yai Island in southern Thailand.

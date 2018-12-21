@@ -114,20 +114,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     //Tag by origin folder
     if(path.includes("/posts")){
       tags.add("post")
-      style = "blueAccent"
     }
     else if(path.includes("/tutorials")){
       tags.add("tutorial")
-      style = "redAccent"
     }
     else if(path.includes("/albums")){
       tags.add("album")
-      style = "greenAccent"
       external = node.frontmatter.album
     }
     else if(path.includes("/papers")){
       tags.add("paper")
-      style = "redAccent"
     }
 
 
@@ -137,8 +133,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       tags.add("album")
     }
 
-    if(node.frontmatter.project) {
-      tags.add("project")
+    if(node.frontmatter.paper) {
+      tags.add("paper")
     }
 
 
@@ -154,8 +150,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
     createNodeField({
       node,
-      name: `style`,
-      value: style,
+      name: `type`,
+      value: Array.from(tags)[0],
     })
     createNodeField({
       node,

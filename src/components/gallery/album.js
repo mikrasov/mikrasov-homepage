@@ -8,12 +8,10 @@ import PostIcon from '../blog/news.svg'
 
 
 export default function(props) {
+  const album = props.album;
+  let icon = "";
 
-
-  var album = props.album;
-  var icon = "";
-
-  if (album.fields.type === "post") {
+  if (album.fields.tags[0] === "post") {
     icon = (<Link to={album.fields.slug} className={"icon"}><PostIcon height="15px" width="15px"/></Link>)
   }
 
@@ -24,8 +22,7 @@ export default function(props) {
             <Img className="gallery-image" fixed={album.frontmatter.featuredImage.childImageSharp.fixed}/>
           </OutboundLink>
           <p className="gallery-name">
-            <OutboundLink href={album.frontmatter.album}
-                          target="_blank">{album.frontmatter.title}</OutboundLink>{icon}
+            <OutboundLink href={album.frontmatter.album} target="_blank">{album.frontmatter.title}</OutboundLink>{icon}
           </p>
           <p className="gallery-date">{album.fields.date} </p>
 

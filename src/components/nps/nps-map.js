@@ -56,7 +56,7 @@ class NpsMap extends React.Component {
     console.log(geography)
 
     return;
-    if (geography.properties.STUSPS == "CA" || geography.properties.STATE == "CA") {
+    if (geography.properties.STUSPS === "CA" || geography.properties.STATE === "CA") {
 
       this.setState({
         center: [0,500],
@@ -65,7 +65,7 @@ class NpsMap extends React.Component {
     }
   }
 
-  styleNps(geography){
+  static styleNps(geography){
     var cls = "mapDefault";
 
     if(geography.properties.UNIT_TYPE !== undefined)
@@ -86,7 +86,6 @@ class NpsMap extends React.Component {
     return (
       <div className="mapContainer"  style={{marginBottom:"1rem"}}>
 
-
         <ComposableMap
           projection="albersUsa"
           projectionConfig={{ scale: 1240 }}
@@ -104,7 +103,7 @@ class NpsMap extends React.Component {
                   cacheId={i}
                   geography={geography}
                   projection={projection}
-                  className={this.styleNps(geography)}
+                  className={NpsMap.styleNps(geography)}
                   onClick={this.handleGeographyClick}
                   onMouseEnter={this.handleGeographyEnter}
                   onMouseLeave={this.handleGeographyLeave}

@@ -10,11 +10,19 @@
 }
 
 .gallery-name {
-    color: #000000 !important;
+
     font-weight: bold;
     font-size: 85%;
     margin: 0;
     padding-left: 4px;
+}
+
+.gallery-name a{
+    color: #000000 !important;
+}
+
+.gallery-name rect, .gallery-name path{
+    fill: #1856ba99 !important;
 }
 
 
