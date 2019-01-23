@@ -277,7 +277,7 @@ export default class CvPage extends React.Component {
             Turbine Initiative – 20hrs per week.
           </Experience>
 
-          <Experience name={"Pacific Rim Undergraduate Experiences [PRIME] Scholar, National Museum of Marine Biology and Aquarium, Taiwan"} date={"Sep 2013 - Jun 2017"}>
+          <Experience name={"Pacific Rim Undergraduate Experiences [PRIME] Scholar, National Museum of Marine Biology and Aquarium, Taiwan"} date={"Jul 2009 - Aug 2009"}>
             Automated coral spawning detection using computer vision coupled with coral fluorescence and– 40hrs per
             week.
           </Experience>
