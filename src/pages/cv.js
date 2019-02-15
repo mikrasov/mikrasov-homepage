@@ -278,7 +278,7 @@ export default class CvPage extends React.Component {
           </Experience>
 
           <Experience name={"Pacific Rim Undergraduate Experiences [PRIME] Scholar, National Museum of Marine Biology and Aquarium, Taiwan"} date={"Jul 2009 - Aug 2009"}>
-            Automated coral spawning detection using computer vision coupled with coral fluorescence and– 40hrs per
+            Automated coral spawning detection using computer vision coupled with coral fluorescence – 40hrs per
             week.
           </Experience>
 

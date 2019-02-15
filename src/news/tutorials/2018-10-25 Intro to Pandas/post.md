@@ -5,7 +5,7 @@ featuredImage: "./featured-image.png"
 
 Pandas? As in the bear?
 
-Turns out [Pandas](https://pandas.pydata.org/) is an awesome python library for data analysis. If you were like me 5 years a go you may groan at learning another tool. You need to analyze some data right *now* and you don't have time for learning a brand new thing. Besides you can do it all through lists dicts and loops anyway right? 
+Turns out [Pandas](https://pandas.pydata.org/) is an awesome python library for data analysis. If you were like me 5 years ago you may groan at learning another tool. You need to analyze some data right *now* and you don't have time for learning a brand new thing. Besides you can do it all through lists dicts and loops anyway right? 
 
 Well turns out, if you want to save yourself an incredible amount of time and write very little code then there may be a better way. So lets introduce you to pandas.
 

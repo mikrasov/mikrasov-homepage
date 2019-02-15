@@ -89,7 +89,7 @@ const AboutPage = ({ children }) => (
         <p>
           My skills include application and systems engineering, strong understanding of wireless networks, as well as
           a long history of web development. I excel in interdisciplinary work and most of my past projects have
-          partner with marine biologists, environmental scientists as well as social science.
+          partner with marine biologists, environmental scientists as well as social scientists.
         </p>
         <p>
           In addition to my academic and professional work, I am a photographer, hiker, and adventurer.
