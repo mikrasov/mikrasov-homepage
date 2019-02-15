@@ -47,10 +47,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint": "^5.x",
+    "eslint": "^4.19.x",
     "eslint-plugin-import": "^2.x",
     "eslint-plugin-react": "^7.x",
-    "googleapis": "^37.x",
+    "googleapis": "^34.x",
     "image-downloader": "^3.4.1",
     "prettier": "^1.15.2"
   },
