@@ -21,7 +21,7 @@ Our project was separated into three parts. Esther focused on TVWS active measur
 
 In the meantime I was working on spectrum sensing from a UAS. I took up my [DJI M100](https://www.dji.com/matrice100) equipped with a SDR (software defined radio) to scan TVWS and LTE channels. The goal was to create a heatmap of available and occupied spectrum and evaluate how altitude impacts received signal strength. 
 
-<div class="img-right"><img src="featured-image.jpg" alt="DJI M100"></div>
+<div class="img-right"><img src="drone.jpg" alt="DJI M100"></div>
 
 For TVWS in particular, the FCC enforces non interference rules on conservative propagation models that seek to minimize interference. In reality local obstructions such as mountains, hills, and plant life may restrict interference. In our test we flew at 150ft and 300ft (in addition to the 0ft altitude Esther was collecting on the ground). We wanted to understand what spectrum was available for transmission over the reservation, what impact if any altitude had in real reception, and how this compared to FCC reports.
 

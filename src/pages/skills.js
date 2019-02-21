@@ -18,7 +18,7 @@ const SkillsPage = ({ children }) => (
   <StaticQuery
     query={graphql`
     {
-      profileImage: file(relativePath: { eq: "profile/profile-skill.png" }) {
+      profileImage: file(relativePath: { eq: "profile/profile-skill.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
             ...GatsbyImageSharpFluid
