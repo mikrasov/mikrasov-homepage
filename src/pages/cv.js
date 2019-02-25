@@ -339,7 +339,7 @@ export default class CvPage extends React.Component {
 
 export const pageQuery =  graphql`
   query {
-    profileImage: file(relativePath: { eq: "profile/profile-cv.png" }) {
+    profileImage: file(relativePath: { eq: "profile/profile-cv.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
             ...GatsbyImageSharpFluid
