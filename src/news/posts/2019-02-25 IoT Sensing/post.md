@@ -1,7 +1,6 @@
 ---
 title: "IoT Sensing Project"
-featuredIm
-age: "./featured-image.jpg"
+featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/8N3WxvaqEndDvf3QA"
 ---
 
