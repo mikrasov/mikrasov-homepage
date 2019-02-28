@@ -76,6 +76,7 @@ const visited = {
     "Cambodia",
     "Luxembourg",
     "Monaco",
+    "Mongolia",
     "Mexico",
     "Montenegro",
     "Malaysia",

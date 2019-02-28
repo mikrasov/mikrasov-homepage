@@ -1,16 +1,16 @@
 ---
-title: "Hotmobile 2018 Poster"
-featuredImage: "./featured-image.png" 
+title: "Hotmobile 2018 Poster (Won Runner Up)"
+featuredImage: "./featured-image.jpg" 
 paper: "Nekrasov_2019_02_HotMobile-Poster-abstract.pdf"
 citation: "(POSTER) Paul, U. Nekrasov, M. Belding, E. \"Emergence: A Delay Tolerant Web Application for Disaster Relief.\" HotMobile. 2019."
 keywords: "UAV, Drone, Emergency, Wireless Networks, Progressive Web App"
 ---
 
-Udit Paul presented **[EmerGence: A Delay Tolerant Web Application for Disaster Relief](/papers/Nekrasov_2019_02_HotMobile-Poster-abstract.pdf)** on our joint work at ACM HotMobile in Santa Cruz. This work is the early stages of a project in delivering messages from a drone using emerging web standards.
-
+Udit Paul presented our joint work on **[EmerGence: A Delay Tolerant Web Application for Disaster Relief](/papers/Nekrasov_2019_02_HotMobile-Poster-abstract.pdf)** at ACM HotMobile in Santa Cruz. This work is the early stages of a project in delivering messages from a drone using emerging web standards. Our poster won runner up (second place) which is cool.
+.
 
 <div class="img-left">
-  <a href="/papers/Nekrasov_2019_02_HotMobile-Poster.pdf"><img src="featured-image.png" alt="EmerGence: A Delay Tolerant Web Application for Disaster Relief" /></a>
+  <a href="/papers/Nekrasov_2019_02_HotMobile-Poster.pdf"><img src="poster.png" alt="EmerGence: A Delay Tolerant Web Application for Disaster Relief" /></a>
 </div>
 
 
