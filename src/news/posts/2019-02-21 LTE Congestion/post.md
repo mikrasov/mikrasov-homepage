@@ -20,4 +20,8 @@ For this work we need areas of unusually high cellular activity. This week Vivek
 
 <div class="img-right"><img src="./setup.jpg" alt="Expiremental Setup"></div>
 
-We had two computers collecting logs (each for 8 towers), while we worked on the intro and background sections on the corresponding paper for this work. We got more than a few glances and good bursts of conversation with Starbucks patrons. We came back with 1TB of data that we are crunching now. Stay tuned later in the year for the official paper.
+We had two computers collecting logs (each for 8 towers), while we worked on the intro and background sections on the corresponding paper for this work. We got more than a few glances and good bursts of conversation with Starbucks patrons. We came back with 1TB of data that we are crunching now. 
+
+**Update**: When we crunched the numbers we found that actually there was no detectable congestion. We hypothesize that this is because dedicated event venues (like stadiums) are adequately provisioned for a large influence of people. Good news for users, bad news for our paper. We will have to look for congestion elsewhere.
+
+**Update 2**: We ended up finding some a month later in [San Diego during Saint Patrick's Day](/posts/2019-03-16-sd-congestion/)  
