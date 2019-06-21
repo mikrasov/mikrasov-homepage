@@ -9,31 +9,16 @@ export default function(props) {
 
   const post = props.post.frontmatter
 
-  if(post.album) {
-    if (props.icon) return (
-      <OutboundLink href={post.album} target="_blank" className="blog-reminder-icon album">
-        <AlbumIcon/>
-      </OutboundLink>
-    )
-
-    else return (
-
-      <OutboundLink href={post.album} target="_blank">
-        <div className="blog-reminder album">
-          <AlbumIcon/> Check out the full album of images for this post!
-        </div>
-      </OutboundLink>
-    )
-  }
+  let reminders =[]
 
   if(post.paper) {
-    if (props.icon) return (
+    if (props.icon) reminders.push(
       <a href={withPrefix("papers/"+post.paper)} target="_blank" className="blog-reminder-icon paper">
         <PdfIcon />
       </a>
     )
 
-    else return (
+    else reminders.push(
 
       <a href={withPrefix("papers/"+post.paper)} target="_blank">
         <div className="blog-reminder paper">
@@ -43,5 +28,25 @@ export default function(props) {
     )
   }
 
-  return <></>
+  if(post.album) {
+    if (props.icon) reminders.push(
+      <OutboundLink href={post.album} target="_blank" className="blog-reminder-icon album">
+        <AlbumIcon/>
+      </OutboundLink>
+    )
+
+    else reminders.push(
+
+      <OutboundLink href={post.album} target="_blank">
+        <div className="blog-reminder album">
+          <AlbumIcon/> Check out the full album of images for this post!
+        </div>
+      </OutboundLink>
+    )
+  }
+
+
+
+  console.log(reminders)
+  return reminders
 }

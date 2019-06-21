@@ -1,11 +1,11 @@
 ---
-title: "Paper on Aerial Measurement of 802.15.4"
+title: "Study of Aerial 802.15.4"
 featuredImage: "./featured-image.jpg" 
 album: "https://photos.app.goo.gl/8N3WxvaqEndDvf3QA"
 
 project: "Drone"
 paper: "Nekrasov_2019_06_21_DroNet"
-citation: "Nekrasov, M. Allen, R. Belding, E.  \"Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4\". ACM DroNet. 2019."
+citation: "Nekrasov, M. Allen, R. Belding, E.  \"Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4\". ACM DroNet. 2019. (Best Paper)"
 keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireless Networks, Precision Agriculture, Aerial networks."
 ---
 
@@ -13,7 +13,7 @@ keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireles
 
 <div class="img-right"><img src="./featured-image.jpg" alt="IoT Sensing Project"></div>
 
-For the last 9 months, I have been working with [Ryan Allen](https://www.linkedin.com/in/ryan-allen-ba5560124/), a now just graduated Masters student. He was a pleasure to work with and extremely reliable. He is presenting our work: **[Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4](/papers/Nekrasov_2019_06_21_DroNet)** in Seoul, South Korea at *ACM DroNet*.
+For the last nine months I have had the pleasure to work  with [Ryan Allen](https://www.linkedin.com/in/ryan-allen-ba5560124/), a just-graduated! Masters student. He presented our work: **[Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4](/papers/Nekrasov_2019_06_21_DroNet.pdf)** in Seoul, South Korea at *ACM DroNet*. It won *Best Paper*. 
 
 
 Unmanned Aircraft Systems (UAS), i.e. drones, have been commercially successful in both the consumer and industrial sectors in part due to the wide variety of applications they benefit. In environmental monitoring and precision agriculture, UASs can be utilized for data collection from rural IoT sensor networks. 

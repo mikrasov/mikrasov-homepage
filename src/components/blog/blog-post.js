@@ -40,10 +40,7 @@ export default function Template(props) {
   const disqusConfig = {
     identifier: post.fields.slug.replace(/\//g,""),
     title: post.frontmatter.title,
-  };
-
-  console.log(html)
-
+  }
 
   return (
     <Layout sideContent={sidebar} active={"news"}>

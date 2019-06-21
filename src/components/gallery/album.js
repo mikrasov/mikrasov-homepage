@@ -11,7 +11,7 @@ export default function(props) {
   const album = props.album;
   let icon = "";
 
-  if (album.fields.tags[0] === "post") {
+  if (album.fields.tags[0] === "post" || album.fields.tags[0] === "paper") {
     icon = (<Link to={album.fields.slug} className={"icon"}><PostIcon height="15px" width="15px"/></Link>)
   }
 
