@@ -45,8 +45,5 @@ export default function(props) {
     )
   }
 
-
-
-  console.log(reminders)
   return reminders
 }

@@ -3,12 +3,12 @@ title: "Mobisys 2013 Best Poster"
 featuredImage: "./featured-image.jpg"
 
 project: "Fulbright"
-paper: "Nekrasov_2012_07_ICRS_Racha.pdf"
+paper: "Nekrasov_2013_05_Mobisys_Poster-abstract.pdf"
 citation: "(POSTER) Nekrasov, M., Chumkiew, S., Shin, P. \"Instrumenting Thailand’s Coastline: Mobile Devices for Environmental and Disaster Monitoring.\" MobiSys. 2013."
 keywords: "Android, Real-time Analysis, Environmental, Observing System, Water Quality, Event Detection; Mobile Computing"
 ---
 
-My poster titled **[Instrumenting Thailand’s Coastline: Mobile Devices for Environmental and Disaster Monitoring](/papers/Nekrasov_2012_07_ICRS_Racha.pdf)** won best poster of *[Mobisys 2013](https://www.sigmobile.org/mobisys/2013/)*.
+My poster titled **[Instrumenting Thailand’s Coastline: Mobile Devices for Environmental and Disaster Monitoring](/papers/Nekrasov_2013_05_Mobisys_Poster-abstract.pdf)** won best poster of *[Mobisys 2013](https://www.sigmobile.org/mobisys/2013/)*.
 
 <div class="img-left">
   <a href="/papers/Nekrasov_2013_05_Mobisys_Poster.pdf"><img src="featured-image.jpg" alt="Instrumenting Thailand’s Coastline: Mobile Devices for Environmental and Disaster Monitoring" /></a>
