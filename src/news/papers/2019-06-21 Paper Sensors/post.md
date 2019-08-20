@@ -4,7 +4,7 @@ featuredImage: "./featured-image.png"
 album: "https://photos.app.goo.gl/8N3WxvaqEndDvf3QA"
 
 project: "Drone"
-paper: "Nekrasov_2019_08_09_Sensors.pdf
+paper: "Nekrasov_2019_08_09_Sensors.pdf"
 citation: "Nekrasov M, Allen R, Artamonova I, Belding E. \"Optimizing 802.15. 4 Outdoor IoT Sensor Networks for Aerial Data Collection\". Sensors. 2019 Jan;19(16):3479."
 keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireless Networks, Precision Agriculture, Aerial networks."
 ---
