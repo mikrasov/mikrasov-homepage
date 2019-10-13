@@ -1,7 +1,7 @@
 ---
 title: "Internet Freedom Festival"
 featuredImage: "./featured-image.jpg"
-album: "https://goo.gl/photos/auHCSUzYdX9JUShQ7"
+album: "https://goo.gl/photos/a2YB6MYDL9GYB92h8"
 ---
 
 
