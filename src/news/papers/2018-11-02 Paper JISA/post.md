@@ -1,8 +1,9 @@
 ---
-title: "Paper on Verified Group Anonymity Published"
+title: "JISA Paper: A user-driven free speech application for anonymous and verified online, public group discourse"
 featuredImage: "./featured-image.jpg" 
 
 project: "flownet"
+category: "core"
 paper: "Nekrasov_2018_11_JISA.pdf"
 citation: "Nekrasov, M, et al. \"Anonymity and Reputation on Social Media in an Age of Global Internet Dependence\". Journal of Internet Services and Applications. 2018."
 keywords: "Social media, Internet freedoms, Free speech, Censorship, Anonymity, ICTD, Android, App"

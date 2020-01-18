@@ -128,6 +128,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 
 
+
+
     //Tag the types based on content
     if(node.frontmatter.album) {
       tags.add("album")

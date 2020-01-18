@@ -1,10 +1,10 @@
 ---
-title: "Present at Environmental Information Management Conference"
+title: "EIM Paper: Coral sensor network at Racha Island, Thailand"
 featuredImage: "./featured-image.jpg"
 
 
 paper: "Nekrasov_2011_09_EIM.pdf"
-citation: "Jaroensutasinee, M., Jaroensutasinee, K., Fountain, T., Nekrasov, M. et al.\"Coral Sensor Network at Racha Island, Thailand.\" Proceedings of the Environmental Information Management Conference. 2011."
+citation: "Jaroensutasinee, M., Jaroensutasinee, K., Fountain, T., Nekrasov, M. et al.\"Coral Sensor Network at Racha Island, Thailand.\" EIM. Sep 2011."
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 

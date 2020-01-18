@@ -1,5 +1,5 @@
 ---
-title: "Paper on DataTurbine Published "
+title: "Paper: The Open Source DataTurbine Initiative"
 featuredImage: "./featured-image.jpg"
 
 paper: "Nekrasov_2012_07_ESA_DataTurbine.pdf"

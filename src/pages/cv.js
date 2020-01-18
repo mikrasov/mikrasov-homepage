@@ -27,6 +27,7 @@ const skills = {
   "Programing": [
     ["Java", 100],
     ["Python", 80],
+    ["Javascript", 100],
     ["PHP", 50],
     ["C", 50],
     ["C++", 30],
@@ -35,13 +36,10 @@ const skills = {
   "Web": [
     ["HTML", 100],
     ["CCS", 80],
-    ["Javascript", 100],
     ["JQuery", 100],
     ["Bootstrap", 80],
-    ["D3", 80],
     ["React", 30],
     ["Gatsby", 30],
-
   ],
   "Technologies": [
     ["Android Development", 100],
@@ -49,6 +47,7 @@ const skills = {
     ["Django", 100],
     ["NodeJs", 100],
     ["SQL", 100],
+    ["MongoDB", 100],
     ["XML", 100],
     ["JSON", 100],
     ["NumPy", 100],
@@ -56,13 +55,13 @@ const skills = {
     ["OpenCV", 100],
     ["TCP/IP Stack", 100],
     ["802.11", 100],
+    ["802.15.4", 100],
     ["DataTurbine", 100],
 
   ],
   "Development Environment": [
     ["Linux", 100],
     ["Windows", 100],
-    ["OS X", 100],
     ["JetBrains IDEs", 100],
     ["Android Studio", 100],
     ["Eclipse", 100],
@@ -73,6 +72,14 @@ const skills = {
     ["Lightroom", 100],
     ["Photoshop", 100],
     ["Microsoft Office", 100],
+  ],
+  "Social Skill": [
+    ["Teaching", 100],
+    ["Teamwork", 100],
+    ["Communicating Between Disciplines", 100],
+    ["Multi-national Collaborations", 100],
+    ["Engage with technology stakeholders", 100],
+    ["Grant Writing", 100],
   ],
   "Other": [
     ["Sensor Networks", 100],
@@ -127,6 +134,11 @@ const classes = {
     "Foundations of Computer Science",
     "Data Structures and Algorithms ",
     "Into to Computer Science",
+    "Compilers",
+    "Networking",
+  ],
+  "Taught (As Instructor)":[
+    "Computers and Society (high school)",
   ]
 }
 
@@ -171,7 +183,7 @@ export default class CvPage extends React.Component {
         <Section name={"Education"}>
           <a id="education" />
           <div className="row mb-2">
-            <div className="col-md-3 col-lg-4 order-1 order-md-2 text-emphasis">2019<br/>(expected)</div>
+            <div className="col-md-3 col-lg-4 order-1 order-md-2 text-emphasis">2020<br/>(expected in March)</div>
             <div className="col-md-9 col-lg-8 order-2 order-md-1"> <strong>Ph.D Computer Science</strong> <br/>
               University of California, Santa Barbara
             </div>
@@ -303,17 +315,31 @@ export default class CvPage extends React.Component {
   <Section name={"Publications"}>
   <a id="publications" />
 
-    {papers.map( ({node:paper}) => (
+    <Subsection name={"Academic Papers"}>
+
+    {papers.map( ({node:paper}) => ( paper.frontmatter.category === 'core'?
       <div className="mb-2" key={paper.id}>
         {paper.frontmatter.citation} <Reminder icon post={paper}/>
-      </div>
+
+      </div>:''
     ))}
+    </Subsection>
+
+    <Subsection name={"Other Work"}>
+    {papers.map( ({node:paper}) => ( paper.frontmatter.category !== 'core'?
+        <div className="mb-2" key={paper.id}>
+          {paper.frontmatter.citation} <Reminder icon post={paper}/>
+
+        </div>:''
+    ))}
+    </Subsection>
 
   </Section>
 
   <Section name={"Awards & Scholarships"}>
     <a id="awards" />
     <ul className="fa-ul mb-0">
+      <li>DroNet 2019 Best Paper</li>
       <li>MobiSys 2013 Best Poster 2013</li>
       <li>NSF Graduate Fellowship Recipient 2012</li>
       <li>Fulbright Scholar 2012</li>
@@ -358,6 +384,7 @@ export const pageQuery =  graphql`
           }
           frontmatter {
             title
+            category
             paper
             citation
           }

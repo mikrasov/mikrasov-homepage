@@ -1,8 +1,8 @@
 ---
-title: "MobiSys 2019 Poster"
+title: "MobiSys 2019 Poster: Data Collection from Outdoor IoT 802.15.4 Sensor Networks using Unmanned Aerial Systems"
 featuredImage: "./featured-image.jpg" 
 paper: "Nekrasov_2019_06_17_MobiSys_Poster-abstract.pdf"
-citation: "(POSTER) Allen, R. Nekrasov, M. Belding, E. \"Data Collection from Outdoor IoT 802.15.4 Sensor Networks using Unmanned Aerial Systems.\" MobiSys. 2019."
+citation: "(POSTER) Allen, R. Nekrasov, M. Belding, E. \"Data Collection from Outdoor IoT 802.15.4 Sensor Networks using Unmanned Aerial Systems.\" ACM MobiSys. 2019."
 keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireless Networks, Aerial networks, Experimental Measurements"
 ---
 

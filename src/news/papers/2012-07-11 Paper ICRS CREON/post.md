@@ -1,9 +1,9 @@
 ---
-title: "Paper on CREON presented at ICRS "
+title: "ICRS Paper: CREON – Integrating Disparate Sources of Remote Coral Reef Sensor Data"
 featuredImage: "./creon_logo.png"
 
 paper: "Nekrasov_2012_07_ICRS_CREON.pdf"
-citation: "Jaroensutasinee, K., Jaroensutasinee, M., Bainbridge, S., Fountain, T., Holbrook, S., Nekrasov, M. \"CREON – Integrating Disparate Sources of Remote Coral Reef Sensor Data.\" Proceedings of the 12th International Coral Reef Symposium. Cairns, Australia. 9-13 July 2012."
+citation: "Jaroensutasinee, K., Jaroensutasinee, M., Bainbridge, S., Fountain, T., Holbrook, S., Nekrasov, M. \"CREON – Integrating Disparate Sources of Remote Coral Reef Sensor Data.\" ICRS. Jul 2012."
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 
@@ -11,8 +11,7 @@ keywords: "Sensor network, Coral, CREON, Environmental observing"
 Our paper: **[CREON – Integrating Disparate Sources of Remote Coral Reef Sensor Data](/papers/Nekrasov_2012_07_ICRS_CREON.pdf)** was published and presented at the *[12th International Coral Reef Symposium](http://www.icrs2012.com/)* in Cairns, Australia.
 
 
- The Coral Reef Ecological Observatory Network (CREON) is a grass-roots, self-assembled group of coral reef scientists and engineers working to advance an understanding of coral reef dynamics by facilitating
-the development of practical environmental sensor networks. 
+ The Coral Reef Ecological Observatory Network (CREON) is a grass-roots, self-assembled group of coral reef scientists and engineers working to advance an understanding of coral reef dynamics by facilitating the development of practical environmental sensor networks. 
 
 <div class="img-right"><img src="creon_logo.png" alt="CREON Logo"></div>
 

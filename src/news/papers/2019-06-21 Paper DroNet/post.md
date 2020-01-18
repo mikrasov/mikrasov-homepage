@@ -1,9 +1,10 @@
 ---
-title: "Study of Aerial 802.15.4"
+title: "DroNet Paper: Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4"
 featuredImage: "./featured-image.jpg" 
 album: "https://photos.app.goo.gl/8N3WxvaqEndDvf3QA"
 
 project: "Drone"
+category: "core"
 paper: "Nekrasov_2019_06_21_DroNet.pdf"
 citation: "Nekrasov, M. Allen, R. Belding, E.  \"Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4\". ACM DroNet. 2019. (Best Paper)"
 keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireless Networks, Precision Agriculture, Aerial networks."

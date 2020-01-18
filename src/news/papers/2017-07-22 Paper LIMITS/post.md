@@ -1,10 +1,11 @@
 ---
-title: "Paper Presented at ACM LIMITS "
+title: "LIMITS Paper: Limits to internet freedoms: Being heard in an increasingly authoritarian world"
 featuredImage: "./featured-image.jpg"
 
 project: "flownet"
+category: "core"
 paper: "Nekrasov_2017_07_LIMITS.pdf"
-citation: "Nekrasov, M, Parks, L., and Belding, E. \"Limits to internet freedoms: Being heard in an increasingly authoritarian world\". Proceedings of the 2017 Workshop on Computing Within Limits. ACM, 2017."
+citation: "Nekrasov, M, Parks, L., and Belding, E. \"Limits to internet freedoms: Being heard in an increasingly authoritarian world\". ACM LIMITS. Jul 2017."
 keywords: "Social Media, Internet Freedoms, Free Speech, Censorship, Anonymity, ICTD, Survey."
 ---
 Our paper on: **[Limits to Internet Freedoms: Being Heard in an Increasingly Authoritarian World](/papers/Nekrasov_2017_07_LIMITS.pdf)** was published and presented at *Workshop on Computing Within Limits*.

@@ -3,7 +3,7 @@ title: "Paper Published on Automatic Honey Bee Counting"
 featuredImage: "./featured-image.jpg"
 
 paper: "Nekrasov_2011_05_TJSF_Bees.pdf"
-citation: "Lu, S. Perry, M. Nekrasov, et al.. (2011). \"Automatic analysis of Camera Image Data: an Example of Honey Bee (Apis cerana) Images from Shanping Wireless Sensor Network.\" Taiwan Journal of Forest Science. 6 (26); 305-311. 2011."
+citation: "Lu, S. Perry, M. Nekrasov, et al.. \"Automatic analysis of Camera Image Data: an Example of Honey Bee (Apis cerana) Images from Shanping Wireless Sensor Network.\" Taiwan Journal of Forest Science. 2011."
 keywords: "bee image, image analysis, automated identification, blob detection"
 ---
 
