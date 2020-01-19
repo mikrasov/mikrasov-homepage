@@ -8,6 +8,7 @@ import Subsection from '../components/cv/subsection.js'
 import Subsubsection from '../components/cv/subsubsection.js'
 import Experience from '../components/cv/experience.js'
 import "../components/cv/skill.css"
+import EsciIcon from '../images/icons/esci.svg'
 
 
 function slugify(text)
@@ -120,7 +121,8 @@ const classes = {
   ],
   "Graduate":[
     "Computational Geometry",
-    "Distributed Computing and Computer Networks",
+    "Distributed Computing",
+    "Computer Networks",
     "Mobile Computing",
     "Cloud Computing",
     "Mobile Networks",
@@ -129,16 +131,6 @@ const classes = {
     "Java Distributed Computing",
     "Sociology & Biology Networks",
     "Education: Blended Learning Course Design"
-  ],
-  "Taught (As TA)":[
-    "Foundations of Computer Science",
-    "Data Structures and Algorithms ",
-    "Into to Computer Science",
-    "Compilers",
-    "Networking",
-  ],
-  "Taught (As Instructor)":[
-    "Computers and Society (high school)",
   ]
 }
 
@@ -160,9 +152,14 @@ const sidebar = <div>
 
         <li><a href="#academic">Academic Experience</a></li>
         <li><a href="#industry">Industry Experience</a></li>
+        <li><a href="#teaching">Teaching Experience</a></li>
       </ul>
     </li>
     <li><a href="#publications">Publications</a></li>
+    <ul>
+      <li><a href="#pub-core">Core Research</a></li>
+      <li><a href="#pub-other">Other Work</a></li>
+    </ul>
     <li><a href="#awards">Awards & Scholarships</a></li>
   </ul>
 </div>
@@ -301,7 +298,7 @@ export default class CvPage extends React.Component {
     <Subsection name={"Industry Experience"}>
       <a id="industry" />
 
-      <Experience name={"Idependent Contractor"} date={"Sep 2006 - Present"}>
+      <Experience name={"Independent Contractor"} date={"Sep 2006 - Present"}>
         Administered a private consulting business for occasional jobs including web development, small business computer network instillation and troubleshooting, and photography. Requires high level of flexibility, understanding client needs, communicating expectations, meeting deadlines, and communicating technical constraints and solutions in clear understandable language.
       </Experience>
 
@@ -309,14 +306,49 @@ export default class CvPage extends React.Component {
         Lead front-end web developer for MobileTrac, a startup specializing in vehicle history reports. Worked in a team with marketing, business, and back-end programmers to develop a commercial website selling instant vehicle history reports. Required meeting tight deadlines, co-ordinating with members who had varying perspectives and technical literacy. Duties included: programing as well graphical and interface design.
       </Experience>
     </Subsection>
+
+
+    <Subsection name={"Teaching Experience"}>
+        <a id="teaching" />
+
+        <Experience name={"Computer Ethics: Reshaping Society Through Technology"} date={"Winter 2020"}>
+          Designed and co-taught (with Sherri Conklin) a high school enrichment course. What we share online and how this highly tailored personal information is used is a topic of continuous concern and debate. In this class we explored what these algorithms “know” about us and how they gather data. This class provided an overview of active areas of computer science including: Big Data, Machine Learning, Networking, Security, and Human Computer Interaction. The class will provided the skills for understanding how the technologies work as well as philosophical skills for critically engaging with these technologies.
+        </Experience>
+
+        <Experience name={"Introduction to Compute Communication Networks (TA)"} date={"Fall 2019"}>
+          As a teaching assistant, I led discussion sections, held office hours, moderated an online forum, and graded student assignments. This course covered the fundamentals of computer networks including the application, transport, network, and link layers.
+          <div className="blog-emphasis"> <a href="/eval/ESCI_CS176A.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
+        </Experience>
+
+      <Experience name={"Translation of Programming Languages (TA)"} date={"Spring 2019"}>
+        As a teaching assistant, I led discussion sections, held office hours, moderated an online forum, and graded student assignments. This course covered how to construct parsers and compilers. Due to the difficult nature of the class, as a TA I spent lots of time outside of class helping students understand the class material and to apply it to their course projects.
+        <div className="blog-emphasis"> <a href="/eval/ESCI_CS160.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
+      </Experience>
+
+
+      <Experience name={"Data Structure and Algorithms (TA)"} date={"Spring 2018"}>
+        As a teaching assistant, I led discussion sections, held office hours, moderated an online forum, and graded student assignments. This was a proof heavy course covering greedy algorithms, divide and conquer, dynamic programming, np-completeness, and approximation algorithms.
+        <div className="blog-emphasis"> <a href="/eval/ESCI_CS130B.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
+      </Experience>
+
+      <Experience name={"Computer Science Bootcamp (TA)"} date={"Winter 2018"}>
+        As a teaching assistant, I led lab section, held office hours, moderated an online forum, and graded student assignments. This was an intro course targeted to non computer scientists that covered a wide range of topics such as data encoding, image formats, python programming, audio encoding, graph traversal, and huffman coding.
+        <div className="blog-emphasis"> <a href="/eval/ESCI_CS4.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
+      </Experience>
+
+      <Experience name={"Foundations of Computer Science (TA)"} date={"Winter 2018"}>
+        As a teaching assistant, I led discussion sections, held office hours, and graded student assignments. This course introduced students to core mathematical concepts underpinning computer science such as logic, inductive proofs, recursion set theory, combinatorics .
+      </Experience>
+
+    </Subsection>
   </Section>
 
 
   <Section name={"Publications"}>
   <a id="publications" />
 
-    <Subsection name={"Academic Papers"}>
-
+    <Subsection name={"Core Papers"}>
+      <a id="pub-core" />
     {papers.map( ({node:paper}) => ( paper.frontmatter.category === 'core'?
       <div className="mb-2" key={paper.id}>
         {paper.frontmatter.citation} <Reminder icon post={paper}/>
@@ -326,6 +358,7 @@ export default class CvPage extends React.Component {
     </Subsection>
 
     <Subsection name={"Other Work"}>
+      <a id="pub-other" />
     {papers.map( ({node:paper}) => ( paper.frontmatter.category !== 'core'?
         <div className="mb-2" key={paper.id}>
           {paper.frontmatter.citation} <Reminder icon post={paper}/>

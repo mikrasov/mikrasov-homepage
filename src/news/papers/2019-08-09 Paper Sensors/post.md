@@ -1,7 +1,6 @@
 ---
 title: "Sensors Paper: Optimizing 802.15. 4 Outdoor IoT Sensor Networks for Aerial Data Collection"
 featuredImage: "./featured-image.png" 
-album: "https://photos.app.goo.gl/8N3WxvaqEndDvf3QA"
 
 project: "Drone"
 category: "core"
