@@ -16,7 +16,7 @@ const sidebar =<div>
 
   <h3>Next Step:</h3>
   <p>
-  Looking for a career position starting in <strong>August 2019</strong>.
+  Looking for a career position starting in <strong>March 2020</strong>.
   </p>
 
 
@@ -28,7 +28,7 @@ const AboutPage = ({ children }) => (
   <StaticQuery
     query={graphql`
     {
-      profileImage: file(relativePath: { eq: "paww35rofile/profile-about.jpg" }) {
+      profileImage: file(relativePath: { eq: "profile/profile-about.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG

@@ -336,7 +336,7 @@ export default class CvPage extends React.Component {
         <div className="blog-emphasis"> <a href="/eval/ESCI_CS4.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
       </Experience>
 
-      <Experience name={"Foundations of Computer Science (TA)"} date={"Winter 2018"}>
+      <Experience name={"Foundations of Computer Science (TA)"} date={"Fall 2012"}>
         As a teaching assistant, I led discussion sections, held office hours, and graded student assignments. This course introduced students to core mathematical concepts underpinning computer science such as logic, inductive proofs, recursion set theory, combinatorics .
       </Experience>
 
