@@ -71,6 +71,7 @@ module.exports = {
         path: `${__dirname}/src/news/`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

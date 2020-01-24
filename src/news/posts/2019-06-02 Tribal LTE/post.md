@@ -2,6 +2,7 @@
 title: "Evaluating Tribal Cellular Access"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/GVx4rxaJJ5r79KBC9"
+project: "Tribal-Internet"
 ---
 
 <div class="img-right"><img src="./featured-image.jpg" alt="Flying Drone over Santa Clara"></div>

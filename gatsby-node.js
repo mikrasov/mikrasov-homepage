@@ -25,6 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/components/blog/blog-post.js')
+    const projectPost = path.resolve('./src/components/projects/project-post.js')
 
     resolve(
       graphql(`
@@ -33,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
               edges {
                 node {
                   fields {
+                    type
                     external
                     tags                  
                     draft
@@ -41,6 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    id
                   }
                 }
               }
@@ -63,12 +66,14 @@ exports.createPages = ({ graphql, actions }) => {
           const previous = index === internalPosts.length - 1 ? null : internalPosts[index + 1].node;
           const next = index === 0 ? null : internalPosts[index - 1].node;
 
+
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: (post.node.fields.type=="project")?projectPost:blogPost,
             context: {
               slug: post.node.fields.slug,
               date: post.node.fields.date,
+              proj: post.node.frontmatter.id,
               previous,
               next,
             },
@@ -124,6 +129,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
     else if(path.includes("/papers")){
       tags.add("paper")
+    }
+    else if(path.includes("/projects")){
+      tags.add("project")
     }
 
 

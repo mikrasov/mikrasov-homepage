@@ -2,6 +2,7 @@
 title: "Deploy Coral Observatory at Racha Yai."
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/HYKFmDWzCX7MGFZdA"
+project: "creon"
 ---
 
 As part of the [Coral Reef Environmental Observatory Network (CREON)](http://www.coralreefeon.org) I worked on a team to deploy a new coral observatory at Racha Island in Thailand. The collaboration included members from the Center of Excellence of Ecoinformatics, Walailak University, the [Great Barrier Reef Ocean Observing System](http://imos.org.au/gbroos.html), and UCSD. 

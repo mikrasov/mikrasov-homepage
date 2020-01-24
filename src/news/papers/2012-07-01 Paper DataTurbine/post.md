@@ -1,6 +1,7 @@
 ---
 title: "Paper: The Open Source DataTurbine Initiative"
 featuredImage: "./featured-image.jpg"
+project: "creon"
 
 paper: "Nekrasov_2012_07_ESA_DataTurbine.pdf"
 citation: "Fountain, T., Sameer, T., Shin, P. Nekrasov, M. \"The Open Source DataTurbine Initiative: Empowering the Scientific Community with Streaming Data Middleware.\" Bulletin of the Ecological Society of America. 2012."

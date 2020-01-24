@@ -62,7 +62,7 @@ export const blogListQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
-      filter: {fields:{draft:{eq:false}}}
+      filter: {fields:{draft:{eq:false},  tags: {ne: "project"}}}
       limit: $limit
       skip: $skip
     ) {

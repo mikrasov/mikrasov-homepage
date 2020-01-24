@@ -2,7 +2,7 @@
 title: "Sensors Paper: Optimizing 802.15. 4 Outdoor IoT Sensor Networks for Aerial Data Collection"
 featuredImage: "./featured-image.png" 
 
-project: "Drone"
+project: "Aerial-IoT"
 category: "core"
 paper: "Nekrasov_2019_08_09_Sensors.pdf"
 citation: "Nekrasov M, Allen R, Artamonova I, Belding E. \"Optimizing 802.15. 4 Outdoor IoT Sensor Networks for Aerial Data Collection\". MDPI Sensors. Jan 2019."
@@ -10,7 +10,7 @@ keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireles
 ---
 
 
-<div class="img-right"><img src="./featured-image.png" alt="IoT Sensing Project"></div>
+<div class="img-right"><img src="./featured-image.png" alt="IoT Sensing ProjectPreview"></div>
 
 My work with [Ryan Allen](https://www.linkedin.com/in/ryan-allen-ba5560124/), on **[Optimizing 802.15. 4 Outdoor IoT Sensor Networks for Aerial Data Collection](/papers/Nekrasov_2019_08_09_Sensors.pdf)** has been published in the Sensors Special Issue on "UAV-Based Applications in the Internet of Things (IoT)". 
 

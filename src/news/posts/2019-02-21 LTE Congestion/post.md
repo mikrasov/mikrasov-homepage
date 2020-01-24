@@ -1,6 +1,7 @@
 ---
 title: "LTE Congestion Monitoring in LA"
 featuredImage: "./featured-image.jpg"
+project: "LTE-congestion"
 ---
 
 <div class="img-right"><img src="./featured-image.jpg" alt="LTE Passive Monitoring Setup"></div>

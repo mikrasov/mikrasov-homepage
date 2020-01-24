@@ -44,12 +44,11 @@ const GalleryPage = ({ children }) => (
   `}
 
     render={data => (
-
-      <Layout sideImage={data.profileImage} sideContent=<GallerySidebar data={data.allMarkdownRemark}/> active={"gallery"}>
-      <h1>Recent Albums</h1>
-      <Gallery data={data.allMarkdownRemark}/>
-    </Layout>
-      )}
+      <Layout sideImage={data.profileImage} sideContent={<GallerySidebar data={data.allMarkdownRemark}/>} active={"gallery"}>
+        <h1>Recent Albums</h1>
+        <Gallery data={data.allMarkdownRemark}/>
+      </Layout>
+    )}
   />
 )
 

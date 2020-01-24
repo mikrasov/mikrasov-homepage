@@ -1,6 +1,7 @@
 ---
 title: "Received Fulbright Fellowship"
 featuredImage: "./featured-image.jpg" 
+project: "BandonBay"
 ---
 
 I am honored to have been selected for a US Student Fulbright award for 2012-2013 to Thailand.

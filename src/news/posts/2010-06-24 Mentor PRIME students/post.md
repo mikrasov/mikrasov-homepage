@@ -1,6 +1,7 @@
 ---
 title: "Mentor PRIME Students"
 featuredImage: "./featured-image.jpg"
+project: "bee-count"
 ---
 Mentored UCSD students for work with the Taiwan Forestry Research Institute (TFRI). They are working closely with TFRI scientist Dr. Chau Chin Lin and Dr. Lu to integrate real-time audio and video data into Open Source DataTurbine for a variety of applications including bee and wasp interaction and frog species identification. 
 

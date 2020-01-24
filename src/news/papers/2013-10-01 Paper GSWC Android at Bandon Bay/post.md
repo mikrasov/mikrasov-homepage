@@ -2,7 +2,7 @@
 title: "Presented at GSWC at UCSB"
 featuredImage: "./featured-image.jpg"
 
-project: "Fulbright"
+project: "BandonBay"
 paper: "Nekrasov_2013_10_Android_Bandon_Bay.pdf"
 citation: "Nekrasov, M., Chumkiew, S., Shin, P. \"Android at Bandon Bay: Low-Cost Environmental Monitoring and Event Detection Using Smartphones.\" GSWC. 2013."
 keywords: "Android, Real-time Analysis, Environmental, Observing System, Water Quality, Event Detection; Mobile Computing"

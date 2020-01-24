@@ -2,6 +2,7 @@
 title: "Present at PRAGMA 18"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/vVi8vUbqbzF6nD4o9"
+project: "creon"
 ---
 Poster on [monitoring coral spawning using underwater fluorescence camera system](/papers/Nekrasov_2010_03_PRAGMA_18.pdf) was accepted into the PRAGMA 18 workshop.  
 

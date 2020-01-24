@@ -1,6 +1,7 @@
 ---
 title: "Interview"
 featuredImage: "./featured-image.jpg"
+project: "BandonBay"
 ---
 I was interviewed by local news on my Fulbright work here in Thailand.
 

@@ -2,7 +2,7 @@
 title: "MASS Paper: Evaluating LTE Coverage and Quality from an Unmanned Aircraft System"
 featuredImage: "./featured-image.png" 
 
-project: "LTE"
+project: "Tribal-Internet"
 category: "core"
 paper: "Nekrasov_2019_11_06_Evaluating_LTE_Coverage.pdf"
 citation: "Adarsh V, Nekrasov M, Belding E. \"Evaluating LTE Coverage and Quality from an Unmanned Aircraft System.\" IEEE MASS. Nov 2019."

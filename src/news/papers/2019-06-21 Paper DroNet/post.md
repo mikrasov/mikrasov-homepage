@@ -2,7 +2,7 @@
 title: "DroNet Paper: Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4"
 featuredImage: "./featured-image.jpg" 
 
-project: "Drone"
+project: "Aerial-IoT"
 category: "core"
 paper: "Nekrasov_2019_06_21_DroNet.pdf"
 citation: "Nekrasov, M. Allen, R. Belding, E.  \"Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4\". ACM DroNet. 2019. (Best Paper)"
@@ -11,7 +11,7 @@ keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireles
 
 
 
-<div class="img-right"><img src="./featured-image.jpg" alt="IoT Sensing Project"></div>
+<div class="img-right"><img src="./featured-image.jpg" alt="IoT Sensing ProjectPreview"></div>
 
 For the last nine months I have had the pleasure to work  with [Ryan Allen](https://www.linkedin.com/in/ryan-allen-ba5560124/), a just-graduated! Masters student. He presented our work: **[Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4](/papers/Nekrasov_2019_06_21_DroNet.pdf)** in Seoul, South Korea at *ACM DroNet*. It won *Best Paper*. 
 

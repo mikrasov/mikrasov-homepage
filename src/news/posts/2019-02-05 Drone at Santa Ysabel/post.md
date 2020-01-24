@@ -2,6 +2,7 @@
 title: "Drone Research at Santa Ysabel"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/6CgsoQPnbRijGjLp6"
+project: "Tribal-Internet"
 ---
 <div class="img-right"><img src="tower.jpg" alt="TDV Tower"></div>
 

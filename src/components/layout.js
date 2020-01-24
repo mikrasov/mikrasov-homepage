@@ -38,6 +38,7 @@ export default (props) => (
             <Nav.Link href="/about" className={(props.active==="about")?"active":""}>About</Nav.Link>
             <Nav.Link href="/cv" className={(props.active==="cv")?"active":""}>CV</Nav.Link>
             <Nav.Link href="/" className={(props.active==="news")?"active":""}>News</Nav.Link>
+            <Nav.Link href="/projects" className={(props.active==="projects")?"active":""}>Projects</Nav.Link>
             <Nav.Link href="/travel" className={(props.active==="travel")?"active":""}>Travel</Nav.Link>
             <Nav.Link href="/gallery" className={(props.active==="gallery")?"active":""}>Photography</Nav.Link>
           </Nav>
@@ -68,7 +69,7 @@ export default (props) => (
     }
 
       <div id="footer" className="row">
-        <div className="col-md-4"> Copyright © 2018 - Michael Nekrasov</div>
+        <div className="col-md-4"> Copyright © 2020 - Michael Nekrasov</div>
         <div className="col-md-8" style={{color:"#DDDDDD"}}>
           If you wish to use any content including photos featured on this website please contact me.
         </div>

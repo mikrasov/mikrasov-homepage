@@ -1,7 +1,8 @@
 ---
-title: "Spectrum Sensing Project"
+title: "Spectrum Sensing"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/3dkMcHzNrmvj7mRk6"
+project: "Tribal-Internet"
 ---
 
 <div class="img-right"><img src="truck.jpg" alt="USRP"></div>

@@ -1,6 +1,7 @@
 ---
 title: "Article UCSB Current"
 featuredImage: "./featured-image.png"
+project: "flownet"
 ---
 
 <div class="img-right"><img src="./featured-image.png" alt="The Current"></div>

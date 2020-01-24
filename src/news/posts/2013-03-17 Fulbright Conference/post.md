@@ -2,6 +2,7 @@
 title: "Present at Fulbright SE Asia Workshop"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/P6jU2mLXSYd3CdFH7"
+project: "BandonBay"
 ---
 
 <div class="img-left"  >

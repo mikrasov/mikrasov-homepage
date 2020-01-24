@@ -2,6 +2,7 @@
 title: "LTE Congestion Monitoring in San Diego"
 featuredImage: "./featured-image.jpg" 
 album: "https://photos.app.goo.gl/LuwNKBTAdnropWoP7"
+project: "LTE-congestion"
 ---
 
 <div class="img-right"><img src="featured-image.jpg" alt="Sensing in Balboa Park"></div>

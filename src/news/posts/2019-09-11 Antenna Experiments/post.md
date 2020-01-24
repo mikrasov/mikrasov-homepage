@@ -2,9 +2,10 @@
 title: "802.15.4 Antenna Experiments"
 featuredImage: "./featured-image.jpg" 
 album: "https://photos.app.goo.gl/nn71ZcPCAm2ZcQPD6"
+project: "Aerial-IoT"
 ---
 
-<div class="img-right"><img src="./featured-image.jpg" alt="IoT Sensing Project"></div>
+<div class="img-right"><img src="./featured-image.jpg" alt="IoT Sensing ProjectPreview"></div>
 
 For the last 3 months I have been working with [Maxton Ginier](https://www.linkedin.com/in/maxton-ginier/), an undergraduate student working with our lab, to continue the work I started with [Ryan Allen](https://www.linkedin.com/in/ryan-allen-ba5560124/) on 802.15.4 aerial network assessment. Check out our [paper](https://michaelnekrasov.com/papers/2019-08-09-paper-sensors/) on the subject.
 

@@ -4,6 +4,7 @@ featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/3w5UmAwtD2ejnvPW8"
 nextPage: "/posts/2017-07-22-paper-limits/"
 prevPage: "/posts/2015-07-03-mongolia-work/"
+project: "flownet"
 ---
 
 <div class="img-right"><img src="work.jpg" alt="Michael Nekrasov examining network setup at a HIV center"></div>

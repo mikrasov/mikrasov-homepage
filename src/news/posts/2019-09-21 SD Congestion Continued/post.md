@@ -1,6 +1,8 @@
 ---
-title: "LTE Congestion Project"
+title: "LTE Congestion Research"
 featuredImage: "./featured-image.jpg" 
+
+project: "LTE-congestion"
 ---
 
 <div class="img-right"><img src="featured-image.jpg" alt="Cellular monitoring in San Diego Waterfront park"></div>

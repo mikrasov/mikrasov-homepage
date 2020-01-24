@@ -25,6 +25,13 @@
     fill: #18ba5699;
 }
 
+.blog-posts .project, .blog-content .project{
+    color: #D4923799;
+    background-color: #D4923707;
+    border-color: #D4923799;
+    fill: #D4923799;
+}
+
 .blog-posts .tutorial, .blog-content .tutorial{
     color: #ba185699;
     background-color: #FF000007;
@@ -166,4 +173,9 @@
 .date-range{
     text-align: right;
     font-weight: bold;
+}
+
+.related-posts{
+    clear: both;
+    margin-top: 2em;
 }

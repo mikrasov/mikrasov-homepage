@@ -2,7 +2,7 @@
 title: "IMC Paper: Packet-level Congestion Estimation in LTE Networks using Passive Measurements"
 featuredImage: "./featured-image.jpg" 
 
-project: "LTE"
+project: "LTE-congestion"
 category: "core"
 paper: "Nekrasov_2019_10_21_IMC_Congestion_Paper.pdf"
 citation: "Adarsh V, Nekrasov M, Belding E. \"Packet-level Congestion Estimation in LTE Networks using Passive Measurements.\" IMC. Oct 2019."

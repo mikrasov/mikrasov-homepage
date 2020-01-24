@@ -38,7 +38,7 @@ class BlogPreview extends React.Component {
             <div className="col-9 col-md-9">
               <div className="d-flex">
                 <div className="blog-title mr-auto">{post.frontmatter.title}</div>
-                <div className="blog-date">{post.fields.date}</div>
+                <div className="blog-daterange">{post.fields.date}</div>
               </div>
 
               <div className="blog-content">{post.excerpt}</div>

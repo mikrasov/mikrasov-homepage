@@ -2,6 +2,7 @@
 title: "SensorPod Workshop"
 featuredImage: "./featured-image.jpg"
 album: "https://photos.app.goo.gl/k4iATxT6rQgWAmrG7"
+project: "BandonBay"
 ---
 
 I helped instigate, plan, and execute the First OSDT Android SensorPod Workshop was held on 1-5 July 2013 at the Lienhuachih Research Center of Taiwan Forestry Research Institute (TFRI), Central Taiwan.

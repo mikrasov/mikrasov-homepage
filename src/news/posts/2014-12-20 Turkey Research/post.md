@@ -2,6 +2,7 @@
 title: "Turkey Research"
 featuredImage: "./featured-image.jpg" 
 nextPage: "/posts/2015-07-03-mongolia-work/"
+project: "flownet"
 ---
 
 ![Panoramic view of the city](pano.jpg)
