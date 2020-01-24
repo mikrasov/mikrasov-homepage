@@ -21,8 +21,8 @@ export default class BlogPage extends React.Component {
     const firstPost = posts[0]?posts[0].node.fields.date:"Error on First"
     const lastPost = posts[posts.length - 1]?posts[posts.length - 1].node.fields.date:"Error on Last"
 
-    const fromLabel = isFirst? "Newest":firstPost.node.fields.date
-    const toLabel = isLast?"End":lastPost.node.fields.date
+    const fromLabel = isFirst? "Newest":firstPost
+    const toLabel = isLast?"End":lastPost
 
 
     const sidebar = (<div className="mb-9">
