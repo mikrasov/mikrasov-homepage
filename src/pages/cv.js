@@ -9,6 +9,9 @@ import Subsubsection from '../components/cv/subsubsection.js'
 import Experience from '../components/cv/experience.js'
 import "../components/cv/skill.css"
 import EsciIcon from '../images/icons/esci.svg'
+import PdfIcon from '../images/icons/pdf.svg'
+import Img from 'gatsby-image'
+
 
 
 function slugify(text)
@@ -25,7 +28,7 @@ function slugify(text)
 }
 
 const skills = {
-  "Programing": [
+  "Programming": [
     ["Java", 100],
     ["Python", 80],
     ["Javascript", 100],
@@ -134,6 +137,26 @@ const classes = {
   ]
 }
 
+const awards = [
+  "DroNet Best Paper (2019)",
+  "MobiSys Best Poster (2013)",
+  "NSF Graduate Fellowship Recipient (2012)",
+  "Fulbright Scholar (2012)",
+  "UCSB Fellowship Recipient (2012)",
+  "Graduated Cum Laude (2011)",
+  "UCSD Robins Scholarship (2010)",
+  "BAE Systems Scholarship (2009)",
+  "UCSD Programs Abroad Returnee of the Year (2010)",
+  "Inducted Tau Beta Pi (2009)",
+  "Inducted Eta Kappa Nu (2009)",
+  "UCSD Provost Honors (2006-2009)",
+  "Boeing Scholarship (2008)",
+  "UCSD International Center Scholarship (2007)",
+]
+
+
+
+
 const sidebar = <div>
   <h3>Jump to:</h3>
   <ul>
@@ -171,72 +194,84 @@ export default class CvPage extends React.Component {
 
   render() {
     const profileImage = this.props.data.profileImage
+    const walLogo = this.props.data.walLogo.childImageSharp.fluid
+    const ucsdLogo = this.props.data.ucsdLogo.childImageSharp.fluid
+    const ucsbLogo = this.props.data.ucsbLogo.childImageSharp.fluid
     const papers = this.props.data.allMarkdownRemark.edges
 
     return (
-      <Layout sideImage={profileImage} sideContent={sidebar} active={"cv"}>
-
-
+      <Layout sideImage={profileImage} sideContent={sidebar} active={"cv"} className={"page-cv"}>
+        <div className="float-right download-cv"><a href="/cv.pdf"><PdfIcon/></a></div>
         <Section name={"Education"}>
           <a id="education" />
-          <div className="row mb-2">
-            <div className="col-md-3 col-lg-4 order-1 order-md-2 text-emphasis">2020<br/>(expected in March)</div>
-            <div className="col-md-9 col-lg-8 order-2 order-md-1"> <strong>Ph.D Computer Science</strong> <br/>
-              University of California, Santa Barbara
-            </div>
+          <div className="row align-items-center">
 
+            <div className="col-md-2 d-none d-md-block"><Img fluid={ucsbLogo}/></div>
+            <div className="col-md-10 ">
+              <div className="row mb-2">
+                <div className="col-md-3 col-lg-4 order-1 order-md-3 text-emphasis">2020<br/>(expected in March)</div>
+
+                <div className="col-md-7 col-lg-6 order-2 order-md-2"> <strong>Ph.D Computer Science</strong> <br/>
+                  University of California, Santa Barbara
+                </div>
+              </div>
+
+              <div className="row mb-2">
+                <div className="col-md-3 col-lg-4 order-1 order-md-2 text-emphasis">2018<br/></div>
+                <div className="col-md-7 col-lg-6 order-2 order-md-1"> <strong>M.S. Computer Science</strong> <br/>
+                  University of California, Santa Barbara
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="row mb-2">
-            <div className="col-md-3 col-lg-4 order-1 order-md-2 align-items-center text-emphasis">2011</div>
-            <div className="col-md-9 col-lg-8 order-2 order-md-1"><strong>B.S. Computer Science </strong> (cum laude) <br/>
-              Minor in Mathematics <br/>
-              University of California, San Diego, <br/>
+          <div className="row align-items-center mt-3">
+          <div className="col-md-2 d-none d-md-block"><Img fluid={ucsdLogo}/></div>
+            <div className="col-md-10 ">
+
+              <div className="row mb-2">
+                <div className="col-md-3 col-lg-4 order-1 order-md-2 align-items-center text-emphasis">2011</div>
+                <div className="col-md-7 col-lg-6 order-2 order-md-1"><strong>B.S. Computer Science </strong> (cum laude) <br/>
+                  Minor in Mathematics <br/>
+                  University of California, San Diego, <br/>
+                </div>
+              </div>
             </div>
           </div>
         </Section>
 
-        <Section name={"Training"}>
-          <a id="training" />
-          <Subsection name="Skills" id="skills">
-            <a id="skills" />
-            {
-              Object.keys(skills).map((key, index) => (
-                <Subsubsection name={key}>
-                  <ul className="list-inline list-icons">
-                    {skills[key].map((s) => (
-                      <li key={s[0]} className="list-inline-item">
-                        <div className={slugify(s)}/>
-                        <div className="skill-label">{s[0]}</div>
-                      </li>
-                    ))
-                    }
-                  </ul>
-                </Subsubsection>
-              ))
-            }
+
+        <Section name={"Publications"}>
+          <a id="publications" />
+
+          <Subsection name={"Core Papers"}>
+            <a id="pub-core" />
+            <ul className="list-inline  mb-0 " >
+              {papers.map( ({node:paper}) => ( paper.frontmatter.category === 'core'?
+                  <li  className="list-inline-item row align-items-center mb-3" >
+                    <div className="col-1"> <Reminder icon post={paper}/> </div>
+                    <div className="col-11"> {paper.frontmatter.citation} </div>
+                  </li>:''
+              ))}
+            </ul>
           </Subsection>
 
-          <Subsection name="Formal Training">
-            <a id="classes" />
-            {
-              Object.keys(classes).map((key, index) => (
-                <Subsubsection name={key}>
-                  <ul className="list-inline">
-                    {classes[key].map((c) => (
-                      <li key={c} className="list-inline-item ">
-                        <div className="skill-label">{c}</div>
-                      </li>
-                    ))
-                    }
-                  </ul>
-                </Subsubsection>
-              ))
-            }
+          <Subsection name={"Other Work"}>
+            <a id="pub-other" />
+            <ul className="list-inline  mb-0" >
+              {papers.map( ({node:paper}) => ( paper.frontmatter.category !== 'core'?
+                  <li  className="list-inline-item row align-items-center mb-3" >
+                    <div className="col-1"> <Reminder icon post={paper}/> </div>
+                    <div className="col-11"> {paper.frontmatter.citation} </div>
+                  </li>:''
+              ))}
+            </ul>
           </Subsection>
+
         </Section>
 
-      <Section name={"Experience"}>
+
+        <Section name={"Experience"}>
         <a id="experience" />
 
         <Subsection name="Academic Experience">
@@ -246,7 +281,7 @@ export default class CvPage extends React.Component {
             Eight-year academic with work experience including leadership, research, outreach, policy development, and administrative roles. Interdisciplinary and cross-sectoral collaborations with various departments at UCSD, UCSB, and LTER member sites as well as with international organizations in Australia, Mongolia, Taiwan, Thailand, Turkey, and Zambia.
           </p>
 
-        <Subsubsection name={"UC Santa Barbara"} subtitle={"Santa Barbara, CA, USA"}>
+        <Subsubsection name={"UC Santa Barbara"} subtitle={"Santa Barbara, CA, USA"} logo={ucsbLogo}>
 
           <Experience name={"PhD Research on Wireless Aerial Disaster Networks Project"} date={"Sep 2013 - Present"}>
             Designed applied solutions for locating and communicating with affected individuals during
@@ -266,7 +301,7 @@ export default class CvPage extends React.Component {
         </Subsubsection>
 
 
-        <Subsubsection name={"Walailak University"} subtitle={"Tha Sala, Nakhon Si Thammarat Province, Thailand"}>
+        <Subsubsection name={"Walailak University"} subtitle={"Tha Sala, Nakhon Si Thammarat Province, Thailand"} logo={walLogo}>
 
           <Experience name={"Fulbright Scholar, Center of Excellence in Ecoinformatics"} date={"Jan 2013 - Sep 2013"}>
             Led international research partnership to develop real-time flood detection for protecting aquaculture
@@ -279,7 +314,7 @@ export default class CvPage extends React.Component {
         </Subsubsection>
 
 
-        <Subsubsection name={"UC San Diego"} subtitle={"San Diego, CA, USA"}>
+        <Subsubsection name={"UC San Diego"} subtitle={"San Diego, CA, USA"} logo={ucsdLogo}>
 
           <Experience name={"Research Assistant, California Institute for Telecommunications and Information Technology [CALIT2]"} date={"Sep 2009 - Jun 2012"}>
             Developed technologies for real-time data streaming and analysis as part of the Open Source Data
@@ -303,7 +338,7 @@ export default class CvPage extends React.Component {
       </Experience>
 
       <Experience name={"Front-End Web Developer"} date={"Feb 2009 - Nov 2012"}>
-        Lead front-end web developer for MobileTrac, a startup specializing in vehicle history reports. Worked in a team with marketing, business, and back-end programmers to develop a commercial website selling instant vehicle history reports. Required meeting tight deadlines, co-ordinating with members who had varying perspectives and technical literacy. Duties included: programing as well graphical and interface design.
+        Lead front-end web developer for MobileTrac, a startup specializing in vehicle history reports. Worked in a team with marketing, business, and back-end programmers to develop a commercial website selling instant vehicle history reports. Required meeting tight deadlines, co-ordinating with members who had varying perspectives and technical literacy. Duties included: programming as well graphical and interface design.
       </Experience>
     </Subsection>
 
@@ -312,28 +347,25 @@ export default class CvPage extends React.Component {
         <a id="teaching" />
 
         <Experience name={"Computer Ethics: Reshaping Society Through Technology"} date={"Winter 2020"}>
-          Designed and co-taught (with Sherri Conklin) a high school enrichment course. What we share online and how this highly tailored personal information is used is a topic of continuous concern and debate. In this class we explored what these algorithms “know” about us and how they gather data. This class provided an overview of active areas of computer science including: Big Data, Machine Learning, Networking, Security, and Human Computer Interaction. The class will provided the skills for understanding how the technologies work as well as philosophical skills for critically engaging with these technologies.
+          Designed and co-taught (with Sherri Conklin) a high school enrichment course. What we share online and how this highly tailored personal information is used is a topic of continuous concern and debate. In this class we explored what these algorithms “know” about us and how they gather data. This class provided an overview of active areas of computer science including: Big Data, Machine Learning, Networking, Security, and Human Computer Interaction. The class taught skills for understanding how the technologies work as well as philosophical skills for critically engaging with these technologies.
         </Experience>
 
-        <Experience name={"Introduction to Compute Communication Networks (TA)"} date={"Fall 2019"}>
+        <Experience name={"Introduction to Computer Communication Networks (TA)"} date={"Fall 2019"} attachment={ <a href="/eval/ESCI_CS176A.pdf"><EsciIcon/><div className="mb-0" style={{marginTop:-10}}>Evaluation</div></a>}>
           As a teaching assistant, I led discussion sections, held office hours, moderated an online forum, and graded student assignments. This course covered the fundamentals of computer networks including the application, transport, network, and link layers.
-          <div className="blog-emphasis"> <a href="/eval/ESCI_CS176A.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
         </Experience>
 
-      <Experience name={"Translation of Programming Languages (TA)"} date={"Spring 2019"}>
+      <Experience name={"Translation of Programming Languages (TA)"} date={"Spring 2019"} attachment={ <a href="/eval/ESCI_CS160.pdf"><EsciIcon/><div className="mb-0" style={{marginTop:-10}}>Evaluation</div></a>}>
         As a teaching assistant, I led discussion sections, held office hours, moderated an online forum, and graded student assignments. This course covered how to construct parsers and compilers. Due to the difficult nature of the class, as a TA I spent lots of time outside of class helping students understand the class material and to apply it to their course projects.
-        <div className="blog-emphasis"> <a href="/eval/ESCI_CS160.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
       </Experience>
 
 
-      <Experience name={"Data Structure and Algorithms (TA)"} date={"Spring 2018"}>
+      <Experience name={"Data Structure and Algorithms (TA)"} date={"Spring 2018"} attachment={ <a href="/eval/ESCI_CS130B.pdf"><EsciIcon/><div className="mb-0" style={{marginTop:-10}}>Evaluation</div></a>}>
         As a teaching assistant, I led discussion sections, held office hours, moderated an online forum, and graded student assignments. This was a proof heavy course covering greedy algorithms, divide and conquer, dynamic programming, np-completeness, and approximation algorithms.
-        <div className="blog-emphasis"> <a href="/eval/ESCI_CS130B.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
+
       </Experience>
 
-      <Experience name={"Computer Science Bootcamp (TA)"} date={"Winter 2018"}>
+      <Experience name={"Computer Science Bootcamp (TA)"} date={"Winter 2018"} attachment={ <a href="/eval/ESCI_CS4.pdf"><EsciIcon/><div className="mb-0" style={{marginTop:-10}}>Evaluation</div></a>}>
         As a teaching assistant, I led lab section, held office hours, moderated an online forum, and graded student assignments. This was an intro course targeted to non computer scientists that covered a wide range of topics such as data encoding, image formats, python programming, audio encoding, graph traversal, and huffman coding.
-        <div className="blog-emphasis"> <a href="/eval/ESCI_CS4.pdf"><EsciIcon/> Course evaluation of my teaching is available.</a></div>
       </Experience>
 
       <Experience name={"Foundations of Computer Science (TA)"} date={"Fall 2012"}>
@@ -344,53 +376,70 @@ export default class CvPage extends React.Component {
   </Section>
 
 
-  <Section name={"Publications"}>
-  <a id="publications" />
-
-    <Subsection name={"Core Papers"}>
-      <a id="pub-core" />
-    {papers.map( ({node:paper}) => ( paper.frontmatter.category === 'core'?
-      <div className="mb-2" key={paper.id}>
-        {paper.frontmatter.citation} <Reminder icon post={paper}/>
-
-      </div>:''
-    ))}
-    </Subsection>
-
-    <Subsection name={"Other Work"}>
-      <a id="pub-other" />
-    {papers.map( ({node:paper}) => ( paper.frontmatter.category !== 'core'?
-        <div className="mb-2" key={paper.id}>
-          {paper.frontmatter.citation} <Reminder icon post={paper}/>
-
-        </div>:''
-    ))}
-    </Subsection>
-
-  </Section>
-
   <Section name={"Awards & Scholarships"}>
     <a id="awards" />
-    <ul className="fa-ul mb-0">
-      <li>DroNet 2019 Best Paper</li>
-      <li>MobiSys 2013 Best Poster 2013</li>
-      <li>NSF Graduate Fellowship Recipient 2012</li>
-      <li>Fulbright Scholar 2012</li>
-      <li>UCSB Fellowship Recipient 2012</li>
-      <li>Graduated Cum Laude 2011</li>
-      <li>UCSD Robins Scholarship 2010</li>
-      <li>BAE Systems Scholarship 2009</li>
-      <li>UCSD Programs Abroad Returnee of the Year 2010</li>
-      <li>Inducted Tau Beta Pi (TBP) 2009</li>
-      <li>Inducted Eta Kappa Nu (HKN) 2009</li>
-      <li>UCSD Provost Honors 2006- 2009</li>
-      <li>Boeing Scholarship 2008</li>
-      <li>UCSD International Center Scholarship 2007</li>
+    <ul className="list-inline list-icons mb-0 awards-list">
+
+
+      <Subsubsection >
+        <ul className="list-inline  mb-0" >
+          {awards.map((s) => (
+            <li  className="list-inline-item col-md-5" >
+              {s}
+            </li>
+          ))
+          }
+        </ul>
+      </Subsubsection>
+
+
     </ul>
 
   </Section>
 
-  </Layout>
+
+        <Section name={"Training"} >
+          <a id="training" />
+          <Subsection name="Skills" id="skills" >
+            <a id="skills" />
+            {
+              Object.keys(skills).map((key, index) => (
+                <Subsubsection name={key}>
+                  <ul className="list-inline list-icons mb-0" >
+                    {skills[key].map((s) => (
+                      <li key={s[0]} className="list-inline-item">
+                        <div className={slugify(s)}/>
+                        <div className="cv-skill">{s[0]}</div>
+                      </li>
+                    ))
+                    }
+                  </ul>
+                </Subsubsection>
+              ))
+            }
+          </Subsection>
+
+          <Subsection name="Formal Training">
+            <a id="classes" />
+            {
+              Object.keys(classes).map((key, index) => (
+                <Subsubsection name={key}>
+                  <ul className="list-inline">
+                    {classes[key].map((c) => (
+                      <li key={c} className="list-inline-item ">
+                        <div className="cv-class">{c}</div>
+                      </li>
+                    ))
+                    }
+                  </ul>
+                </Subsubsection>
+              ))
+            }
+          </Subsection>
+        </Section>
+
+
+      </Layout>
     )
   }
 }
@@ -399,6 +448,27 @@ export default class CvPage extends React.Component {
 export const pageQuery =  graphql`
   query {
     profileImage: file(relativePath: { eq: "profile/profile-cv.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+    }
+    ucsbLogo: file(relativePath: { eq: "UCSB-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+    }
+    ucsdLogo: file(relativePath: { eq: "UCSD-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+    }
+     walLogo: file(relativePath: { eq: "WAL-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
             ...GatsbyImageSharpFluid

@@ -45,10 +45,10 @@ export default (props) => (
         </Navbar.Collapse>
       </Navbar>
 
-    {(props.noSidebar === true) ? (<div className={'container'}><div id='content'>{props.children}</div></div>) : (
+    {(props.noSidebar === true) ? (<div className={'container'}><div id='content' className={props.className}>{props.children}</div></div>) : (
       <div className={'container'}>
         <div className={'row no-gutters'}>
-          <div id='content' className={'col-md-9'}>{props.children}</div>
+          <div id='content' className={'col-md-9 '+props.className}>{props.children}</div>
           <div className='col-md-3 ' id={"sidebar"}>
             <div className="sidebarProfileBlock">
               <Img className="sidebarProfile"

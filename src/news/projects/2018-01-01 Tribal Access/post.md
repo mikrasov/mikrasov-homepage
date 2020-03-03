@@ -2,7 +2,7 @@
 title: "Tribal Internet Access"
 id: "Tribal-Internet"
 featuredImage: "./featured-image.jpg" 
-range: "2018-2020"
+range: "2017-2020"
 keywords: "LTE, Overload, Passive Measurements, Disaster Management"
 summary: "A new system for automated network assessment we want to be able to be able to rapidly plan new network deployments by utilizing open wireless spectrum. In the rural context a new deployment may consist of a permanent wireless backhaul linking remote communities."
 ---
