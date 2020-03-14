@@ -3,7 +3,7 @@ title: "ICRS Paper: Sensor Networks Applications for Reefs at Racha Island, Thai
 featuredImage: "./featured-image.jpg"
 project: "creon"
 paper: "Nekrasov_2012_07_ICRS_Racha.pdf"
-citation: "Jaroensutasinee, M., Jaroensutasinee, K., Bainbridge, S., Fountain, T., Chumkiew, S., Noonsang, P. Kuhapon, U. Vannarat, S. Poyai, S. Nekrasov, M. \"Sensor Networks Applications for Reefs at Racha Island, Thailand.\" ICRS. July 2012."
+citation: "Jaroensutasinee, M., Jaroensutasinee, K., Bainbridge, S., Fountain, T., Chumkiew, S., Noonsang, P. Kuhapon, U. Vannarat, S. Poyai, S. Nekrasov, M. \"Sensor Networks Applications for Reefs at Racha Island, Thailand.\" In Proceeding of the 12th International Coral Reef Symposium (ICRS), Cairns, Australia, p. 95. 2012."
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 Our paper: **[Sensor Networks Applications for Reefs at Racha Island, Thailand](/papers/Nekrasov_2012_07_ICRS_Racha.pdf)** was published and presented at the *[12th International Coral Reef Symposium](http://www.icrs2012.com/)* in Cairns, Australia.

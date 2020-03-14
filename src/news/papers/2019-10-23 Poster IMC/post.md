@@ -4,7 +4,7 @@ featuredImage: "./featured-image.png"
 
 project: "Tribal-Internet"
 paper: "Nekrasov_2019_10_23_IMC_Congestion_Paper.pdf"
-citation: "(POSTER) Adarsh V, Nekrasov M, Paul U, Showalter E, Vigil-Hayes M, Zegura E, Belding E. \"Towards Robust Evaluation of LTE Coverage and Quality using Unmanned Aircraft System.\" ACM IMC. Oct 2019."
+citation: "(POSTER) Adarsh V, Nekrasov M, Paul U, Showalter E, Vigil-Hayes M, Zegura E, Belding E. \"Towards Robust Evaluation of LTE Coverage and Quality using Unmanned Aircraft System.\" In Proceedings of the Internet Measurement Conference. 2019."
 keywords: "LTE, Aerial Networks, Mobile Broadband, Software Defined Radios, Cellular Coverage, RSRP, UAS."
 ---
 

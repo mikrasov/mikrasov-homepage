@@ -5,7 +5,7 @@ featuredImage: "./featured-image.png"
 project: "flownet"
 category: "core"
 paper: "Nekrasov_2017_08_FOCI.pdf"
-citation: "Nekrasov, M, et al. \"SecurePost: Verified Group-Anonymity on Social Media.\" USENIX FOCI. Aug 2017."
+citation: "Nekrasov, M., Iland, D., Metzger, M., Zhao, B. and Belding, E., \"SecurePost: Verified Group-Anonymity on Social Media.\" In 7th USENIX Workshop on Free and Open Communications on the Internet (FOCI).  2017."
 keywords: "Social Media, Internet Freedoms, Free Speech, Censorship, Anonymity, ICTD."
 ---
 Our paper on: **[SecurePost : Verified Group-Anonymity on Social Media](/papers/Nekrasov_2017_08_FOCI.pdf)** was published and presented at *USENIX Workshop on Free and Open Communications on the Internet (FOCI)*.

@@ -5,7 +5,7 @@ featuredImage: "./featured-image.png"
 project: "Tribal-Internet"
 category: "core"
 paper: "Nekrasov_2019_11_06_Evaluating_LTE_Coverage.pdf"
-citation: "Adarsh V, Nekrasov M, Belding E. \"Evaluating LTE Coverage and Quality from an Unmanned Aircraft System.\" IEEE MASS. Nov 2019."
+citation: "Nekrasov M, Adarsh V, Paul U, Showalter E, Zegura E, Vigil-Hayes M, Belding E. \"Evaluating LTE Coverage and Quality from an Unmanned Aircraft System.\" In Proceedings of the 16th IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS). 2019."
 keywords: "LTE, Overload, Passive Measurements, Disaster Management."
 ---
 

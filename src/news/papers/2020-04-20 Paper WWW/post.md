@@ -5,13 +5,13 @@ featuredImage: "./featured-image.png"
 project: "LTE"
 category: "core"
 paper: "Nekrasov_2019_10_21_IMC_Congestion_Paper.pdf"
-citation: "Paul U, Alexander E, Nekrasov M, Adrash V, Belding E. \"#Outage: Detecting Power and Communication Outages from Social Network.\"  WWW. Apr 2019."
+citation: "Paul U, Alexander E, Nekrasov M, Adrash V, Belding E. \"#Outage: Detecting Power and Communication Outages from Social Network.\"  In Proceedings of the Web Conference (WWW). 2020."
 keywords: "Event Detection, Information Extraction, Natural Language Processing,  Social Media, Data Mining."
 ---
 
 <div class="img-right"><img src="./featured-image.png" alt="Word cloud from analysis."></div>
 
-Fpr the last half year I have been helping [Udit Paul](https://www.linkedin.com/in/uditapaul) on new information extraction techniques for social media analysis. Our paper (I am the third author on this work) titled  **[#Outage: Detecting Power and Communication Outages from Social Network](/papers/Nekrasov_2019_10_21_IMC_Congestion_Paper.pdf)** was published and presented at the [The Web Conference](https://www2020.thewebconf.org/) in Taipei.  
+For the last half year I have been helping [Udit Paul](https://www.linkedin.com/in/uditapaul) on new information extraction techniques for social media analysis. Our paper (I am the third author on this work) titled  **[#Outage: Detecting Power and Communication Outages from Social Network](/papers/Nekrasov_2019_10_21_IMC_Congestion_Paper.pdf)** was published and presented at the [The Web Conference](https://www2020.thewebconf.org/) in Taipei.  
 
 Natural disasters are increasing worldwide at an alarming rate.  To aid relief operations during and post disaster, humanitarian organizations rely on various types of situational information such as missing, trapped or injured people and damaged infrastructure in an area. Crucial and timely identification of infrastructure and utility damage is critical to properly plan and execute search and rescue operations. However, in the wake of natural disasters, real time identification of this information becomes challenging. This research investigates the use of tweets posted on the Twitter social media platform to detect power and communication outages during natural disasters. 
 

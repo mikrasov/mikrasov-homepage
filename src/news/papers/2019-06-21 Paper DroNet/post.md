@@ -5,7 +5,7 @@ featuredImage: "./featured-image.jpg"
 project: "Aerial-IoT"
 category: "core"
 paper: "Nekrasov_2019_06_21_DroNet.pdf"
-citation: "Nekrasov, M. Allen, R. Belding, E.  \"Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4\". ACM DroNet. 2019. (Best Paper)"
+citation: "Nekrasov, M. Allen, R. Belding, E.  \"Performance Analysis of Aerial Data Collection from Outdoor IoT Sensor Networks using 2.4GHz 802.15.4\". In Proceedings of the 5th Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet), pp. 33-38. 2019. (Best Paper)"
 keywords: "Internet of Things, 802.15.4, UAS, UAV, Drone, Sensor Network,Wireless Networks, Precision Agriculture, Aerial networks."
 ---
 

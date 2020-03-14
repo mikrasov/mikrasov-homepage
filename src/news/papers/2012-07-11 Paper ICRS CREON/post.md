@@ -3,7 +3,7 @@ title: "ICRS Paper: CREON – Integrating Disparate Sources of Remote Coral Reef
 featuredImage: "./creon_logo.png"
 project: "creon"
 paper: "Nekrasov_2012_07_ICRS_CREON.pdf"
-citation: "Jaroensutasinee, K., Jaroensutasinee, M., Bainbridge, S., Fountain, T., Holbrook, S., Nekrasov, M. \"CREON – Integrating Disparate Sources of Remote Coral Reef Sensor Data.\" ICRS. Jul 2012."
+citation: "Jaroensutasinee, Krisanadej, M. Jaroensutasinee, S. Bainbridge, T. Fountain, S. Holbrook, and M. Nekrasov. \"CREON–Integrating Disparate Sources of Remote Coral Reef Sensor Data.\" In Proceedings of the 12th International Coral Reef Symposium (ICRS), Cairns, Australia, pp. 9-13. 2012."
 keywords: "Sensor network, Coral, CREON, Environmental observing"
 ---
 

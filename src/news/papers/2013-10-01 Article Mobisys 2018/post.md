@@ -3,7 +3,7 @@ title: "Article: MobiSys 2013"
 featuredImage: "./featured-image.jpg"
 
 paper: "Nekrasov_2013_10_MobiSys.pdff"
-citation: "Zheleva, M., Nekrasov, M. (2013). \"MobiSys 2013.\" IEEE Pervasive Computing."
+citation: "Zheleva, M., Nekrasov, M. \"MobiSys 2013.\" IEEE Pervasive Computing. 2013."
 keywords: "Conference, MobiSys 2013, Review"
 ---
 Our review of **[MobiSys 2013](/papers/Nekrasov_2013_10_MobiSys.pdf)** was published in Journal of *IEEE Pervasive Computing*.

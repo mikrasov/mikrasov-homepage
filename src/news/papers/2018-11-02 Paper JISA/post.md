@@ -5,7 +5,7 @@ featuredImage: "./featured-image.jpg"
 project: "flownet"
 category: "core"
 paper: "Nekrasov_2018_11_JISA.pdf"
-citation: "Nekrasov, M, et al. \"Anonymity and Reputation on Social Media in an Age of Global Internet Dependence\". Journal of Internet Services and Applications. 2018."
+citation: "Nekrasov, M., Iland, D., Metzger, M., Parks, L. and Belding, E., \"A user-driven free speech application for anonymous and verified online, public group discourse\". Journal of Internet Services and Applications, 9(1) p. 21. 2018."
 keywords: "Social media, Internet freedoms, Free speech, Censorship, Anonymity, ICTD, Android, App"
 ---
 
