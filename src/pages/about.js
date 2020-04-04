@@ -11,13 +11,9 @@ const sidebar =<div>
 
   <h3>Current Occupation:</h3>
   <p>
-  Ph.D Student at UC Santa Barbara
+    Looking for work!
   </p>
 
-  <h3>Next Step:</h3>
-  <p>
-  Looking for a career position starting in <strong>March 2020</strong>.
-  </p>
 
 
 

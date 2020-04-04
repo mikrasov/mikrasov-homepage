@@ -158,6 +158,16 @@ const awards = [
 
 
 const sidebar = <div>
+
+
+  <h3>Contact Me </h3>
+  <a href={"mailto:mikrasov@gmail.com"}>mikrasov@gmail.com</a><br/><br/>
+
+  <h3>Current Occupation:</h3>
+  <p>
+    Looking for work!
+  </p>
+
   <h3>Jump to:</h3>
   <ul>
     <li>
@@ -209,7 +219,7 @@ export default class CvPage extends React.Component {
             <div className="col-md-2 d-none d-md-block"><Img fluid={ucsbLogo}/></div>
             <div className="col-md-10 ">
               <div className="row mb-2">
-                <div className="col-md-3 col-lg-4 order-1 order-md-3 text-emphasis">2020<br/>(expected in March)</div>
+                <div className="col-md-3 col-lg-4 order-1 order-md-3 text-emphasis">2020</div>
 
                 <div className="col-md-7 col-lg-6 order-2 order-md-2"> <strong>Ph.D Computer Science</strong> <br/>
                   University of California, Santa Barbara

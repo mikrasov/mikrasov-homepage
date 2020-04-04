@@ -60,7 +60,7 @@ export default (props) => (
               <a className="sidebarIconC" href="https://www.linkedin.com/in/mikrasov" target="_blank"><img src={gitLogo}/></a>
             </div>
             <h1>Michael Nekrasov</h1>
-            <h2 style={{ textAlign: 'center' }}>Ph.D Candidate in C.S., Web Designer, Photographer, Traveler.</h2>
+            <h2 style={{ textAlign: 'center' }}>Ph.D in Computer Science <br>Web Developer, Photographer, Traveler.</h2>
             <div className="sidebar-content">{props.sideContent}</div>
           </div>
         </div>
