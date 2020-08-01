@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery, withPrefix } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import WorldMap from "../components/map/world-map"
 import UsaMap from "../components/map/usa-map"
 import Layout from '../components/layout'
