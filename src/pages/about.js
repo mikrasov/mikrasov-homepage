@@ -64,12 +64,12 @@ const AboutPage = ({ children }) => (
         <Img className="boundedPic float-left" fixed={data.droneImage.childImageSharp.fixed} />
 
         <p>
-          I am currently finishing a PhD in Computer Science at UC Santa Barbara.
-          My research focuses on wireless aerial networks for environmental and disaster applications.
+          I received a PhD in Computer Science from UC Santa Barbara in March 2020.
+          My research focused on wireless aerial networks for environmental and disaster applications.
           My dissertation looks at using 802.11 (WiFi) to locate and communicate with survivors after a natural disaster from a aerial platform.
-          As part of my work I develop new algorithms for low energy computation suitable for deployment on a multi-copter that has limited
+          As part of my work I developed new algorithms for low energy computation suitable for deployment on a multi-copter that has limited
           power and weight, and which may not be able to offload computationally expensive work in a disaster due to lack of a functional internet backhaul.
-          I build prototype systems and evaluate their performance through physical field experimentation, and analysis of large
+          I built prototype systems and evaluate their performance through physical field experimentation, and analysis of large
           network traces.
         </p>
 
