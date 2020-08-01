@@ -1,7 +1,6 @@
 import React from "react"
 import {Link, graphql, withPrefix} from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { DiscussionEmbed } from "disqus-react";
 import Layout from '../layout'
 import "./blog.css"
 
@@ -10,8 +9,6 @@ import Img from 'gatsby-image'
 import Reminder from './reminder'
 
 export default function Template(props) {
-
-  const disqusShortname = props.data.site.siteMetadata.disqusShortname
 
   const post = props.data.markdownRemark
   const { fields, frontmatter, html, tableOfContents} = post
@@ -37,10 +34,6 @@ export default function Template(props) {
   </div>)
 
 
-  const disqusConfig = {
-    identifier: post.fields.slug.replace(/\//g,""),
-    title: post.frontmatter.title,
-  }
 
   return (
     <Layout sideContent={sidebar} active={"news"}>
@@ -71,7 +64,6 @@ export default function Template(props) {
         <div style={{clear:"both"}} />
         <Reminder post={post} />
 
-        { !fields.external && (<DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />)}
       </div>
     </Layout>
 
@@ -83,7 +75,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        disqusShortname
         siteUrl
       }
     }
