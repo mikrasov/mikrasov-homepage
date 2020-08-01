@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import Layout from '../../src/components/layout'
 import { graphql, StaticQuery } from 'gatsby'
-import NpsMap from '../../components/nps/nps-map'
+import NpsMap from '../../src/components/nps/nps-map'
 import BillboardChart from "react-billboardjs";
 import "react-billboardjs/lib/billboard.css";
 import Img from 'gatsby-image'

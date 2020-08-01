@@ -50,6 +50,9 @@ const skills = {
     ["Cloud Computing (AWS)", 100],
     ["Django", 100],
     ["NodeJs", 100],
+    ["React", 100],
+    ["Redux", 100],
+    ["Gatsby", 100],
     ["SQL", 100],
     ["MongoDB", 100],
     ["XML", 100],
@@ -342,6 +345,10 @@ export default class CvPage extends React.Component {
 
     <Subsection name={"Industry Experience"}>
       <a id="industry" />
+
+      <Experience name={"Front-End Web Engineer"} date={"Aug 2020 - Present"}>
+        Lead front-end web engineer for Institutional Shareholder Services.
+      </Experience>
 
       <Experience name={"Independent Contractor"} date={"Sep 2006 - Present"}>
         Administered a private consulting business for occasional jobs including web development, small business computer network instillation and troubleshooting, and photography. Requires high level of flexibility, understanding client needs, communicating expectations, meeting deadlines, and communicating technical constraints and solutions in clear understandable language.

@@ -11,7 +11,7 @@ const sidebar =<div>
 
   <h3>Current Occupation:</h3>
   <p>
-    Looking for work!
+    Front-End Web Engineer Institutional Shareholder Services
   </p>
 
 
