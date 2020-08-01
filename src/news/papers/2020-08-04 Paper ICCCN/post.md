@@ -5,7 +5,7 @@ featuredImage: "./featured-image.png"
 project: "LTE"
 category: "core"
 paper: "Nekrasov_2020_08_04_ICCCN_802_15_4_UAS.pdf"
-citation: "Nekrasov M, Ginier M, Allen R, Artamonova A, Belding E. \"Impact of 802.15.4 Radio Antenna Orientation on UAS Aerial Data Collection"  In Proceedings of 29th International Conference on Computer, Communication and Networks (ICCCN). 2020."
+citation: "Nekrasov M, Ginier M, Allen R, Artamonova A, Belding E. \"Impact of 802.15.4 Radio Antenna Orientation on UAS Aerial Data Collection\"  In Proceedings of 29th International Conference on Computer, Communication and Networks (ICCCN). 2020."
 keywords: "Internet of Things, 802.15.4, UAS, UAV, drone, sensor network, wireless networks, aerial networks, experimental measurements."
 ---
 
